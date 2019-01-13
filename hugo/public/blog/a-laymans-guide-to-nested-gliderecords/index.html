@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://example.org/assets/main.min.d206194abbd1ce5a0ca819b68f103dc21cb08c4864ac772c71d5e60a0e10d86e.css">
+<title>A Layman&#39;s Guide to Nested GlideRecords | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="My previous articles on the Nested GlideRecord issue were far more technical than I usually try to achieve. With that in mind, I would like to revisit Nested GlideRecords, how they cause performance problems, and why database indexing alone isn&#39;t the best solution... this time with a little more simplicity.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/"><meta property="og:site_name" content="CodeCreative | A ServiceNow Blog">
+<meta property="og:title" content="A Layman&#39;s Guide to Nested GlideRecords">
+<meta property="og:url" content="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:description" content="My previous articles on the Nested GlideRecord issue were far more technical than I usually try to achieve. With that in mind, I would like to revisit Nested GlideRecords, how they cause performance problems, and why database indexing alone isn&#39;t the best solution... this time with a little more simplicity.">
+
+<meta property="og:image" content="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/images/social.png">
+
+<meta itemprop="name" content="A Layman&#39;s Guide to Nested GlideRecords">
+<meta itemprop="url" content="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/">
+<meta itemprop="description" content="My previous articles on the Nested GlideRecord issue were far more technical than I usually try to achieve. With that in mind, I would like to revisit Nested GlideRecords, how they cause performance problems, and why database indexing alone isn&#39;t the best solution... this time with a little more simplicity.">
+
+<meta itemprop="thumbnailUrl" content="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/images/social.png">
+<link rel="image_src" href="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/images/social.png">
+<meta itemprop="image" content="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/images/social.png">
+
+
+<meta name="twitter:title" content="A Layman&#39;s Guide to Nested GlideRecords">
+<meta name="twitter:image" content="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/images/social.png">
+<meta name="twitter:url" content="http://example.org/blog/a-laymans-guide-to-nested-gliderecords/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="My previous articles on the Nested GlideRecord issue were far more technical than I usually try to achieve. With that in mind, I would like to revisit Nested GlideRecords, how they cause performance problems, and why database indexing alone isn&#39;t the best solution... this time with a little more simplicity.">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://example.org/"
+    },
+    "name" : "A Layman&#39;s Guide to Nested GlideRecords",
+    "headline" : "A Layman&#39;s Guide to Nested GlideRecords",
+    "description" : "My previous articles on the Nested GlideRecord issue were far more technical than I usually try to achieve. With that in mind, I would like to revisit Nested GlideRecords, how they cause performance problems, and why database indexing alone isn&#39;t the best solution... this time with a little more simplicity.","image": "http://example.org/blog/a-laymans-guide-to-nested-gliderecords/images/social.png","inLanguage" : "en-US",
+      "author" : "Travis Toulson",
+      "creator" : "Travis Toulson","publisher": "Travis Toulson",
+    "copyrightHolder" : "Travis Toulson",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-04-13 15:30:01 &#43;0000 UTC",
+    "dateModified" : "2017-04-13 15:30:01 &#43;0000 UTC",
+    "url" : "http://example.org/blog/a-laymans-guide-to-nested-gliderecords/",
+    "wordCount" : "856",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+
+  </head>
+  <body><header role="banner">
+  <h1 class="logo">
+      <a href="/">
+         <img src="/assets/codecreativelogo.png" alt="A Layman&#39;s Guide to Nested GlideRecords" />
+         <span class="sr-only">CodeCreative Logo, click to navigate home</span>
+      </a>
+    </h1>
+
+  <div class="menuToggle">
+    <button class="hamburger" type="button" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+
+  <nav class="fullNav">
+    <ul>
+      
+      
+        <li title="Home">
+          <a class="" href="/">Home</a>
+        </li>
+      
+        <li title="Blog">
+          <a class="" href="/blog/">Blog</a>
+        </li>
+      
+        <li title="About">
+          <a class="" href="/about/">About</a>
+        </li>
+      
+        <li title="Contact">
+          <a class="" href="/contact/">Contact</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<main>
+  <header class="banner">
+    <h1>A Layman&#39;s Guide to Nested GlideRecords</h1>
+  </header>
+
+  <div class="content text-content">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name sr-only" itemprop="name headline">A Layman&#39;s Guide to Nested GlideRecords</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2017-04-13T15:30:01Z" itemprop="datePublished">
+            April 13, 2017
+            </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </p>
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        
+
+<p>My <a href="/blog/nested-gliderecords-are-killing-your-app-performance">previous</a> <a href="/blog/3-strategies-to-fix-nested-gliderecords">articles</a> on the Nested GlideRecord issue were far more technical than I usually try to achieve. After all, if I can&rsquo;t explain it simply enough then I probably don&rsquo;t understand it well myself. With that in mind, I would like to revisit Nested GlideRecords, how they cause performance problems, and why database indexing alone isn&rsquo;t the best solution&hellip; this time with a little more simplicity.</p>
+
+<p>And a parable!</p>
+
+<p>Suppose that 3 people are separately going to the grocery store: Peter, Dora, and Lois. As well prepared shoppers, unlike me, they have their shopping lists ahead of time. Each shopper has parked his or her car and is ready to shop!</p>
+
+<h2 id="peter-a-tale-told-by-an-idiot">Peter: A Tale Told By An Idiot</h2>
+
+<p>Peter is not the sharpest tool in the shed (sorry Peter). He&rsquo;s what I like to refer to as an ASVAB waiver. You&rsquo;ll have to look that one up. He&rsquo;s got those good old fashioned values, he just doesn&rsquo;t buy into the whole &lsquo;work smarter not harder&rsquo; routine.</p>
+
+<p>Peter wrote his list on index cards&hellip; one item per card. What&rsquo;s worse is that he only brings one card to into the grocery store at a time. The rest he leaves in the car. And if that wasn&rsquo;t bad enough, he searches every aisle in the store from front to back. Every. Single. Time.</p>
+
+<p>So Peter&rsquo;s shopping trip looks like this:</p>
+
+<ol>
+<li>Grab the top index card from the car</li>
+<li>Search the grocery store from front to back</li>
+<li>Find the item on the index card</li>
+<li>Buy the item at the register</li>
+<li>Return to the car for the next index card</li>
+<li>Repeat</li>
+</ol>
+
+<p>Peter does this for every&hellip; single&hellip; item on his list. An elaborate montage or well timed cutaway gag couldn&rsquo;t save this approach.</p>
+
+<h2 id="dora-she-has-a-map">Dora: She Has A Map</h2>
+
+<p>Dora is a little better off. Like Peter, she seems to constantly repeat the same endless loop but at least <a href="https://youtu.be/5DUgiMjuu7w?t=51s">she has a map</a>. Well, technically, the grocery store has a map but she knows where it is and decides to use it. With the map, Dora doesn&rsquo;t have to search the entire store, she can go straight to the shelf that has the item she is looking for.</p>
+
+<p>Dora&rsquo;s shopping trip looks mostly familiar though:</p>
+
+<ol>
+<li>Grab the top index card from the car</li>
+<li>Find the index card item on the map</li>
+<li>Get the item on the index card</li>
+<li>Buy the item at the register</li>
+<li>Return to the car for the next index card</li>
+<li>Repeat</li>
+</ol>
+
+<p>Sure, Dora is probably saving a lot of time using that map. Not having to search the whole grocery store for every item would save time even on just a small basket of food for Abuela. But there is still the whole issue of running back and forth to the car.</p>
+
+<h2 id="lois-she-s-got-it-together">Lois: She&rsquo;s Got It Together</h2>
+
+<p>I think you&rsquo;re starting to see picture here. But just to cover our bases, lets take a look at Lois because Lois does groceries! Lois not only uses the map, she also quite sensibly brings the whole list with her. She plots her path with precision and executes perfectly.</p>
+
+<p>This is what Lois&rsquo; shopping trip looks like:</p>
+
+<ol>
+<li>Find the next item on the map</li>
+<li>Get the item on the index card</li>
+<li>Repeat 1 and 2 until all items have been put in the cart</li>
+<li>Buy the items at the register</li>
+</ol>
+
+<p>First and foremost, she spends most of her grocery trip in the grocery store. That alone reduces most of the wasted effort expended by her, the register clerk, and the car door hinges. It simplifies everyone&rsquo;s job involved</p>
+
+<h2 id="the-analogy">The Analogy</h2>
+
+<p>So putting it all together, here&rsquo;s what each of our actors in this odd parable represent:</p>
+
+<ul>
+<li>Parking Lot = ServiceNow Application</li>
+<li>Grocery List / Index Cards = Query Criteria</li>
+<li>Store = Database</li>
+<li>Store Map = Index</li>
+</ul>
+
+<p>Peter represents the Nested GlideRecord. He passes back and forth from application code to database over and over again with one criteria at a time. Worse, without proper indexing in the database, he runs around like a chicken with his head cut off. With a large enough store, the lines of these shoppers pile up, Peter abandons his list and goes to the pub.</p>
+
+<p>Dora represents a Nested GlideRecord with proper indexing. Sure, each pass through the store is made faster but she&rsquo;s still working her application and database much more than necessary. Indexes might make each individual search faster but she&rsquo;s still queueing up way more queries than she needs to.</p>
+
+<p>All the query criteria is passed efficiently in a single query to the database.</p>
+
+<aside class="ccPullQuote right w-50">
+  <p>All the query criteria is passed efficiently in a single query to the database.</p>
+</aside>
+
+<p>Lois represents the Nested GlideRecords being eliminated. All the query criteria is passed efficiently in a single query to the database. Both application and database are worked only as much as needed and with proper indexes her visit to the database is as quick as possible. A happy path all around.</p>
+
+<p>So I hope this article helped clarify the Nested GlideRecord issue. If it did, let me know! I&rsquo;m always trying new ways to communicate complicated issues and it helps to know what works.</p>
+
+      </div>
+
+      <a class="u-url" href="/blog/a-laymans-guide-to-nested-gliderecords" hidden></a>
+    </article><div class="subscribe-form">
+  
+  <div id="mc_embed_signup">
+    <form action="https://codecreative.us14.list-manage.com/subscribe/post?u=98c1070493fa133df8ea08394&amp;id=f759c17295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <h2>Subscribe</h2>
+        <div class="subtext">Sign up with your email address to receive news and updates.</div>
+        <div>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
+          
+          <div class="sr-only" aria-hidden="true">
+            <input type="text" name="b_98c1070493fa133df8ea08394_f759c17295" tabindex="-1" value="">
+          </div>
+
+          <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+</div>
+
+      </main><footer>
+  <div class="footer-content-wrap">
+    <p class="text-align-center">
+      <a href="/servicenow">Blog</a>
+      &nbsp;|&nbsp;
+      <a href="/about">About</a>
+      &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
+    </p>
+    <div class="text-align-center">
+      
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/main.js"></script>
+</body>
+</html>

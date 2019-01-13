@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://example.org/assets/main.min.d206194abbd1ce5a0ca819b68f103dc21cb08c4864ac772c71d5e60a0e10d86e.css">
+<title>Nested GlideRecords Are Killing Your App Performance | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="Nested GlideRecord is a silent performance killer among scripting patterns. Learn how these scripts can easily slow your page load times and find out how to identify them.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="http://example.org/blog/nested-gliderecords-are-killing-your-app-performance/"><meta property="og:site_name" content="CodeCreative | A ServiceNow Blog">
+<meta property="og:title" content="Nested GlideRecords Are Killing Your App Performance">
+<meta property="og:url" content="http://example.org/blog/nested-gliderecords-are-killing-your-app-performance/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:description" content="Nested GlideRecord is a silent performance killer among scripting patterns. Learn how these scripts can easily slow your page load times and find out how to identify them.">
+
+<meta itemprop="name" content="Nested GlideRecords Are Killing Your App Performance">
+<meta itemprop="url" content="http://example.org/blog/nested-gliderecords-are-killing-your-app-performance/">
+<meta itemprop="description" content="Nested GlideRecord is a silent performance killer among scripting patterns. Learn how these scripts can easily slow your page load times and find out how to identify them.">
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://example.org/"
+    },
+    "name" : "Nested GlideRecords Are Killing Your App Performance",
+    "headline" : "Nested GlideRecords Are Killing Your App Performance",
+    "description" : "Nested GlideRecord is a silent performance killer among scripting patterns. Learn how these scripts can easily slow your page load times and find out how to identify them.","inLanguage" : "en-US",
+      "author" : "Travis Toulson",
+      "creator" : "Travis Toulson","publisher": "Travis Toulson",
+    "copyrightHolder" : "Travis Toulson",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-01-18 17:00:00 &#43;0000 UTC",
+    "dateModified" : "2017-01-18 17:00:00 &#43;0000 UTC",
+    "url" : "http://example.org/blog/nested-gliderecords-are-killing-your-app-performance/",
+    "wordCount" : "994",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+
+  </head>
+  <body><header role="banner">
+  <h1 class="logo">
+      <a href="/">
+         <img src="/assets/codecreativelogo.png" alt="Nested GlideRecords Are Killing Your App Performance" />
+         <span class="sr-only">CodeCreative Logo, click to navigate home</span>
+      </a>
+    </h1>
+
+  <div class="menuToggle">
+    <button class="hamburger" type="button" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+
+  <nav class="fullNav">
+    <ul>
+      
+      
+        <li title="Home">
+          <a class="" href="/">Home</a>
+        </li>
+      
+        <li title="Blog">
+          <a class="" href="/blog/">Blog</a>
+        </li>
+      
+        <li title="About">
+          <a class="" href="/about/">About</a>
+        </li>
+      
+        <li title="Contact">
+          <a class="" href="/contact/">Contact</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<main>
+  <header class="banner">
+    <h1>Nested GlideRecords Are Killing Your App Performance</h1>
+  </header>
+
+  <div class="content text-content">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name sr-only" itemprop="name headline">Nested GlideRecords Are Killing Your App Performance</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2017-01-18T17:00:00Z" itemprop="datePublished">
+            January 18, 2017
+            </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </p>
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        
+
+<p>In a troubleshooting conversation with a couple of my teammates, I realized that I take GlideRecord (and its partner GlideAggregate) for granted. When you make that simple gr.query() call, what happens? What SQL does it run? What does the real underlying table structure look like? Are there indexes? Are additional queries run when you dot walk? Does any of this hit a cache? How does the cache work? Where are the optimizations under the hood?</p>
+
+<p>But when performance issues start to pile up&hellip; well, what you don&rsquo;t know could be killing your instance.</p>
+
+<aside class="ccPullQuote right w-50">
+  <p>But when performance issues start to pile up... well, what you don't know could be killing your instance.</p>
+</aside>
+
+<p>The truth is, most of us have no idea what happens and most of the time that is really awesome! If the queries run fast and returns accurate data we usually don&rsquo;t care how ServiceNow made it happen.</p>
+
+<p>But when performance issues start to pile up on that scripted REST endpoint and all you&rsquo;re doing is generating JSON from GlideRecords&hellip; well, what you don&rsquo;t know could be killing your instance. The <strong>Nested GlideRecord</strong> silently drags down your app&rsquo;s response times, killing usability and the first step to fix it is to learn how to identify it.</p>
+
+<hr />
+
+<h2 id="the-basic-pattern">The Basic Pattern</h2>
+
+<p>A Nested GlideRecord is when you run a GlideRecord query within the while loop of another GlideRecord query, like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">gr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;any_table&#39;</span><span class="p">);</span>
+<span class="nx">gr1</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">gr1</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">gr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;any_table&#39;</span><span class="p">);</span>
+  <span class="nx">gr2</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">gr2</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+      <span class="c1">// Do something here
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Now, take a look at that script. How many times does that script query the database? The correct answer: I have no idea and neither do you. We don&rsquo;t know how GlideRecord works exactly. What we do know is that in the worst case it will run one query for gr1.query() and an additional query for each record in gr1 (gr2.query() inside the while loop).</p>
+
+<aside class="ccPullQuote right w-50">
+  <p>The defining feature... is using many smaller queries when one larger query could retrieve the same data.</p>
+</aside>
+
+<p>The defining feature of this performance killer is using many smaller queries when one larger query could retrieve the same data.</p>
+
+<h2 id="a-crude-scenario">A Crude Scenario</h2>
+
+<p>So lets take a look at a somewhat real world script to get an idea of why this is such a problem. Lets try to find and output a list of duplicate user records. We&rsquo;ll keep it simple and assume the first record found is the original. To do this, we need to:</p>
+
+<ol>
+<li>Get a list of usernames with a count greater than 0</li>
+<li>Find all user records with those usernames</li>
+<li>Update all but the first with a duplicate flag</li>
+</ol>
+
+<p>For this test, I will compare 2 approaches: Nested GlideRecord and an Array Flattened GlideRecord.</p>
+
+<p>Here is a crude Nested GlideRecord approach:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="s1">&#39;sys_user&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">addQuery</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;!=&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">((</span><span class="nx">count</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;sys_user&#39;</span><span class="p">);</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">addQuery</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nx">count</span><span class="p">.</span><span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span> <span class="c1">// skip the first
+</span><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">gs</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">sys_id</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>And the Array Flattened GlideRecord:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="s1">&#39;sys_user&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">addQuery</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;!=&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">((</span><span class="nx">count</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">users</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;sys_user&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">prevUser</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">addQuery</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">));</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">orderBy</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">prevUser</span> <span class="o">==</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">gs</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// Else, skip the original user
+</span><span class="c1"></span>  <span class="nx">prevUser</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Running these two scripts in the background, I was able to achieve some poor man&rsquo;s stats after a few manual runs with 1144 user records and 572 duplicates:</p>
+
+<ul>
+<li>Nested GlideRecord: ~0.795 seconds to execute</li>
+<li>Array Flattened GlideRecord: ~0.145 seconds to execute</li>
+</ul>
+
+<p>Now this is a pretty extreme example that will more likely be executed as background script or scheduled job rather than a user facing transaction. But that performance difference between the nested and flattened scripts starts to add up when multiplied by the number of users hitting your site and the depth and frequency of nested GlideRecords in your scripts. Pretty soon, you might find your database running a query every 60 seconds (yep, that actually happened on a different client).</p>
+
+<h2 id="dot-walking-has-the-same-results">Dot Walking Has The Same Results</h2>
+
+<p>The scary part about this pattern is that it easily hides itself. Dot walking, for example, works like magic to retrieve related data. Under the hood, it runs a query at least once to retrieve the reference (I assume the reference is cached for subsequent calls in a given script if not the entire transaction but I&rsquo;m not sure).</p>
+
+<p>So the following script could inadvertently cause the same issue as the previous example (and in the originally mentioned REST script, I believe this was a contributing factor):</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">gr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;sys_user&#39;</span><span class="p">);</span>
+<span class="nx">gr</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">gr</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">department</span> <span class="o">=</span> <span class="nx">gr</span><span class="p">.</span><span class="nx">department</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// Reference Field!
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div>
+<p>That Department is a reference field, so ServiceNow has to run a separate GlideRecord query behind the scenes to retrieve the data for that department. All magic comes at a price, deary!</p>
+
+<h2 id="or-how-about-acl-s">Or How About ACL&rsquo;s</h2>
+
+<p>Running a GlideRecord query in an ACL yields the same effect. In this case, its subtle but still there. If you run a query on the incident table for example, an ACL will be applied to (and the script run for) each record in the resulting set. For each and every record in your resulting set, a narrowly defined GlideRecord query will execute to find out if the user can see the record! (This by the way was one of the primary causes behind the 60 second queries).</p>
+
+<hr />
+
+<h2 id="bottom-line">Bottom Line</h2>
+
+<p>Here&rsquo;s the too long didn&rsquo;t read: Avoid using 20 narrowly defined GlideRecords when with a little work you can combine it into a single broader GlideRecord. Watch out for the same pattern in ACLs, dot walking, and other ServiceNow scripts. This pattern likes to hide itself. Another time, we&rsquo;ll take a look at some strategies to fix this.</p>
+
+      </div>
+
+      <a class="u-url" href="/blog/nested-gliderecords-are-killing-your-app-performance" hidden></a>
+    </article><div class="subscribe-form">
+  
+  <div id="mc_embed_signup">
+    <form action="https://codecreative.us14.list-manage.com/subscribe/post?u=98c1070493fa133df8ea08394&amp;id=f759c17295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <h2>Subscribe</h2>
+        <div class="subtext">Sign up with your email address to receive news and updates.</div>
+        <div>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
+          
+          <div class="sr-only" aria-hidden="true">
+            <input type="text" name="b_98c1070493fa133df8ea08394_f759c17295" tabindex="-1" value="">
+          </div>
+
+          <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+</div>
+
+      </main><footer>
+  <div class="footer-content-wrap">
+    <p class="text-align-center">
+      <a href="/servicenow">Blog</a>
+      &nbsp;|&nbsp;
+      <a href="/about">About</a>
+      &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
+    </p>
+    <div class="text-align-center">
+      
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/main.js"></script>
+</body>
+</html>

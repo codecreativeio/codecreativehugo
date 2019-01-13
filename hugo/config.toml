@@ -1,0 +1,12 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "CodeCreative | A ServiceNow Blog"
+theme = "codecreative"
+pygmentsCodefences = true
+pygmentsUseClasses=true
+
+[params]
+  author = "Travis Toulson"
+
+[taxonomies]
+  year = "years"

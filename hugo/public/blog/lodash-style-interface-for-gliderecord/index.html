@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://example.org/assets/main.min.d206194abbd1ce5a0ca819b68f103dc21cb08c4864ac772c71d5e60a0e10d86e.css">
+<title>Lodash style interface for GlideRecord | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="Introducing Glider.js, a lodash style interface for GlideRecord (and yes it works with Arrays as well). Currently in early development. Checkout the Git Repo.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="http://example.org/blog/lodash-style-interface-for-gliderecord/"><meta property="og:site_name" content="CodeCreative | A ServiceNow Blog">
+<meta property="og:title" content="Lodash style interface for GlideRecord">
+<meta property="og:url" content="http://example.org/blog/lodash-style-interface-for-gliderecord/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:description" content="Introducing Glider.js, a lodash style interface for GlideRecord (and yes it works with Arrays as well). Currently in early development. Checkout the Git Repo.">
+
+<meta property="og:image" content="http://example.org/blog/lodash-style-interface-for-gliderecord/images/social.png">
+
+<meta itemprop="name" content="Lodash style interface for GlideRecord">
+<meta itemprop="url" content="http://example.org/blog/lodash-style-interface-for-gliderecord/">
+<meta itemprop="description" content="Introducing Glider.js, a lodash style interface for GlideRecord (and yes it works with Arrays as well). Currently in early development. Checkout the Git Repo.">
+
+<meta itemprop="thumbnailUrl" content="http://example.org/blog/lodash-style-interface-for-gliderecord/images/social.png">
+<link rel="image_src" href="http://example.org/blog/lodash-style-interface-for-gliderecord/images/social.png">
+<meta itemprop="image" content="http://example.org/blog/lodash-style-interface-for-gliderecord/images/social.png">
+
+
+<meta name="twitter:title" content="Lodash style interface for GlideRecord">
+<meta name="twitter:image" content="http://example.org/blog/lodash-style-interface-for-gliderecord/images/social.png">
+<meta name="twitter:url" content="http://example.org/blog/lodash-style-interface-for-gliderecord/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Introducing Glider.js, a lodash style interface for GlideRecord (and yes it works with Arrays as well). Currently in early development. Checkout the Git Repo.">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://example.org/"
+    },
+    "name" : "Lodash style interface for GlideRecord",
+    "headline" : "Lodash style interface for GlideRecord",
+    "description" : "Introducing Glider.js, a lodash style interface for GlideRecord (and yes it works with Arrays as well). Currently in early development. Checkout the Git Repo.","image": "http://example.org/blog/lodash-style-interface-for-gliderecord/images/social.png","inLanguage" : "en-US",
+      "author" : "Travis Toulson",
+      "creator" : "Travis Toulson","publisher": "Travis Toulson",
+    "copyrightHolder" : "Travis Toulson",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-08-16 19:56:57 &#43;0000 UTC",
+    "dateModified" : "2017-08-16 19:56:57 &#43;0000 UTC",
+    "url" : "http://example.org/blog/lodash-style-interface-for-gliderecord/",
+    "wordCount" : "512",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+
+  </head>
+  <body><header role="banner">
+  <h1 class="logo">
+      <a href="/">
+         <img src="/assets/codecreativelogo.png" alt="Lodash style interface for GlideRecord" />
+         <span class="sr-only">CodeCreative Logo, click to navigate home</span>
+      </a>
+    </h1>
+
+  <div class="menuToggle">
+    <button class="hamburger" type="button" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+
+  <nav class="fullNav">
+    <ul>
+      
+      
+        <li title="Home">
+          <a class="" href="/">Home</a>
+        </li>
+      
+        <li title="Blog">
+          <a class="" href="/blog/">Blog</a>
+        </li>
+      
+        <li title="About">
+          <a class="" href="/about/">About</a>
+        </li>
+      
+        <li title="Contact">
+          <a class="" href="/contact/">Contact</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<main>
+  <header class="banner">
+    <h1>Lodash style interface for GlideRecord</h1>
+  </header>
+
+  <div class="content text-content">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name sr-only" itemprop="name headline">Lodash style interface for GlideRecord</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2017-08-16T19:56:57Z" itemprop="datePublished">
+            August 16, 2017
+            </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </p>
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        
+
+<p>Wow, I really left things hanging after the Interface Design Patterns post. The good news is that <a href="http://mapanything.com/resources/blog/tap-new-productivity-levels-inside-view-introducing-indoor-mapping-servicenow-users">MapAnything&rsquo;s next release</a> will be amazing! And of course, I will circle back to interface design patterns. But for today, I want to take a look at the start of a library that has been a long time coming.</p>
+
+<p>I love the <a href="https://lodash.com">lodash</a> library. It&rsquo;s great for working with arrays in a simplified manner. This unfortunately does nothing for me server side with GlideRecord. For a couple years now I have been secretly obsessed with improving GlideRecord if for no other reason than to clear out the boilerplate. I&rsquo;ve tried a few different approaches to varying degrees of success but I finally have an approach inspired by <a href="http://danieltao.com/lazy.js/">lazy.js</a> (which itself is inspired by lodash and underscore) that is both flexible and powerful. Today I am releasing the early prototype on <a href="https://github.com/tltoulson/Glider.js">GitHub</a> so please, provide feedback!</p>
+
+<h2 id="introducing-glider-js">Introducing Glider.js</h2>
+
+<p><a href="https://github.com/tltoulson/Glider.js">Glider.js</a> provides an interface similar to lodash and underscore but it is specifically designed to work with GlideRecords first. It&rsquo;s still in the early phase of development, so expect issues and missing features for now. At this point I have some core functionality already in place, so lets take a look:</p>
+
+<h3 id="iterate-values">Iterate Values</h3>
+
+<p>The simplest use case is iterating values as in a vanilla GlideRecord while loop.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Glider</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">,</span> <span class="s1">&#39;active=true&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">gr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">gs</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">gr</span><span class="p">.</span><span class="nx">short_description</span><span class="p">);</span>
+    <span class="p">});</span>
+</code></pre></div>
+<h3 id="map-over-values">Map Over Values</h3>
+
+<p>Map allows you to transform the GlideRecord into a sequence of objects or other data types.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Glider</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">,</span> <span class="s1">&#39;active=true&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">gr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="s1">&#39;short_description&#39;</span><span class="o">:</span> <span class="nx">gr</span><span class="p">.</span><span class="nx">short_description</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span>
+    <span class="p">};</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="filter-values">Filter Values</h3>
+
+<p>Filter allows you to easily filter out records, such as with canRead. This is a real life saver when performing advanced processing on GlideRecords. Usually I would solve this problem with a <strong>continue</strong> statement, <strong>if</strong> block, or using a <strong>try / catch / throw</strong>. From experience I can tell you, this is a way better approach.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Glider</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">,</span> <span class="s1">&#39;active=true&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">gr</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">gr</span><span class="p">.</span><span class="nx">canRead</span><span class="p">();</span> <span class="p">})</span>
+  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">gr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="s1">&#39;short_description&#39;</span><span class="o">:</span> <span class="nx">gr</span><span class="p">.</span><span class="nx">short_description</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span>
+    <span class="p">};</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="chunk-a-gliderecord-for-batch-operations">Chunk a GlideRecord for Batch Operations</h3>
+
+<p>This allows you to operate on large data sets, one chunk at a time while still only using one database query. Very useful if performing batch operations on a web service where message size is sensitive.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Glider</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">,</span> <span class="s1">&#39;active=true&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">chunk</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">chunkItems</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// before process chunk
+</span><span class="c1"></span>        <span class="nx">chunkItems</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Process chunk items
+</span><span class="c1"></span>        <span class="p">});</span>
+        <span class="c1">// after process chunk
+</span><span class="c1"></span>    <span class="p">});</span>
+</code></pre></div>
+<h3 id="reduce-gliderecords-to-a-single-value">Reduce GlideRecords to a Single Value</h3>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Totals the cost of all CI&#39;s
+</span><span class="c1"></span><span class="nx">Glider</span><span class="p">(</span><span class="s1">&#39;cmdb_ci&#39;</span><span class="p">,</span> <span class="s1">&#39;active=true&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">accum</span><span class="p">,</span> <span class="nx">gr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">accum</span> <span class="o">+</span> <span class="p">(</span><span class="nx">gr</span><span class="p">.</span><span class="nx">cost</span> <span class="o">*</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">0</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="and-yes-it-works-with-arrays-too">And yes&hellip; it works with arrays too</h3>
+
+<p>Within scoped applications, many of the newer ECMAScript goodies like Array.prototype.forEach choke because the function is in a different scope than the callback. Glider uses its own internal iterator pattern, so everything exists within your scoped application.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Glider</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">gs</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+    <span class="p">});</span>
+</code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>So that is the quick and dirty on this library. The best part is that it is built on ServiceNow, for ServiceNow. No crazy porting hacks to get it to work. So let me know what you think!</p>
+
+      </div>
+
+      <a class="u-url" href="/blog/lodash-style-interface-for-gliderecord" hidden></a>
+    </article><div class="subscribe-form">
+  
+  <div id="mc_embed_signup">
+    <form action="https://codecreative.us14.list-manage.com/subscribe/post?u=98c1070493fa133df8ea08394&amp;id=f759c17295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <h2>Subscribe</h2>
+        <div class="subtext">Sign up with your email address to receive news and updates.</div>
+        <div>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
+          
+          <div class="sr-only" aria-hidden="true">
+            <input type="text" name="b_98c1070493fa133df8ea08394_f759c17295" tabindex="-1" value="">
+          </div>
+
+          <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+</div>
+
+      </main><footer>
+  <div class="footer-content-wrap">
+    <p class="text-align-center">
+      <a href="/servicenow">Blog</a>
+      &nbsp;|&nbsp;
+      <a href="/about">About</a>
+      &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
+    </p>
+    <div class="text-align-center">
+      
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/main.js"></script>
+</body>
+</html>

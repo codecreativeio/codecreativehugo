@@ -1,0 +1,30 @@
+{{ if .Type}}
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "{{ .Site.BaseURL }}"
+    },
+    "name" : "{{ .Title }}",
+    "headline" : "{{ .Title }}",
+    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}",
+    {{- if .Params.socialImg -}}"image": "{{ .Permalink }}{{ .Params.socialImg }}",{{- end -}}
+    "inLanguage" : "en-US",
+    {{- if .Params.author -}}
+      {{ $author := index .Site.Data.authors .Params.author }}
+      "author" : "{{ $author.name }}",
+      "creator" : "{{ $author.name }}",
+    {{- end -}}
+    "publisher": "{{ .Site.Params.author }}",
+    "copyrightHolder" : "{{ .Site.Params.author }}",
+    "copyrightYear" : "{{ .Date.Format "2006" }}",
+    "datePublished": "{{ .Date }}",
+    "dateModified" : "{{ .Date }}",
+    "url" : "{{ .Permalink }}",
+    "wordCount" : "{{ .WordCount }}",
+    "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog" ]
+}
+</script>
+{{ end }}

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/blog/how-to-land-your-first-servicenow-role/</loc>
+    <lastmod>2018-09-11T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/building-apps-on-servicenow-the-app-publishers-checklist/</loc>
+    <lastmod>2018-05-21T17:13:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/making-service-portal-widgets-work-together/</loc>
+    <lastmod>2018-05-21T17:12:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/fixing-scoped-apps-a-different-take/</loc>
+    <lastmod>2018-04-30T00:46:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/interface-design-patterns-function-pattern/</loc>
+    <lastmod>2017-09-15T15:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/interface-design-patterns-class-pattern/</loc>
+    <lastmod>2017-09-07T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/lodash-style-interface-for-gliderecord/</loc>
+    <lastmod>2017-08-16T19:56:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/interface-design-patterns-for-script-includes/</loc>
+    <lastmod>2017-06-01T02:51:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/making-the-highchart-widget-reusable/</loc>
+    <lastmod>2017-05-24T15:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/generate-highchart-data-in-a-widget-server-script/</loc>
+    <lastmod>2017-05-17T14:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/configuring-highcharts-in-service-portal/</loc>
+    <lastmod>2017-05-10T21:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/intro-to-highcharts-in-service-portal/</loc>
+    <lastmod>2017-05-03T11:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/eliminate-unnecessary-queries-with-this-simple-check/</loc>
+    <lastmod>2017-04-26T23:51:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/lets-grab-a-drink-at-knowledge-17/</loc>
+    <lastmod>2017-04-14T16:35:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-laymans-guide-to-nested-gliderecords/</loc>
+    <lastmod>2017-04-13T15:30:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/avoid-the-style-tag-in-service-portal-widgets/</loc>
+    <lastmod>2017-04-12T14:41:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/intro-to-configurable-styles-for-service-portal-widgets/</loc>
+    <lastmod>2017-04-07T13:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/6-best-practices-for-service-portal-css/</loc>
+    <lastmod>2017-03-22T17:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/gliderecord-full-text-search-explained/</loc>
+    <lastmod>2017-03-14T21:36:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-to-do-full-text-search-with-gliderecord/</loc>
+    <lastmod>2017-03-08T20:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/glideajax-troubleshooting-guide/</loc>
+    <lastmod>2017-03-02T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/3-ways-css-widget-scopes-affect-service-portal-css/</loc>
+    <lastmod>2017-02-22T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-are-css-widget-scopes-in-service-portal/</loc>
+    <lastmod>2017-02-15T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/istanbul-cms-iframes-are-missing-theme-css/</loc>
+    <lastmod>2017-02-09T01:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/flexbox-layouts-in-service-portal/</loc>
+    <lastmod>2017-02-08T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/3-strategies-to-fix-nested-gliderecords/</loc>
+    <lastmod>2017-02-01T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/4-things-to-do-before-building-a-service-portal/</loc>
+    <lastmod>2017-01-25T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/nested-gliderecords-are-killing-your-app-performance/</loc>
+    <lastmod>2017-01-18T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/share-knowledge-dont-worry-about-the-competition/</loc>
+    <lastmod>2016-06-23T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/whats-in-a-service-portal-on-servicenow/</loc>
+    <lastmod>2016-06-08T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/4-reasons-youre-not-ready-for-service-portal/</loc>
+    <lastmod>2016-05-25T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/service-portal-first-impressions/</loc>
+    <lastmod>2016-05-13T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/servicenow-engagement-the-path-forward/</loc>
+    <lastmod>2016-05-06T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ecmascript-5-in-servicenow-helsinki/</loc>
+    <lastmod>2016-05-05T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/where-to-start-with-knowledge-16/</loc>
+    <lastmod>2016-05-04T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-to-fix-cms-iframe-resizing/</loc>
+    <lastmod>2016-05-03T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/perfectionism-is-procrastination/</loc>
+    <lastmod>2016-05-02T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/adding-doctype-to-a-ui-page/</loc>
+    <lastmod>2015-06-15T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-to-make-custom-pivot-tables/</loc>
+    <lastmod>2015-06-01T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-to-get-more-out-of-servicenow-pivot-tables/</loc>
+    <lastmod>2015-05-18T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/demystifying-glideajax/</loc>
+    <lastmod>2015-05-09T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-to-build-custom-charts-and-reports/</loc>
+    <lastmod>2015-05-04T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/years/2015/</loc>
+    <lastmod>2015-06-15T16:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/years/2016/</loc>
+    <lastmod>2016-06-23T16:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/years/2017/</loc>
+    <lastmod>2017-09-15T15:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/years/2018/</loc>
+    <lastmod>2018-09-11T13:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/</loc>
+    <lastmod>2018-09-11T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2018-09-11T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/years/</loc>
+    <lastmod>2015-06-15T16:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

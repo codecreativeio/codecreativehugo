@@ -1,0 +1,62 @@
+.content, .content.text-content, .index-content {
+  .subscribe-form {
+    width: 100%;
+    padding: 4em 17px;
+    background: $light-bg;
+    font-size: 15px;
+    text-align: center;
+    color: #27273E;
+    max-width: 1000px;
+    margin: 4rem auto;
+    margin-bottom: 0;
+  }
+
+  .subscribe-form h2 {
+    font-size: 30px;
+    margin: 0 0 17px 0;
+    padding: 0;
+    line-height: 1.2em;
+  }
+
+  .subscribe-form .subtext {
+    margin: 17px 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.6em;
+  }
+
+  .subscribe-form .email {
+    width: 250px;
+    padding: 1em;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.12);
+    font-family: inherit;
+    font-size: 15px;
+    line-height: normal;
+    outline: none;
+    margin-bottom:1em;
+  }
+
+  .subscribe-form .button {
+    border: 2px solid #616161;
+    background: transparent;
+    color: #272727;
+    -webkit-transition: .4s background-color ease-in-out,.4s color ease-in-out;
+    -moz-transition: .4s background-color ease-in-out,.4s color ease-in-out;
+    -o-transition: .4s background-color ease-in-out,.4s color ease-in-out;
+    transition: .4s background-color ease-in-out,.4s color ease-in-out;
+    padding: 1em 2.5em;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: normal;
+    font-weight: normal;
+    margin-left: .5em;
+  }
+
+  .subscribe-form .button:hover {
+    background-color: #616161;
+    color: #fff;
+  }
+}

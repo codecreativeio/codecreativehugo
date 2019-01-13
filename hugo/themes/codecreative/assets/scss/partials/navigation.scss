@@ -1,0 +1,75 @@
+.fullNav {
+  animation: .1s fade-in .5s linear forwards;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 5px solid #fff;
+  background-color: $bg-color-nav;
+  z-index: 25;
+  transition: .5s transform cubic-bezier(0.895, .03, .685, .22);
+  transform: translate3d(100%, 0, 0);
+  overflow-y: scroll;
+}
+
+.fullNav.open {
+  display: block;
+  transform: translate3d(0, 0, 0);
+  transition-timing-function: cubic-bezier(0.165, .84, .44, 1);
+}
+
+.fullNav ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  padding-top: 4em;
+}
+
+.fullNav ul a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  line-height: 3;
+}
+
+.fullNav ul a:hover {
+  color: #fff;
+  border-bottom: 0;
+}
+
+.fullNav ul a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.fullNav ul a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.fullNav ul a.active {
+  color: $primary-color;
+}
+
+.fullNav ul a.active:before {
+  background-color: $primary-color;
+}
+
+@media only screen and (min-width : $small-breakpoint) {
+  .fullNav ul {
+    padding-top: 4em;
+  }
+}

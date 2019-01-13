@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://example.org/assets/main.min.d206194abbd1ce5a0ca819b68f103dc21cb08c4864ac772c71d5e60a0e10d86e.css">
+<title>Making the HighChart Widget Reusable | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="Up until now, the HighChart Widget that we&#39;ve been working on has remained... well... mostly unusable. In this article, we are going to make some final changes that actually make this Widget useful in an actual Service Portal.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="http://example.org/blog/making-the-highchart-widget-reusable/"><meta property="og:site_name" content="CodeCreative | A ServiceNow Blog">
+<meta property="og:title" content="Making the HighChart Widget Reusable">
+<meta property="og:url" content="http://example.org/blog/making-the-highchart-widget-reusable/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:description" content="Up until now, the HighChart Widget that we&#39;ve been working on has remained... well... mostly unusable. In this article, we are going to make some final changes that actually make this Widget useful in an actual Service Portal.">
+
+<meta property="og:image" content="http://example.org/blog/making-the-highchart-widget-reusable/images/social.png">
+
+<meta itemprop="name" content="Making the HighChart Widget Reusable">
+<meta itemprop="url" content="http://example.org/blog/making-the-highchart-widget-reusable/">
+<meta itemprop="description" content="Up until now, the HighChart Widget that we&#39;ve been working on has remained... well... mostly unusable. In this article, we are going to make some final changes that actually make this Widget useful in an actual Service Portal.">
+
+<meta itemprop="thumbnailUrl" content="http://example.org/blog/making-the-highchart-widget-reusable/images/social.png">
+<link rel="image_src" href="http://example.org/blog/making-the-highchart-widget-reusable/images/social.png">
+<meta itemprop="image" content="http://example.org/blog/making-the-highchart-widget-reusable/images/social.png">
+
+
+<meta name="twitter:title" content="Making the HighChart Widget Reusable">
+<meta name="twitter:image" content="http://example.org/blog/making-the-highchart-widget-reusable/images/social.png">
+<meta name="twitter:url" content="http://example.org/blog/making-the-highchart-widget-reusable/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Up until now, the HighChart Widget that we&#39;ve been working on has remained... well... mostly unusable. In this article, we are going to make some final changes that actually make this Widget useful in an actual Service Portal.">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://example.org/"
+    },
+    "name" : "Making the HighChart Widget Reusable",
+    "headline" : "Making the HighChart Widget Reusable",
+    "description" : "Up until now, the HighChart Widget that we&#39;ve been working on has remained... well... mostly unusable. In this article, we are going to make some final changes that actually make this Widget useful in an actual Service Portal.","image": "http://example.org/blog/making-the-highchart-widget-reusable/images/social.png","inLanguage" : "en-US",
+      "author" : "Travis Toulson",
+      "creator" : "Travis Toulson","publisher": "Travis Toulson",
+    "copyrightHolder" : "Travis Toulson",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-05-24 15:38:00 &#43;0000 UTC",
+    "dateModified" : "2017-05-24 15:38:00 &#43;0000 UTC",
+    "url" : "http://example.org/blog/making-the-highchart-widget-reusable/",
+    "wordCount" : "1375",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+
+  </head>
+  <body><header role="banner">
+  <h1 class="logo">
+      <a href="/">
+         <img src="/assets/codecreativelogo.png" alt="Making the HighChart Widget Reusable" />
+         <span class="sr-only">CodeCreative Logo, click to navigate home</span>
+      </a>
+    </h1>
+
+  <div class="menuToggle">
+    <button class="hamburger" type="button" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+
+  <nav class="fullNav">
+    <ul>
+      
+      
+        <li title="Home">
+          <a class="" href="/">Home</a>
+        </li>
+      
+        <li title="Blog">
+          <a class="" href="/blog/">Blog</a>
+        </li>
+      
+        <li title="About">
+          <a class="" href="/about/">About</a>
+        </li>
+      
+        <li title="Contact">
+          <a class="" href="/contact/">Contact</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<main>
+  <header class="banner">
+    <h1>Making the HighChart Widget Reusable</h1>
+  </header>
+
+  <div class="content text-content">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name sr-only" itemprop="name headline">Making the HighChart Widget Reusable</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2017-05-24T15:38:00Z" itemprop="datePublished">
+            May 24, 2017
+            </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </p>
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        
+
+<p><strong>WARNING:</strong> The use of HighCharts in this way may require the purchase of an additional license from Highsoft. Use in production at your own risk.</p>
+
+<p><strong>Read the Whole Series:</strong></p>
+
+<ol>
+<li><a href="/blog/intro-to-highcharts-in-service-portal">Intro to HighCharts in Service Portal</a></li>
+<li><a href="/blog/configuring-highcharts-in-service-portal">Configuring HighCharts in Service Portal</a></li>
+<li><a href="/blog/generate-highchart-data-in-a-widget-server-script">Generate HighChart Data in a Widget Server Script</a></li>
+<li>Making the HighChart Widget Reusable (This Post)</li>
+</ol>
+
+<p><a href="/downloads/HighCharts-Widget.zip">Download the Widget</a></p>
+
+<hr />
+
+<p>Up until now, the <a href="/blog/intro-to-highcharts-in-service-portal">HighChart Widget</a> that we&rsquo;ve been working on has remained&hellip; well&hellip; mostly unusable. It is still hardcoded and built in such a way that adding multiple widget instances to a page is just absurd. In this article, we are going to make some final changes that actually make this Widget useful in an actual Service Portal. To keep the changes simple, we are going to keep the chart to a single series of data. Let&rsquo;s take a look at the changes we need to make:</p>
+
+<hr />
+
+<h2 id="step-1-remove-the-html-id">Step 1: Remove the HTML ID</h2>
+
+<figure>
+  <img src="images/HighChart+Widget+with+Link+Function.png" />
+  <figcaption>
+    HighChart Widget with Link Function
+  </figcaption>
+</figure>
+
+<p>As I&rsquo;ve indicated in a previous article, ID&rsquo;s in the HTML template are generally unnecessary and in certain circumstances can cause trouble. In our case, a static ID ruins the ability to create multiple instances on a page. We could use the ng-attr-id directive from Angular to make the ID dynamic but you will definitely run into some Angular order of execution issues and I think there is a better way if we move our HighCharts client script to the Link function. So as part of this first step, I am going to take a couple actions:</p>
+
+<ol>
+<li>Remove the Div with the ID attribute from the HTML</li>
+<li>Move the <strong>new HighCharts.Chart()</strong> call to the Link function</li>
+</ol>
+
+<p>The first part is easy because we can actually remove the entire HTML Template all together. HighCharts will embed the chart directly into the Service Portal generated widget wrapper with one simple change to the Link function script (Don&rsquo;t forget to click the Link Function check box in the Widget Editor, it is off by default). Speaking of which, here is the new Link function:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">chart1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Highcharts</span><span class="p">.</span><span class="nx">Chart</span><span class="p">({</span>  
+    <span class="nx">chart</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">renderTo</span><span class="o">:</span> <span class="nx">el</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>  
+        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;column&#39;</span>  
+    <span class="p">},</span>  
+    <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+    <span class="p">},</span>  
+    <span class="nx">xAxis</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">categories</span><span class="o">:</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">categories</span><span class="p">,</span>  
+        <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+            <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+        <span class="p">},</span>  
+        <span class="nx">labels</span><span class="o">:</span> <span class="p">{</span>  
+            <span class="nx">rotation</span><span class="o">:</span> <span class="o">-</span><span class="mi">45</span>  
+        <span class="p">}</span>  
+    <span class="p">},</span>  
+    <span class="nx">yAxis</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">min</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  
+        <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+            <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+        <span class="p">}</span>  
+    <span class="p">},</span>  
+    <span class="nx">series</span><span class="o">:</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">series</span>  
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>For the most part, it is very similar to our old Client Script function. Here are the few changes that have been made:</p>
+
+<ol>
+<li>The outter function uses the Angular Link Function signature which you can learn more about from the <a href="https://docs.angularjs.org/guide/directive">Angular docs on Directives</a></li>
+<li>Changed renderTo property to el[0] which refers to the outermost element of the Widget. In other words, we will render the chart to the Widget wrapper</li>
+<li>Changed <strong>c.data</strong> to <strong>scope.data</strong> for both Series and Categories. The Link function passes in the scope to the first parameter of the function which we have called <strong>scope</strong>. This is part of Angular&rsquo;s internal processing.</li>
+</ol>
+
+<p>And with this move, we also need to clear out the Client Script which will now look like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="cm">/* widget controller */</span>
+  <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+
+<h2 id="step-2-clean-up-server-script">Step 2: Clean Up Server Script</h2>
+
+<figure>
+  <img src="images/HighChart+Widget+Clean+Up+Server+Script.png" />
+  <figcaption>
+    Cleanup HighChart Widget Server Script
+  </figcaption>
+</figure>
+
+<p>So next, we need to prepare the Server Script for its grand dynamic makeover. For this step, I want to take two actions in particular:</p>
+
+<ol>
+<li>Remove the Resolved data series to reduce the number of series to 1 (we will be using Widget Options to generate this series, so it will be easier if we only have 1)</li>
+<li>Clean up some variable names like the Open data series so that it is more generic</li>
+</ol>
+
+<p>In the pictured Server Script, you can see that I have removed the block of code for collecting the Resolved Series, removed other references to the Resolved Series, and renamed the following variables:</p>
+
+<ul>
+<li>open: series</li>
+<li>loc: category</li>
+</ul>
+
+<p>Don&rsquo;t worry about making these immediate changes to your own code, we still have more changes to make to the Server Script.</p>
+
+<hr />
+
+<h2 id="step-3-add-support-for-widget-options">Step 3: Add support for Widget Options</h2>
+
+<p>Next, we want the widget to be user / admin configurable, so that naturally means adding Widget Options. As a best practice, I usually recommend normalizing, validating, and providing some error feedback on Widget Options (it is user input after all) but since I am trying to keep things simple, I am only going to do some basic normalizing. The primary variables that I want to convert to Widget Options are:</p>
+
+<ul>
+<li><strong>Chart Title:</strong> Title to display on the chart, useful when you&rsquo;ve got multiple charts on the page</li>
+<li><strong>Series Name:</strong> the name of the data Series</li>
+<li><strong>Chart Type:</strong> the type of HighChart to render (column, bar, line, area, etc)</li>
+<li><strong>Table:</strong> the table to query from</li>
+<li><strong>Query:</strong> the query to apply to the table</li>
+<li><strong>Aggregate:</strong> Count, Sum, Average</li>
+<li><strong>Aggregate Field:</strong> When summing or averaging, which field contains numeric values to sum or average</li>
+<li><strong>Group By:</strong> The field which represents the categories across the x-axis</li>
+</ul>
+
+<p>It&rsquo;s important to note that two of these options, chart title and chart type, need to be passed to the Link Function. So we do need to make those quick changes by adding <strong>scope.options.chartType</strong> and <strong>scope.options.chartTitle</strong> to the appropriate properties in that script. At this point, we are finished with all code changes, so here are the final scripts:</p>
+
+<p><strong>HTML</strong></p>
+
+<p>Ha, just kidding, there is no HTML</p>
+
+<p><strong>Client Script</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="cm">/* widget controller */</span>
+  <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Link Function</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">chart1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Highcharts</span><span class="p">.</span><span class="nx">Chart</span><span class="p">({</span>  
+    <span class="nx">chart</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">renderTo</span><span class="o">:</span> <span class="nx">el</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>  
+        <span class="nx">type</span><span class="o">:</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">chart_type</span>  
+    <span class="p">},</span>  
+    <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">text</span><span class="o">:</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">chart_title</span>  
+    <span class="p">},</span>  
+    <span class="nx">xAxis</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">categories</span><span class="o">:</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">categories</span><span class="p">,</span>  
+        <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+            <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+        <span class="p">},</span>  
+        <span class="nx">labels</span><span class="o">:</span> <span class="p">{</span>  
+            <span class="nx">rotation</span><span class="o">:</span> <span class="o">-</span><span class="mi">45</span>  
+        <span class="p">}</span>  
+    <span class="p">},</span>  
+    <span class="nx">yAxis</span><span class="o">:</span> <span class="p">{</span>  
+        <span class="nx">min</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  
+        <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+            <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+        <span class="p">}</span>  
+    <span class="p">},</span>  
+    <span class="nx">series</span><span class="o">:</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">series</span>  
+   <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Server Script</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="cm">/* populate the &#39;data&#39; object */</span>
+  <span class="cm">/* e.g., data.table = $sp.getValue(&#39;table&#39;); */</span>
+  <span class="kd">var</span> <span class="nx">series</span> <span class="o">=</span> <span class="p">{},</span>
+          <span class="nx">category</span><span class="p">,</span>
+          <span class="nx">count</span><span class="p">,</span>
+          <span class="nx">ga</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">chart_title</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">chart_title</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">chart_title</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">series_name</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">series_name</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">series_name</span> <span class="o">=</span> <span class="s1">&#39;Open&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">chart_type</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">chart_type</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">chart_type</span> <span class="o">=</span> <span class="s1">&#39;column&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">table</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">table</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="s1">&#39;incident&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">query</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">query</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">query</span> <span class="o">=</span> <span class="s1">&#39;stateIN1,2,3,4,5&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span> <span class="o">=</span> <span class="s1">&#39;COUNT&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate_field</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate_field</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">aggregate_field</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">group_by</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">options</span><span class="p">.</span><span class="nx">group_by</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="p">.</span><span class="nx">group_by</span> <span class="o">=</span> <span class="s1">&#39;location&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Collect Open data
+</span><span class="c1"></span>  <span class="nx">ga</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">table</span><span class="p">);</span>
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">addEncodedQuery</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">query</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span> <span class="o">==</span> <span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">ga</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">ga</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">,</span> <span class="nx">options</span><span class="p">.</span><span class="nx">aggregate_field</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">group_by</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">orderBy</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">group_by</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">ga</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">category</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">getElement</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">group_by</span><span class="p">).</span><span class="nx">getDisplayValue</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span> <span class="o">||</span> <span class="s1">&#39;(empty)&#39;</span><span class="p">;</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span> <span class="o">==</span> <span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">count</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">count</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">,</span> <span class="nx">options</span><span class="p">.</span><span class="nx">aggregate_field</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="nx">series</span><span class="p">[</span><span class="nx">category</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Prepare output objects
+</span><span class="c1"></span>  <span class="nx">data</span><span class="p">.</span><span class="nx">categories</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">series</span><span class="p">);</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">series</span> <span class="o">=</span> <span class="p">[{</span>
+      <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="nx">options</span><span class="p">.</span><span class="nx">series_name</span><span class="p">,</span>
+      <span class="s1">&#39;legendIndex&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s1">&#39;data&#39;</span><span class="o">:</span> <span class="p">[]</span>
+  <span class="p">}]</span>
+
+  <span class="c1">// Transform collected objects into data arrays
+</span><span class="c1"></span>  <span class="nx">data</span><span class="p">.</span><span class="nx">categories</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">series</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">series</span><span class="p">[</span><span class="nx">it</span><span class="p">]);</span>
+  <span class="p">});</span>
+<span class="p">})();</span>
+</code></pre></div>
+<hr />
+
+<h2 id="step-4-add-widget-options">Step 4: Add Widget Options</h2>
+
+<figure>
+  <img src="images/Add+HighCharts+Widget+Options.gif" />
+  <figcaption>
+    Add HighCharts Widget Options
+  </figcaption>
+</figure>
+
+<p>Now that we have added support in the code for Widget Options, we can configure the options themselves. Here are the options we need to configure:</p>
+
+<ul>
+<li><strong>Chart Title</strong> (String)</li>
+<li><strong>Series Name</strong> (String)</li>
+<li><strong>Chart Type</strong> (Choice) Line, Area, Bar, Column</li>
+<li><strong>Table</strong> (String)</li>
+<li><strong>Query</strong> (String)</li>
+<li><strong>Aggregate</strong> (Choice) Count, Avg, Sum</li>
+<li><strong>Aggregate Field</strong> (String)</li>
+<li><strong>Group By</strong> (String)</li>
+</ul>
+
+<hr />
+
+<h2 id="step-5-configure-widget-options">Step 5: Configure Widget Options</h2>
+
+<p>With the Widget Options in place, we can add a few instances of the HighChart widget to a page and begin customizing the charts. In the following example, I customize 3 different charts with 3 different sets of options.</p>
+
+<figure>
+  <img src="images/3+HighChart+Widgets+in+Service+Portal.png" />
+  <figcaption>
+    3 HighCharts Widgets in Service Portal
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="images/HighChart+Widget+Instance+3.png" />
+  <figcaption>
+    HighChart Widget Instance 3
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="images/HighChart+Widget+Instance+2.png" />
+  <figcaption>
+    HighChart Widget Instance 2
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="images/HighChart+Widget+Instance+1.png" />
+  <figcaption>
+    HighChart Widget Instance 1
+  </figcaption>
+</figure>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Over the last few articles of this series, we have built a custom reporting widget from scratch. Obviously there is much work that can be done to improve this widget not to mention the possible licensing issues. Needless to say, I&rsquo;m not going to be rushing this thing to the ServiceNow store. But we&rsquo;ve demonstrated a number of Service Portal&rsquo;s capabilities and built a configurable widget from the ground up. I may continue to build off of this in the future or maybe I will attack a free charting library. What are your thoughts?</p>
+
+      </div>
+
+      <a class="u-url" href="/blog/making-the-highchart-widget-reusable" hidden></a>
+    </article><div class="subscribe-form">
+  
+  <div id="mc_embed_signup">
+    <form action="https://codecreative.us14.list-manage.com/subscribe/post?u=98c1070493fa133df8ea08394&amp;id=f759c17295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <h2>Subscribe</h2>
+        <div class="subtext">Sign up with your email address to receive news and updates.</div>
+        <div>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
+          
+          <div class="sr-only" aria-hidden="true">
+            <input type="text" name="b_98c1070493fa133df8ea08394_f759c17295" tabindex="-1" value="">
+          </div>
+
+          <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+</div>
+
+      </main><footer>
+  <div class="footer-content-wrap">
+    <p class="text-align-center">
+      <a href="/servicenow">Blog</a>
+      &nbsp;|&nbsp;
+      <a href="/about">About</a>
+      &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
+    </p>
+    <div class="text-align-center">
+      
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/main.js"></script>
+</body>
+</html>

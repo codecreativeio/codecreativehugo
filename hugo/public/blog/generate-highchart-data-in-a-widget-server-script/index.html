@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://example.org/assets/main.min.d206194abbd1ce5a0ca819b68f103dc21cb08c4864ac772c71d5e60a0e10d86e.css">
+<title>Generate HighChart Data in a Widget Server Script | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="Up until now, we&#39;ve only dealt with custom charts using HighCharts with hardcoded data. The next step in creating a custom chart is to report on actual ServiceNow data by wiring up GlideRecord queries in the server script to the HighCharts configuration object in the client script.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/"><meta property="og:site_name" content="CodeCreative | A ServiceNow Blog">
+<meta property="og:title" content="Generate HighChart Data in a Widget Server Script">
+<meta property="og:url" content="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:description" content="Up until now, we&#39;ve only dealt with custom charts using HighCharts with hardcoded data. The next step in creating a custom chart is to report on actual ServiceNow data by wiring up GlideRecord queries in the server script to the HighCharts configuration object in the client script.">
+
+<meta property="og:image" content="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/images/social.png">
+
+<meta itemprop="name" content="Generate HighChart Data in a Widget Server Script">
+<meta itemprop="url" content="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/">
+<meta itemprop="description" content="Up until now, we&#39;ve only dealt with custom charts using HighCharts with hardcoded data. The next step in creating a custom chart is to report on actual ServiceNow data by wiring up GlideRecord queries in the server script to the HighCharts configuration object in the client script.">
+
+<meta itemprop="thumbnailUrl" content="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/images/social.png">
+<link rel="image_src" href="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/images/social.png">
+<meta itemprop="image" content="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/images/social.png">
+
+
+<meta name="twitter:title" content="Generate HighChart Data in a Widget Server Script">
+<meta name="twitter:image" content="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/images/social.png">
+<meta name="twitter:url" content="http://example.org/blog/generate-highchart-data-in-a-widget-server-script/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Up until now, we&#39;ve only dealt with custom charts using HighCharts with hardcoded data. The next step in creating a custom chart is to report on actual ServiceNow data by wiring up GlideRecord queries in the server script to the HighCharts configuration object in the client script.">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://example.org/"
+    },
+    "name" : "Generate HighChart Data in a Widget Server Script",
+    "headline" : "Generate HighChart Data in a Widget Server Script",
+    "description" : "Up until now, we&#39;ve only dealt with custom charts using HighCharts with hardcoded data. The next step in creating a custom chart is to report on actual ServiceNow data by wiring up GlideRecord queries in the server script to the HighCharts configuration object in the client script.","image": "http://example.org/blog/generate-highchart-data-in-a-widget-server-script/images/social.png","inLanguage" : "en-US",
+      "author" : "Travis Toulson",
+      "creator" : "Travis Toulson","publisher": "Travis Toulson",
+    "copyrightHolder" : "Travis Toulson",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-05-17 14:30:00 &#43;0000 UTC",
+    "dateModified" : "2017-05-17 14:30:00 &#43;0000 UTC",
+    "url" : "http://example.org/blog/generate-highchart-data-in-a-widget-server-script/",
+    "wordCount" : "1031",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+
+  </head>
+  <body><header role="banner">
+  <h1 class="logo">
+      <a href="/">
+         <img src="/assets/codecreativelogo.png" alt="Generate HighChart Data in a Widget Server Script" />
+         <span class="sr-only">CodeCreative Logo, click to navigate home</span>
+      </a>
+    </h1>
+
+  <div class="menuToggle">
+    <button class="hamburger" type="button" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+
+  <nav class="fullNav">
+    <ul>
+      
+      
+        <li title="Home">
+          <a class="" href="/">Home</a>
+        </li>
+      
+        <li title="Blog">
+          <a class="" href="/blog/">Blog</a>
+        </li>
+      
+        <li title="About">
+          <a class="" href="/about/">About</a>
+        </li>
+      
+        <li title="Contact">
+          <a class="" href="/contact/">Contact</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<main>
+  <header class="banner">
+    <h1>Generate HighChart Data in a Widget Server Script</h1>
+  </header>
+
+  <div class="content text-content">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name sr-only" itemprop="name headline">Generate HighChart Data in a Widget Server Script</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2017-05-17T14:30:00Z" itemprop="datePublished">
+            May 17, 2017
+            </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </p>
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        
+
+<p><strong>WARNING:</strong> The use of HighCharts in this way may require the purchase of an additional license from Highsoft. Use in production at your own risk.</p>
+
+<p><strong>Read the Whole Series:</strong></p>
+
+<ol>
+<li><a href="/blog/intro-to-highcharts-in-service-portal">Intro to HighCharts in Service Portal</a></li>
+<li><a href="/blog/configuring-highcharts-in-service-portal">Configuring HighCharts in Service Portal</a></li>
+<li>Generate HighChart Data in a Widget Server Script (This Post)</li>
+<li><a href="/blog/making-the-highchart-widget-reusable">Making the HighChart Widget Reusable</a></li>
+</ol>
+
+<p><a href="/downloads/HighCharts+Widget.zip">Download the Widget</a></p>
+
+<hr />
+
+<p>Up until now, we&rsquo;ve only dealt with custom charts using HighCharts with hardcoded data. The next step in creating a custom chart is to report on actual ServiceNow data by wiring up GlideRecord queries in the server script to the HighCharts configuration object in the client script. At this risk of repeating myself too often, Service Portal makes this much easier compared to the UI Page approach. I will be using the widget created in <a href="/blog/intro-to-highcharts-in-service-portal">Intro to HighCharts in Service Portal</a> as a base again. Let&rsquo;s take a look:</p>
+
+<hr />
+
+<h2 id="step-1-replace-hardcoded-data-with-server-data-object">Step 1: Replace hardcoded data with Server data object</h2>
+
+<p>In the UI Page approach, we had to perform some JSON encoding and decoding to properly transfer data from the server side &lt;g:evaluate&gt; to the client side &lt;script&gt;. Service Portal, though, provides the <strong>data</strong> object which handles the JSON transmission from server to client for us. Our first step is to move the HighCharts <strong>categories</strong> array and the <strong>series</strong> array from the hardcoded client side values to the server data.</p>
+
+<figure>
+  <img src="images/Hardcoded+Values+Move+to+the+Server+Script.png" />
+  <figcaption>
+    Hardcoded Values should move to the Server Script
+  </figcaption>
+</figure>
+
+<p>In the above image, notice that i have replaced the categories and series objects with c.data properties and added the original hardcoded values to the server script as properties of the data object. The result is the same whether the values are hardcoded client side or server side, which means now we can build the categories and series objects using GlideRecord.</p>
+
+<hr />
+
+<h2 id="step-2-dynamically-generate-server-data">Step 2: Dynamically generate server data</h2>
+
+<p>Previously, I used an approach that micromanaged a category array and an array for each series of data. Essentially, I merged the data collection and data transform steps into a single procedural mess. This time, I am going to separate collection and transform processes to make the scripts a little more manageable.</p>
+
+<p>For the new process, I am going to use one collection object for each data series which will act as a simple map from x values to y values for the data series (think something like <strong>(empty) = 5, Solana Beach CA = 1, New York NY = 1, etc</strong>). This data will be collected using a GlideAggregate but could also be accomplished with a GlideRecord. Then, I will convert the collection object into the required categories and series arrays in a transform step. So this is the basic outline of the process:</p>
+
+<ol>
+<li>Collect values from GlideAggregate</li>
+<li>Prepare data output objects</li>
+<li>Transform collection objects into data output category and series arrays</li>
+</ol>
+
+<p>Since I want to keep both Open and Resolved data series, I will need two GlideAggregates by grouped by location (the x axis), one for each series. Here are the relevant pieces of code:</p>
+
+<p><strong>Collect Values from GlideAggregate</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="nx">resolved</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="nx">loc</span><span class="p">,</span>
+        <span class="nx">ga</span><span class="p">;</span>
+
+<span class="c1">// Collect Open data
+</span><span class="c1"></span><span class="nx">ga</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">);</span>
+<span class="nx">ga</span><span class="p">.</span><span class="nx">addEncodedQuery</span><span class="p">(</span><span class="s1">&#39;stateIN1,2,3,4,5&#39;</span><span class="p">);</span>
+<span class="nx">ga</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">);</span>  
+<span class="nx">ga</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+<span class="nx">ga</span><span class="p">.</span><span class="nx">orderBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+<span class="nx">ga</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">ga</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+    <span class="nx">loc</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">getDisplayValue</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span> <span class="o">||</span> <span class="s1">&#39;(empty)&#39;</span><span class="p">;</span>
+    <span class="nx">count</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">open</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">;</span>
+    <span class="nx">resolved</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// to ensure both objects have the same x axis values
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="c1">// Collect Resolved data
+</span><span class="c1"></span><span class="nx">ga</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">);</span>
+<span class="nx">ga</span><span class="p">.</span><span class="nx">addEncodedQuery</span><span class="p">(</span><span class="s1">&#39;state=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)&#39;</span><span class="p">);</span>
+<span class="nx">ga</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">);</span>  
+<span class="nx">ga</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+<span class="nx">ga</span><span class="p">.</span><span class="nx">orderBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+<span class="nx">ga</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">ga</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+    <span class="nx">loc</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">getDisplayValue</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span> <span class="o">||</span> <span class="s1">&#39;(empty)&#39;</span><span class="p">;</span>
+    <span class="nx">count</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">resolved</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">;</span>
+    <span class="nx">open</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="nx">open</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">||</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// to ensure both objects have the same x axis values
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Prepare Data Output Objects</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Prepare output objects
+</span><span class="c1"></span><span class="nx">data</span><span class="p">.</span><span class="nx">categories</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">open</span><span class="p">);</span>
+<span class="nx">data</span><span class="p">.</span><span class="nx">series</span> <span class="o">=</span> <span class="p">[{</span>
+    <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;Open&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;legendIndex&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;data&#39;</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;Resolved&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;legendIndex&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;data&#39;</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">}]</span>
+</code></pre></div>
+<p><strong>Transform collection objects into data output category and series arrays</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Transform collected objects into data arrays
+</span><span class="c1"></span><span class="nx">data</span><span class="p">.</span><span class="nx">categories</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">series</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">open</span><span class="p">[</span><span class="nx">it</span><span class="p">]);</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">series</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">resolved</span><span class="p">[</span><span class="nx">it</span><span class="p">]);</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<figure>
+  <img src="images/Final+HighChart+Widget+with+Server+Data.png" />
+  <figcaption>
+    Final HighChart Widget with Server Data
+  </figcaption>
+</figure>
+
+<p>With our new server script in place, we can now see a chart in the preview that is actually leveraging real data in our instance! It can definitely stand some cleaning up particularly on the y-axis increments (unless we can count half an incident) but those are smaller details we can easily achieve in the client script HighChart options.</p>
+
+<p>The cool part here is that we are definitely not limited to just using GlideRecord or GlideAggregate to make calculations like we are with native reports. We can use web services or other data collection methods, run advanced calculations, and derive complex metrics for plotting on this chart. It&rsquo;s all just a matter of tweaking the server script to suit your purposes.</p>
+
+<p>So here are the final widget scripts so you can play with this in your own instance (don&rsquo;t forget the HighChart dependencies from <a href="/blog/intro-to-highcharts-in-service-portal">Intro to HighCharts in Service Portal</a>:</p>
+
+<p><strong>HTML</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;custom_report&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p><strong>Client Script</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="cm">/* widget controller */</span>
+  <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">chart1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Highcharts</span><span class="p">.</span><span class="nx">Chart</span><span class="p">({</span>  
+  <span class="nx">chart</span><span class="o">:</span> <span class="p">{</span>  
+      <span class="nx">renderTo</span><span class="o">:</span> <span class="s1">&#39;custom_report&#39;</span><span class="p">,</span>  
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;column&#39;</span>  
+  <span class="p">},</span>  
+  <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+      <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+  <span class="p">},</span>  
+  <span class="nx">xAxis</span><span class="o">:</span> <span class="p">{</span>  
+      <span class="nx">categories</span><span class="o">:</span> <span class="nx">c</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">categories</span><span class="p">,</span>  
+      <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+          <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+      <span class="p">},</span>  
+      <span class="nx">labels</span><span class="o">:</span> <span class="p">{</span>  
+          <span class="nx">rotation</span><span class="o">:</span> <span class="o">-</span><span class="mi">45</span>  
+      <span class="p">}</span>  
+  <span class="p">},</span>  
+  <span class="nx">yAxis</span><span class="o">:</span> <span class="p">{</span>  
+      <span class="nx">min</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  
+      <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>  
+          <span class="nx">text</span><span class="o">:</span> <span class="kc">null</span>  
+      <span class="p">}</span>  
+  <span class="p">},</span>  
+  <span class="nx">series</span><span class="o">:</span> <span class="nx">c</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">series</span>  
+ <span class="p">});</span>  
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Server Script</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="cm">/* populate the &#39;data&#39; object */</span>
+  <span class="cm">/* e.g., data.table = $sp.getValue(&#39;table&#39;); */</span>
+  <span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="p">{},</span>
+          <span class="nx">resolved</span> <span class="o">=</span> <span class="p">{},</span>
+          <span class="nx">loc</span><span class="p">,</span>
+          <span class="nx">ga</span><span class="p">;</span>
+
+  <span class="c1">// Collect Open data
+</span><span class="c1"></span>  <span class="nx">ga</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">);</span>
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">addEncodedQuery</span><span class="p">(</span><span class="s1">&#39;stateIN1,2,3,4,5&#39;</span><span class="p">);</span>
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">orderBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">ga</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">loc</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">getDisplayValue</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span> <span class="o">||</span> <span class="s1">&#39;(empty)&#39;</span><span class="p">;</span>
+      <span class="nx">count</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="nx">open</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">;</span>
+      <span class="nx">resolved</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// to ensure both objects have the same x axis values
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="c1">// Collect Resolved data
+</span><span class="c1"></span>  <span class="nx">ga</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">);</span>
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">addEncodedQuery</span><span class="p">(</span><span class="s1">&#39;state=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)&#39;</span><span class="p">);</span>
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">orderBy</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">);</span>  
+  <span class="nx">ga</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">ga</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">loc</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">getDisplayValue</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span> <span class="o">||</span> <span class="s1">&#39;(empty)&#39;</span><span class="p">;</span>
+      <span class="nx">count</span> <span class="o">=</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="nx">resolved</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">;</span>
+      <span class="nx">open</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">=</span> <span class="nx">open</span><span class="p">[</span><span class="nx">loc</span><span class="p">]</span> <span class="o">||</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// to ensure both objects have the same x axis values
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="c1">// Prepare output objects
+</span><span class="c1"></span>  <span class="nx">data</span><span class="p">.</span><span class="nx">categories</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">open</span><span class="p">);</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">series</span> <span class="o">=</span> <span class="p">[{</span>
+      <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;Open&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;legendIndex&#39;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s1">&#39;data&#39;</span><span class="o">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;Resolved&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;legendIndex&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s1">&#39;data&#39;</span><span class="o">:</span> <span class="p">[]</span>
+  <span class="p">}]</span>
+
+  <span class="c1">// Transform collected objects into data arrays
+</span><span class="c1"></span>  <span class="nx">data</span><span class="p">.</span><span class="nx">categories</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">series</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">open</span><span class="p">[</span><span class="nx">it</span><span class="p">]);</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">series</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">resolved</span><span class="p">[</span><span class="nx">it</span><span class="p">]);</span>
+  <span class="p">});</span>
+<span class="p">})();</span>
+</code></pre></div>
+      </div>
+
+      <a class="u-url" href="/blog/generate-highchart-data-in-a-widget-server-script" hidden></a>
+    </article><div class="subscribe-form">
+  
+  <div id="mc_embed_signup">
+    <form action="https://codecreative.us14.list-manage.com/subscribe/post?u=98c1070493fa133df8ea08394&amp;id=f759c17295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <h2>Subscribe</h2>
+        <div class="subtext">Sign up with your email address to receive news and updates.</div>
+        <div>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
+          
+          <div class="sr-only" aria-hidden="true">
+            <input type="text" name="b_98c1070493fa133df8ea08394_f759c17295" tabindex="-1" value="">
+          </div>
+
+          <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+</div>
+
+      </main><footer>
+  <div class="footer-content-wrap">
+    <p class="text-align-center">
+      <a href="/servicenow">Blog</a>
+      &nbsp;|&nbsp;
+      <a href="/about">About</a>
+      &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
+    </p>
+    <div class="text-align-center">
+      
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/main.js"></script>
+</body>
+</html>

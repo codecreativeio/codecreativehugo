@@ -1,0 +1,8 @@
+<meta itemprop="name" content="{{ .LinkTitle }}">
+<meta itemprop="url" content="{{ .Permalink }}">
+<meta itemprop="description" content="{{ .Description }}">
+{{ if .Params.socialImg }}
+<meta itemprop="thumbnailUrl" content="{{ .Permalink }}{{ .Params.socialImg }}">
+<link rel="image_src" href="{{ .Permalink }}{{ .Params.socialImg }}">
+<meta itemprop="image" content="{{ .Permalink }}{{ .Params.socialImg }}">
+{{ end }}

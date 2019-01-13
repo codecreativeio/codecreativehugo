@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://example.org/assets/main.min.d206194abbd1ce5a0ca819b68f103dc21cb08c4864ac772c71d5e60a0e10d86e.css">
+<title>3 Strategies To Fix Nested GlideRecords | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="Previously, I talked about Nested GlideRecords in scripts and the performance impact they can have on your applications. Being able to identify these miscreants is great but we really need to get them out of any mission critical scripts.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/"><meta property="og:site_name" content="CodeCreative | A ServiceNow Blog">
+<meta property="og:title" content="3 Strategies To Fix Nested GlideRecords">
+<meta property="og:url" content="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:description" content="Previously, I talked about Nested GlideRecords in scripts and the performance impact they can have on your applications. Being able to identify these miscreants is great but we really need to get them out of any mission critical scripts.">
+
+<meta property="og:image" content="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/images/social.png">
+
+<meta itemprop="name" content="3 Strategies To Fix Nested GlideRecords">
+<meta itemprop="url" content="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/">
+<meta itemprop="description" content="Previously, I talked about Nested GlideRecords in scripts and the performance impact they can have on your applications. Being able to identify these miscreants is great but we really need to get them out of any mission critical scripts.">
+
+<meta itemprop="thumbnailUrl" content="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/images/social.png">
+<link rel="image_src" href="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/images/social.png">
+<meta itemprop="image" content="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/images/social.png">
+
+
+<meta name="twitter:title" content="3 Strategies To Fix Nested GlideRecords">
+<meta name="twitter:image" content="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/images/social.png">
+<meta name="twitter:url" content="http://example.org/blog/3-strategies-to-fix-nested-gliderecords/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Previously, I talked about Nested GlideRecords in scripts and the performance impact they can have on your applications. Being able to identify these miscreants is great but we really need to get them out of any mission critical scripts.">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://example.org/"
+    },
+    "name" : "3 Strategies To Fix Nested GlideRecords",
+    "headline" : "3 Strategies To Fix Nested GlideRecords",
+    "description" : "Previously, I talked about Nested GlideRecords in scripts and the performance impact they can have on your applications. Being able to identify these miscreants is great but we really need to get them out of any mission critical scripts.","image": "http://example.org/blog/3-strategies-to-fix-nested-gliderecords/images/social.png","inLanguage" : "en-US",
+      "author" : "Travis Toulson",
+      "creator" : "Travis Toulson","publisher": "Travis Toulson",
+    "copyrightHolder" : "Travis Toulson",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-02-01 17:00:00 &#43;0000 UTC",
+    "dateModified" : "2017-02-01 17:00:00 &#43;0000 UTC",
+    "url" : "http://example.org/blog/3-strategies-to-fix-nested-gliderecords/",
+    "wordCount" : "1001",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+
+  </head>
+  <body><header role="banner">
+  <h1 class="logo">
+      <a href="/">
+         <img src="/assets/codecreativelogo.png" alt="3 Strategies To Fix Nested GlideRecords" />
+         <span class="sr-only">CodeCreative Logo, click to navigate home</span>
+      </a>
+    </h1>
+
+  <div class="menuToggle">
+    <button class="hamburger" type="button" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+
+  <nav class="fullNav">
+    <ul>
+      
+      
+        <li title="Home">
+          <a class="" href="/">Home</a>
+        </li>
+      
+        <li title="Blog">
+          <a class="" href="/blog/">Blog</a>
+        </li>
+      
+        <li title="About">
+          <a class="" href="/about/">About</a>
+        </li>
+      
+        <li title="Contact">
+          <a class="" href="/contact/">Contact</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<main>
+  <header class="banner">
+    <h1>3 Strategies To Fix Nested GlideRecords</h1>
+  </header>
+
+  <div class="content text-content">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name sr-only" itemprop="name headline">3 Strategies To Fix Nested GlideRecords</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2017-02-01T17:00:00Z" itemprop="datePublished">
+            February 01, 2017
+            </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </p>
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        
+
+<p>Previously, I talked about <a href="/blog/nested-gliderecords-are-killing-your-app-performance">Nested GlideRecords</a> in scripts and the performance impact they can have on your applications. Being able to identify these miscreants is great but we really need to get them out of any mission critical scripts where they are slowing down response times. Here are a couple strategies to kick those GlideRecords out of the nest and to teach them to fly.</p>
+
+<h2 id="1-array-flattened-gliderecord">1. Array Flattened GlideRecord</h2>
+
+<p>Normally, in a Nested GlideRecord, you run a GlideRecord query for each record in the result of the first GlideRecord. Often times, the simplest way out is to simply collect a list of the queryable criteria (sys_id or other key like field) and use it as part of an <strong>IN</strong> criteria within a second GlideRecord query <strong>outside</strong> of the first. I used this technique in the last article as seen in the below example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideAggregate</span><span class="p">(</span><span class="s1">&#39;sys_user&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">addQuery</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;!=&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">addAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">);</span>
+<span class="nx">count</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">((</span><span class="nx">count</span><span class="p">.</span><span class="nx">getAggregate</span><span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">users</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;sys_user&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">prevUser</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">addQuery</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">));</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">orderBy</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">prevUser</span> <span class="o">==</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">gs</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// Else, skip the original user
+</span><span class="c1"></span>  <span class="nx">prevUser</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Notice the use of the <strong>users</strong> array to collect a list of email addresses. That list is then applied to the second <strong>user</strong>  query with an <strong>IN</strong> criteria. In this way, we compress many smaller queries into a single query containing all the criteria.</p>
+
+<p><strong>When to Use:</strong> Use this approach when two GlideRecord queries are being explicitly called in the nested pattern and changing the data model is too risky.</p>
+
+<p><strong>When to Avoid:</strong> Whenever you can use any other method. Seriously, this method creates longer code that is harder to understand. You&rsquo;re basically creating a database JOIN in application logic.</p>
+
+<h2 id="2-copy-data-to-the-queried-record">2. Copy Data To The Queried Record</h2>
+
+<p>With this strategy, you create Business Rules to copy a frequently queried field from its original table (source) to the frequently queried table (destination). The destination table in this case acts as a cache for the source data. One example of this is the Catalogs field on the Catalog Item table. Did you ever notice that the Related List called Catalogs is kept in sync with the GlideList field called Catalogs:</p>
+
+<figure>
+  <img src="images/ServiceNow+Catalogs+Kept+In+Sync.png" />
+  <figcaption>
+    ServiceNow Catalogs Kept In Sync
+  </figcaption>
+</figure>
+
+<p>With only the Related List, it would take at least two queries to get all the Catalog Items in a given Category. In a worst case, it would take one query on the Catalog related list and then one additional one to dot-walk the Catalog Item data. With the GlideList, we can perform a single query directly on the Catalog Item table.</p>
+
+<p>The tradeoff here is that we are trading &ldquo;write operation&rdquo; performance for &ldquo;read operation&rdquo; performance. That is, we add business rules on Insert and Update to sync the field to the Related List and vice versa. Insert and Update will take a little longer but reading the data requires fewer queries.</p>
+
+<p><strong>When to Use:</strong> Definitely consider this instead of GlideRecord queries in ACLs! Also quite useful for aggregating data such as the Update Count field on tasks. Sometimes useful instead of dot-walking when dealing with related lists whose data is frequently queried with the parent record.</p>
+
+<p><strong>When to Avoid:</strong> Avoid this strategy in most circumstances when dot-walking a record, especially if many fields are required from the dot-walked reference. There is still a better tool for this.</p>
+
+<h2 id="3-create-database-views">3. Create Database Views</h2>
+
+<p>An often asked question in the ServiceNow Community is &ldquo;how do I perform a Database Join with GlideRecord?&rdquo; Well, you don&rsquo;t. You create <a href="http://wiki.servicenow.com/index.php?title=Database_Views#gsc.tab=0">Database Views</a>. Database Views in ServiceNow allow you to effectively merge related records from multiple tables into a single queryable source. Here&rsquo;s an example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">gr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;incident&#39;</span><span class="p">);</span>
+<span class="nx">gr</span><span class="p">.</span><span class="nx">setLimit</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="nx">gr</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">gr</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">callerNum</span> <span class="o">=</span> <span class="nx">gr</span><span class="p">.</span><span class="nx">caller</span><span class="p">.</span><span class="nx">phone_number</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In the above script, that dot-walk to the caller&rsquo;s phone number field is going to cost us. In this case, it will cost us an extra 10 queries, one for each record found in the orginal query (notice the setLimit). With a Database View, we can merge Incident record fields to their related User&rsquo;s by the Caller field:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">gr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GlideRecord</span><span class="p">(</span><span class="s1">&#39;incident_caller&#39;</span><span class="p">);</span>
+<span class="nx">gr</span><span class="p">.</span><span class="nx">setLimit</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="nx">gr</span><span class="p">.</span><span class="nx">query</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">gr</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">callerNum</span> <span class="o">=</span> <span class="nx">gr</span><span class="p">.</span><span class="nx">cl_phone_number</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Now, notice in the above script that we query <strong>incident_caller</strong> instead of <strong>incident</strong>. Creating a Database View creates a sort of virtual table in ServiceNow which you can query with GlideRecord and it can contain fields from any of the joined tables. In this case, we are assuming the view was created as a join between Incident and Caller with the relevant Caller Phone Number field on the view. Now that we have a true database JOIN, this script will only take 1 query compared to the previous script&rsquo;s 10.</p>
+
+<p>Keep in mind that even with Database views you can run into performance problems on larger tables (I&rsquo;m looking at you Task). Be sure to add appropriate indexes to speed up your view.</p>
+
+<p><strong>When to Use:</strong> Whenever dot-walking from one table to another within a GlideRecord loop is causing performance issues, particularly in CMS or ServicePortal. The farther you dot-walk from the root record, the more likely you are to encounter this issue. Also consider this approach in any of the previous scenarios where you will frequently use the fields in the presented view.</p>
+
+<p><strong>When to Avoid:</strong> When the Database View would not contribute significantly to critical performance issues and when the Database View is not part of regular query patterns. In other words, avoid this approach for one off scripts.</p>
+
+<h2 id="bonus-avoid-only-indexing">Bonus: Avoid Only Indexing</h2>
+
+<p>When met with database performance issues we have a habit of just throwing an index at it. And yes, indexes are a great tool but designing efficient data access patterns (avoiding Nested GlideRecords in this case) should be the first step in solving (and ideally preventing) database related performance issues.</p>
+
+      </div>
+
+      <a class="u-url" href="/blog/3-strategies-to-fix-nested-gliderecords" hidden></a>
+    </article><div class="subscribe-form">
+  
+  <div id="mc_embed_signup">
+    <form action="https://codecreative.us14.list-manage.com/subscribe/post?u=98c1070493fa133df8ea08394&amp;id=f759c17295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <h2>Subscribe</h2>
+        <div class="subtext">Sign up with your email address to receive news and updates.</div>
+        <div>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
+          
+          <div class="sr-only" aria-hidden="true">
+            <input type="text" name="b_98c1070493fa133df8ea08394_f759c17295" tabindex="-1" value="">
+          </div>
+
+          <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+</div>
+
+      </main><footer>
+  <div class="footer-content-wrap">
+    <p class="text-align-center">
+      <a href="/servicenow">Blog</a>
+      &nbsp;|&nbsp;
+      <a href="/about">About</a>
+      &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
+    </p>
+    <div class="text-align-center">
+      
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/main.js"></script>
+</body>
+</html>

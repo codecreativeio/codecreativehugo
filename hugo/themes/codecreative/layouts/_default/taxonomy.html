@@ -1,0 +1,20 @@
+{{ define "header" }}
+  <header class="banner">
+    <h1>Articles by {{ .Data.Singular }} ({{ .Title }})</h1>
+  </header>
+{{ end }}
+{{ define "main" }}
+  <div class="index-content">
+    <section class="index-section">
+      <h2>Browse Articles</h2>
+      <ul class="taxonomy-list">
+        {{ range .Pages }}
+        <li>
+            {{.Date.Format "2006-01-02"}} <a href="{{.Permalink}}">{{.Title}}</a>
+        </li>
+        {{ end }}
+      </ul>
+    <section>
+    {{- partial "subscribe.html" . -}}
+  </div>
+{{ end }}

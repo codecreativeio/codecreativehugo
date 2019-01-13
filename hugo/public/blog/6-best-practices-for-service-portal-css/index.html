@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://example.org/assets/main.min.d206194abbd1ce5a0ca819b68f103dc21cb08c4864ac772c71d5e60a0e10d86e.css">
+<title>6 Best Practices for Service Portal CSS | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="When developing Service Portal styles for either the Theme or the Widgets, there is more to think about than there used to be in CMS. Service Portal offers greater modularity to protect our Widgets from our Themes and vice versa.  Read on for 6 best practices to follow when coding the CSS for your Service Portal to keep your CSS maintainable and flexible.">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="http://example.org/blog/6-best-practices-for-service-portal-css/"><meta property="og:site_name" content="CodeCreative | A ServiceNow Blog">
+<meta property="og:title" content="6 Best Practices for Service Portal CSS">
+<meta property="og:url" content="http://example.org/blog/6-best-practices-for-service-portal-css/">
+
+<meta property="og:type" content="article">
+
+<meta property="og:description" content="When developing Service Portal styles for either the Theme or the Widgets, there is more to think about than there used to be in CMS. Service Portal offers greater modularity to protect our Widgets from our Themes and vice versa.  Read on for 6 best practices to follow when coding the CSS for your Service Portal to keep your CSS maintainable and flexible.">
+
+<meta property="og:image" content="http://example.org/blog/6-best-practices-for-service-portal-css/images/social.png">
+
+<meta itemprop="name" content="6 Best Practices for Service Portal CSS">
+<meta itemprop="url" content="http://example.org/blog/6-best-practices-for-service-portal-css/">
+<meta itemprop="description" content="When developing Service Portal styles for either the Theme or the Widgets, there is more to think about than there used to be in CMS. Service Portal offers greater modularity to protect our Widgets from our Themes and vice versa.  Read on for 6 best practices to follow when coding the CSS for your Service Portal to keep your CSS maintainable and flexible.">
+
+<meta itemprop="thumbnailUrl" content="http://example.org/blog/6-best-practices-for-service-portal-css/images/social.png">
+<link rel="image_src" href="http://example.org/blog/6-best-practices-for-service-portal-css/images/social.png">
+<meta itemprop="image" content="http://example.org/blog/6-best-practices-for-service-portal-css/images/social.png">
+
+
+<meta name="twitter:title" content="6 Best Practices for Service Portal CSS">
+<meta name="twitter:image" content="http://example.org/blog/6-best-practices-for-service-portal-css/images/social.png">
+<meta name="twitter:url" content="http://example.org/blog/6-best-practices-for-service-portal-css/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="When developing Service Portal styles for either the Theme or the Widgets, there is more to think about than there used to be in CMS. Service Portal offers greater modularity to protect our Widgets from our Themes and vice versa.  Read on for 6 best practices to follow when coding the CSS for your Service Portal to keep your CSS maintainable and flexible.">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://example.org/"
+    },
+    "name" : "6 Best Practices for Service Portal CSS",
+    "headline" : "6 Best Practices for Service Portal CSS",
+    "description" : "When developing Service Portal styles for either the Theme or the Widgets, there is more to think about than there used to be in CMS. Service Portal offers greater modularity to protect our Widgets from our Themes and vice versa.  Read on for 6 best practices to follow when coding the CSS for your Service Portal to keep your CSS maintainable and flexible.","image": "http://example.org/blog/6-best-practices-for-service-portal-css/images/social.png","inLanguage" : "en-US",
+      "author" : "Travis Toulson",
+      "creator" : "Travis Toulson","publisher": "Travis Toulson",
+    "copyrightHolder" : "Travis Toulson",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-03-22 17:30:00 &#43;0000 UTC",
+    "dateModified" : "2017-03-22 17:30:00 &#43;0000 UTC",
+    "url" : "http://example.org/blog/6-best-practices-for-service-portal-css/",
+    "wordCount" : "1099",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+
+  </head>
+  <body><header role="banner">
+  <h1 class="logo">
+      <a href="/">
+         <img src="/assets/codecreativelogo.png" alt="6 Best Practices for Service Portal CSS" />
+         <span class="sr-only">CodeCreative Logo, click to navigate home</span>
+      </a>
+    </h1>
+
+  <div class="menuToggle">
+    <button class="hamburger" type="button" onclick="toggleMenu()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+  </div>
+
+  <nav class="fullNav">
+    <ul>
+      
+      
+        <li title="Home">
+          <a class="" href="/">Home</a>
+        </li>
+      
+        <li title="Blog">
+          <a class="" href="/blog/">Blog</a>
+        </li>
+      
+        <li title="About">
+          <a class="" href="/about/">About</a>
+        </li>
+      
+        <li title="Contact">
+          <a class="" href="/contact/">Contact</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<main>
+  <header class="banner">
+    <h1>6 Best Practices for Service Portal CSS</h1>
+  </header>
+
+  <div class="content text-content">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title p-name sr-only" itemprop="name headline">6 Best Practices for Service Portal CSS</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2017-03-22T17:30:00Z" itemprop="datePublished">
+            March 22, 2017
+            </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </p>
+      </header>
+
+      <div class="post-content e-content" itemprop="articleBody">
+        
+
+<p>When developing Service Portal styles for either the Theme or the Widgets, there is more to think about than there used to be in CMS. Service Portal offers greater modularity to protect our Widgets from our Themes and vice versa. Below are 6 best practices (they&rsquo;re more what you&rsquo;d call guidelines than actual rules) to follow when coding the CSS for your Service Portal to keep your CSS maintainable and flexible.</p>
+
+<h2 id="1-avoid-common-widget-classes-in-global-css-styles">1. Avoid common widget classes in global CSS styles</h2>
+
+<p>Service Portal is based on Bootstrap, so there are a number of readily available classes with certain stylings. Service Portal is also very modular, so all the real power is in the widgets and many of those Bootstrap classes are likely to appear in your widgets.</p>
+
+<p>You can easily end up breaking widgets, especially if you are manipulating layout styles</p>
+
+<aside class="ccPullQuote right w-50">
+  <p>You can easily end up breaking widgets, especially if you are manipulating layout styles</p>
+</aside>
+
+<p>With those things in mind, you should avoid manipulating classes such as those relating to panels, wells, forms, alerts, and other <a href="http://getbootstrap.com/components/">bootstrap components</a>. Changes to any of these components are likely to leak into all of your widgets unless they have explicitly defined styles.</p>
+
+<p>You can easily end up breaking widgets, especially if you are manipulating layout styles such as margin, padding, position, etc.</p>
+
+<h2 id="2-avoid-long-high-specificity-selectors-in-global-css">2. Avoid long, high specificity selectors in global CSS</h2>
+
+<p>The key to global CSS (such as CSS Includes on your Theme or Portal records) is to minimize specificity. You <strong>want</strong> your global CSS to be able to be overridden easily. The global CSS should provide reasonable defaults for the rest of the portal.</p>
+
+<p>This means that selectors that provide a &ldquo;Complete Idiots Guide to Finding This Element&rdquo; are probably a bad idea. My ideal happy place is 2 - 3 selectors deep. Since widget styles are guaranteed to be 2 selectors deep (<a href="/blog/what-are-css-widget-scopes-in-service-portal">remember CSS scoping</a>), keeping global scopes to 2 - 3 selectors deep will limit the opportunity for global styles to accidentally override your widgets.</p>
+
+<p>This also includes avoiding the use of the <strong>!important</strong> declaration in global styles which basically honey badgers selector specificity.</p>
+
+<p>In other words, this is a bad idea:</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">html</span> <span class="nt">body</span> <span class="p">#</span><span class="nn">first-row</span> <span class="p">.</span><span class="nc">col-md-4</span> <span class="p">.</span><span class="nc">panel</span> <span class="p">{</span>
+ <span class="c">/* Yep, your widget just got overridden */</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="3-keep-global-styles-to-a-minimum">3. Keep global styles to a minimum</h2>
+
+<p>In fact, while we&rsquo;re at it, just plain keep your global styles to a minimum. The power in Service Portal is in the widgets so you should keep it there, including styles.</p>
+
+<p>Service Portal is based on Bootstrap JS, variables are available to manipulate many of Bootstrap&rsquo;s defaults, and layout is already provided&hellip; there are very few Global edits that need to be made. Here are the few examples of when you should use global styles:</p>
+
+<ul>
+<li>Overriding Bootstrap defaults where variables aren&rsquo;t provided</li>
+<li>Using CSS Includes to add required external CSS libraries (PrismJS for Code Highlighting for example)</li>
+<li>Providing custom layouts using Flexbox or other approach (requires disabling Bootstrap layout classes)</li>
+</ul>
+
+<p>But in any of these cases, there should be a very narrowly defined class selector you can use which is unlikely to be used by a widget or can be easily overridden.</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* Unlikely to be used */</span>
+
+<span class="p">#</span><span class="nn">leftNavigationPanel</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Easy to override */</span>
+
+<span class="p">.</span><span class="nc">wrapper</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="4-explicitly-define-vital-css-classes-for-widgets">4. Explicitly define vital CSS classes for widgets</h2>
+
+<p>As widget developers, we can not always trust the theme to respect our authoritah. Some selectors may seem innocuous to a theme developer but can be quite harmful to widgets. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">panel-heading</span> <span class="p">{</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<p>The above CSS doesn&rsquo;t look so bad. Maybe the theme is designed to give a little more whitespace all around, nothing wrong with that. Unless of course your widget was expecting to have that additional width to work with, then it might be a problem.</p>
+
+<p>In these cases where you widget only works within the defined parameters, don&rsquo;t trust the theme to honor your styles. Go ahead and explicitly define the required styles right there in your widget CSS. Heck, in widgets go ahead and throw around the <strong>!important</strong> declaration if your are really concerned. Service Portal CSS scopes will keep your declaration isolated to only your widget.</p>
+
+<h2 id="5-avoid-hardcoding-colors-in-widgets">5. Avoid hardcoding colors in Widgets</h2>
+
+<p>One potential issue is text and background colors. Base colors are often defined in Bootstrap and at the theme level in the global scope. In order to make truly flexible widgets, they should support changing according to the selected theme colors.</p>
+
+<p>One way to style the colors in your widget is to hard code the value in hex or rgb within the Widget CSS. Avoid the temptation to do this. Instead leverage SCSS variables as in the following example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="cm">/* Widget CSS - SCSS */</span>
+<span class="nv">$specialColor</span><span class="o">:</span> <span class="mh">#FFF</span> <span class="nv">!default</span><span class="p">;</span>
+
+<span class="nc">.panel</span> <span class="nt">span</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">specialColor</span><span class="o">;</span>
+<span class="p">}</span></code></pre></div>
+<p>Notice the variable specialColor is declared with the <strong>!default</strong> keyword. This tells the SCSS preprocessor to <strong>#FFF</strong> as the default color only if the variable was not previously assigned&hellip; such as in the Portal SCSS field. By using variables in this way, you set sensible defaults in your Widget while allowing for simple overriding without having to raise the specificity of your selectors in your global CSS.</p>
+
+<p>You can also use Widget Options, especially in cases where there are specific values you want to allow and others that you want to disallow. This approach is a little more complicated but can achieve the same results of protecting your Widget styles from your global ones.</p>
+
+<h2 id="6-avoid-using-id-s">6. Avoid using ID&rsquo;s</h2>
+
+<p>I used to like ID&rsquo;s a lot but the more I use AngularJS, the less I actually need them. In Service Portal there is almost no reason to use them.</p>
+
+<p>In widgets, ID&rsquo;s are pointless because an ID is only supposed to appear once in your HTML document. Widgets, by design, can have multiple instances on any given page, so its difficult to ensure an ID will only appear once.</p>
+
+<p>In global CSS, even just one ID can tip the specificity scales in the CSS and override widget styles. Following the other best practices, it is likewise best to keep ID&rsquo;s in the global CSS to a minimum.</p>
+
+<p>The one exception to this that I can think of is dynamically applied ID&rsquo;s using ng-attr-id.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>When in doubt, if you are styling a widget, code like a lion, fear nothing and be as specific as you can. If you are styling the theme, code like a lamb, avoid anything which might influence the Widget code. Following these guidelines will help keep your widgets modular, reusable, and true to their design.</p>
+
+      </div>
+
+      <a class="u-url" href="/blog/6-best-practices-for-service-portal-css" hidden></a>
+    </article><div class="subscribe-form">
+  
+  <div id="mc_embed_signup">
+    <form action="https://codecreative.us14.list-manage.com/subscribe/post?u=98c1070493fa133df8ea08394&amp;id=f759c17295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <h2>Subscribe</h2>
+        <div class="subtext">Sign up with your email address to receive news and updates.</div>
+        <div>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
+          
+          <div class="sr-only" aria-hidden="true">
+            <input type="text" name="b_98c1070493fa133df8ea08394_f759c17295" tabindex="-1" value="">
+          </div>
+
+          <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>
+</div>
+
+      </main><footer>
+  <div class="footer-content-wrap">
+    <p class="text-align-center">
+      <a href="/servicenow">Blog</a>
+      &nbsp;|&nbsp;
+      <a href="/about">About</a>
+      &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
+    </p>
+    <div class="text-align-center">
+      
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/main.js"></script>
+</body>
+</html>

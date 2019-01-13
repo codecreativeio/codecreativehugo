@@ -1,0 +1,7 @@
+{{ if .Params.socialImg }}
+<meta name="twitter:title" content="{{ .LinkTitle }}">
+<meta name="twitter:image" content="{{ .Permalink }}{{ .Params.socialImg }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}">
+{{ end }}

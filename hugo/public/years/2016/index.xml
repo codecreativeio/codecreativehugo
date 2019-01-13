@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016 on CodeCreative | A ServiceNow Blog</title>
+    <link>http://example.org/years/2016/</link>
+    <description>Recent content in 2016 on CodeCreative | A ServiceNow Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jun 2016 16:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/years/2016/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Share knowledge, don’t worry about the competition</title>
+      <link>http://example.org/blog/share-knowledge-dont-worry-about-the-competition/</link>
+      <pubDate>Thu, 23 Jun 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/share-knowledge-dont-worry-about-the-competition/</guid>
+      <description>I first thought about sharing what I know back in 2012 and even went so far as to bring it up in an interview with my soon to be employer. “So how do you feel about me sharing all of your best kept secrets” might not make the top 10 list of questions to ask your interviewer but surprisingly with a little tweaking it didn’t seem to do me any harm.</description>
+    </item>
+    
+    <item>
+      <title>What’s in a Service Portal on ServiceNow?</title>
+      <link>http://example.org/blog/whats-in-a-service-portal-on-servicenow/</link>
+      <pubDate>Wed, 08 Jun 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/whats-in-a-service-portal-on-servicenow/</guid>
+      <description>ServiceNow Service Portal Designer   Hopefully my last post on Service Portal helped you to figure out whether you or your client are ready to take advantage of this new powerful tool. Before we actually dig in and start coding and building portals though, it will help to understand a bit about the components that make up the Service Portal and what they actually do.
+Don’t let the Service Portal Configuration link in the application fool you.</description>
+    </item>
+    
+    <item>
+      <title>4 Reasons You’re Not Ready For Service Portal</title>
+      <link>http://example.org/blog/4-reasons-youre-not-ready-for-service-portal/</link>
+      <pubDate>Wed, 25 May 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/4-reasons-youre-not-ready-for-service-portal/</guid>
+      <description>To IE or not to IE, that is the question   The most common question I received at Knowledge 16 was “Should we stick with CMS or move forward with Service Portal.” As a developer I want to tell everyone to move to Service Portal if for no other reason than so I never have to touch an iframe ever again. Aside from that, Service Portal is truly a much more refined delivery tool for portals and I can’t recommend it highly enough.</description>
+    </item>
+    
+    <item>
+      <title>Service Portal: First Impressions</title>
+      <link>http://example.org/blog/service-portal-first-impressions/</link>
+      <pubDate>Fri, 13 May 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/service-portal-first-impressions/</guid>
+      <description>ServiceNow Service Portal   So for the last week and a half I have been spending some time exploring the new Service Portal on the ServiceNow developer site. In fact, I may have been spending a bit too much time on it as my In House Designer expressed some displeasure:
+  Sarah&#39;s Tweet   But the time spent has been fruitful and I have learned quite a bit about this new tool.</description>
+    </item>
+    
+    <item>
+      <title>ServiceNow Engagement: The Path Forward</title>
+      <link>http://example.org/blog/servicenow-engagement-the-path-forward/</link>
+      <pubDate>Fri, 06 May 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/servicenow-engagement-the-path-forward/</guid>
+      <description>&amp;ldquo;No application is safe. I’m telling you, name any application we use and I could rebuild it better on this platform. This could replace SAP.&amp;rdquo;
+John didn’t have to respond. His “you’re crazier than a shithouse rat” look was well practiced by this point in our friendship. In hindsight, tilting at SAP may have been carrying it a little far but hey, where would we be if we never looked at things and thought of what they might be.</description>
+    </item>
+    
+    <item>
+      <title>ECMAScript 5 in ServiceNow Helsinki!</title>
+      <link>http://example.org/blog/ecmascript-5-in-servicenow-helsinki/</link>
+      <pubDate>Thu, 05 May 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/ecmascript-5-in-servicenow-helsinki/</guid>
+      <description>Knowledge 16 ECMAScript Session   Ok, so it may not be official yet and I know this is a weird thing to get worked up about. Besides, ECMAScript 5 is so 2011, you say. Weren’t we still talking about DVD’s in 2011? Shouldn’t we be talking about ES 6 / ECMAScript 2015? Aren’t we already using polyfills for that?
+I hear you. I’m with you. But let’s not forget that a lot of code runs on top of ServiceNow’s modified Rhino engine, including yours and mine.</description>
+    </item>
+    
+    <item>
+      <title>Where to Start with Knowledge 16</title>
+      <link>http://example.org/blog/where-to-start-with-knowledge-16/</link>
+      <pubDate>Wed, 04 May 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/where-to-start-with-knowledge-16/</guid>
+      <description>Preview for Developers The Knowledge Conference is the ServiceNow New Year. It is a time for reminiscing on the past year’s projects, setting goals for the next conference year, meeting new friends, having fun with old friends, and of course drinking enough to not remember half of it.
+This year will be my 4th Knowledge Conference, missing only K13 on account of the evils of the number 13 (not at all because I was the rookie on the team and drew the short straw).</description>
+    </item>
+    
+    <item>
+      <title>How to Fix CMS iFrame Resizing (Video)</title>
+      <link>http://example.org/blog/how-to-fix-cms-iframe-resizing/</link>
+      <pubDate>Tue, 03 May 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/how-to-fix-cms-iframe-resizing/</guid>
+      <description>Update (03/21/2017): This script currently only works if the Frame Name on your iFrame is gsft_main. Thanks to Anil Varanasi for catching this!
+  Everyone has that one thing that makes them hate their job. And I don’t mean I’m just gonna stop going I hate my job. I mean I could set the building on fire I hate my job. For me, that thing is iFrames. ServiceNow has given them a lot of love over the years but as the dubbed Portal Guy of my team I would like to see them in an episode of Will It Blend.</description>
+    </item>
+    
+    <item>
+      <title>Perfectionism is Procrastination</title>
+      <link>http://example.org/blog/perfectionism-is-procrastination/</link>
+      <pubDate>Mon, 02 May 2016 16:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/perfectionism-is-procrastination/</guid>
+      <description>Breaking the connection to relaunch Code Creative Nine months, thats how long it takes the female human body to create a new life… conveniently, it’s also how long it has taken me to create absolutely nothing. It’s not that I stopped trying to create or because I was slacking off, quite the contrary. I spent my nights and weekends learning, working on content, writing code, designing graphics, trying to bring my passion project to life.</description>
+    </item>
+    
+  </channel>
+</rss>

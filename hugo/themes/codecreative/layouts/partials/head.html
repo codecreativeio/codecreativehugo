@@ -1,0 +1,24 @@
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS "/assets/main.css"| resources.Minify | resources.Fingerprint }}
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+13px|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<title>{{ .LinkTitle }} | CodeCreative | A ServiceNow Blog</title>
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?d=20181101201248">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- partial "seo_opengraph.html" . -}}
+{{- partial "seo_itemprop.html" . -}}
+{{- partial "seo_twittercard.html" . -}}
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ .RSSLink }}">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90280965-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90280965-1');
+</script>
