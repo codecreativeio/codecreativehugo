@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2018 on CodeCreative | A ServiceNow Blog</title>
-    <link>https://codecreativeio.github.io/years/2018/</link>
+    <link>https://codecreative.io/years/2018/</link>
     <description>Recent content in 2018 on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Sep 2018 13:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://codecreativeio.github.io/years/2018/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codecreative.io/years/2018/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to land your first ServiceNow role</title>
-      <link>https://codecreativeio.github.io/blog/how-to-land-your-first-servicenow-role/</link>
+      <link>https://codecreative.io/blog/how-to-land-your-first-servicenow-role/</link>
       <pubDate>Tue, 11 Sep 2018 13:00:00 +0000</pubDate>
       
-      <guid>https://codecreativeio.github.io/blog/how-to-land-your-first-servicenow-role/</guid>
+      <guid>https://codecreative.io/blog/how-to-land-your-first-servicenow-role/</guid>
       <description>Breaking into a new sector or area of IT is never easy, but with so many opportunities available in ServiceNow perhaps it’s time you made a change. ServiceNow is the fastest-growing IT platform in the marketplace, with Gartner projecting its market share at double that of its nearest competitor in its latest research. Forbes also recently announced it as the world’s most innovative company. So if you’re looking for extra advice to kickstart your ServiceNow journey, here are some handy pointers to help you land your first role.</description>
     </item>
     
     <item>
       <title>Building Apps on ServiceNow: The App Publishers Checklist</title>
-      <link>https://codecreativeio.github.io/blog/building-apps-on-servicenow-the-app-publishers-checklist/</link>
+      <link>https://codecreative.io/blog/building-apps-on-servicenow-the-app-publishers-checklist/</link>
       <pubDate>Mon, 21 May 2018 17:13:08 +0000</pubDate>
       
-      <guid>https://codecreativeio.github.io/blog/building-apps-on-servicenow-the-app-publishers-checklist/</guid>
+      <guid>https://codecreative.io/blog/building-apps-on-servicenow-the-app-publishers-checklist/</guid>
       <description>The following is a summary of the Building Apps on ServiceNow: The App Publishers Checklist session that I presented at Knowledge 18.
  Problem (Slide 2) The Hardest Mistakes to Overcome
 During my time on the ServiceNow platform, I have had many opportunities to build a wide variety of applications. Some of my apps ended up on the ServiceNow Store like Intelligent Queue while others have been silent contributions to client applications.</description>
@@ -33,10 +33,10 @@ During my time on the ServiceNow platform, I have had many opportunities to buil
     
     <item>
       <title>Making Service Portal Widgets Work Together</title>
-      <link>https://codecreativeio.github.io/blog/making-service-portal-widgets-work-together/</link>
+      <link>https://codecreative.io/blog/making-service-portal-widgets-work-together/</link>
       <pubDate>Mon, 21 May 2018 17:12:38 +0000</pubDate>
       
-      <guid>https://codecreativeio.github.io/blog/making-service-portal-widgets-work-together/</guid>
+      <guid>https://codecreative.io/blog/making-service-portal-widgets-work-together/</guid>
       <description>The following is a summary of the Making Service Portal Widgets Work Together session that I presented at Knowledge 18.
  Problem (Slide 2) Widgets don&amp;rsquo;t play well with others
 If you work with Service Portal widgets long enough, you will come across situations where you want to share data between multiple widgets. And inevitably, you will discover that sharing is not something that widgets are very good at.</description>
@@ -44,10 +44,10 @@ If you work with Service Portal widgets long enough, you will come across situat
     
     <item>
       <title>Fixing Scoped Apps: A Different Take</title>
-      <link>https://codecreativeio.github.io/blog/fixing-scoped-apps-a-different-take/</link>
+      <link>https://codecreative.io/blog/fixing-scoped-apps-a-different-take/</link>
       <pubDate>Mon, 30 Apr 2018 00:46:19 +0000</pubDate>
       
-      <guid>https://codecreativeio.github.io/blog/fixing-scoped-apps-a-different-take/</guid>
+      <guid>https://codecreative.io/blog/fixing-scoped-apps-a-different-take/</guid>
       <description>Introduction &amp;ldquo;This record is in the Customer Service Application, but Global is the current application. To edit this record click here.&amp;rdquo; It&amp;rsquo;s the &amp;ldquo;your princess is in another castle&amp;rdquo; of ServiceNow application development and the target of much ire among developers and admins alike (myself included). The fact is, Cross-Scope development is not as great as it could be and one of Tim Woodruff&amp;rsquo;s latest articles inspired by this little pain point really got my wheels spinning on this issue.</description>
     </item>
     

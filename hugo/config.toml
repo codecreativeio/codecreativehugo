@@ -1,4 +1,4 @@
-baseURL = "https://codecreativeio.github.io/"
+baseURL = "https://codecreative.io/"
 languageCode = "en-us"
 title = "CodeCreative | A ServiceNow Blog"
 theme = "codecreative"
