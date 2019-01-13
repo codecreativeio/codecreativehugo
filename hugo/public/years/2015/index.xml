@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2015 on CodeCreative | A ServiceNow Blog</title>
-    <link>http://example.org/years/2015/</link>
+    <link>https://codecreativeio.github.io/years/2015/</link>
     <description>Recent content in 2015 on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jun 2015 16:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/years/2015/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codecreativeio.github.io/years/2015/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Adding Doctype to a UI Page</title>
-      <link>http://example.org/blog/adding-doctype-to-a-ui-page/</link>
+      <link>https://codecreativeio.github.io/blog/adding-doctype-to-a-ui-page/</link>
       <pubDate>Mon, 15 Jun 2015 16:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/adding-doctype-to-a-ui-page/</guid>
+      <guid>https://codecreativeio.github.io/blog/adding-doctype-to-a-ui-page/</guid>
       <description>Today, I am going to share a trick I learned to add a doctype to a UI Page based off of will.leingang&amp;rsquo;s article Making a UI Page without using the framework page template. A page&amp;rsquo;s doctype usually doesn&amp;rsquo;t seem to make a huge difference in output but occasionally, certain scripts and html/css tricks require a specific doctype. In my case, I needed the standard HTML5 doctype.
 What Not To Do As my first attempt, I foolishly tried this for the UI Page:</description>
     </item>
     
     <item>
       <title>How To Make Custom Pivot Tables in ServiceNow (Video)</title>
-      <link>http://example.org/blog/how-to-make-custom-pivot-tables/</link>
+      <link>https://codecreativeio.github.io/blog/how-to-make-custom-pivot-tables/</link>
       <pubDate>Mon, 01 Jun 2015 16:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/how-to-make-custom-pivot-tables/</guid>
+      <guid>https://codecreativeio.github.io/blog/how-to-make-custom-pivot-tables/</guid>
       <description>Well, it seems that pivot tables are just a little bit popular in community and while sometimes native pivot tables will suffice, there are times when custom is the only route to take. Sadly, these pivot table questions have all too often gone unanswered or answered with the dreaded &amp;ldquo;You can&amp;rsquo;t do that out of box&amp;rdquo;. Well no more. The technique covered in Code Creative Episode 3 can be used to build nearly any pivot table imaginable!</description>
     </item>
     
     <item>
       <title>How to get more out of ServiceNow Pivot Tables (Video)</title>
-      <link>http://example.org/blog/how-to-get-more-out-of-servicenow-pivot-tables/</link>
+      <link>https://codecreativeio.github.io/blog/how-to-get-more-out-of-servicenow-pivot-tables/</link>
       <pubDate>Mon, 18 May 2015 16:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/how-to-get-more-out-of-servicenow-pivot-tables/</guid>
+      <guid>https://codecreativeio.github.io/blog/how-to-get-more-out-of-servicenow-pivot-tables/</guid>
       <description>So its time for the release of Code Creative Episode 2! I had a lot of fantastic followup questions from How to Build Custom Charts and Reports but the one that kept jumping out was &amp;ldquo;How do I do a Pivot Table?&amp;rdquo; In fact, this was a common question even before I released Episode 1 and your wish is my command. Sadly, though, High Charts does not offer a Pivot Table in ServiceNow.</description>
     </item>
     
     <item>
       <title>Demystifying GlideAjax (Infographic)</title>
-      <link>http://example.org/blog/demystifying-glideajax/</link>
+      <link>https://codecreativeio.github.io/blog/demystifying-glideajax/</link>
       <pubDate>Sat, 09 May 2015 16:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/demystifying-glideajax/</guid>
+      <guid>https://codecreativeio.github.io/blog/demystifying-glideajax/</guid>
       <description>Let&amp;rsquo;s face it, unless you&amp;rsquo;re a web developer who has been on the AJAX bandwagon for a while, GlideAjax can be downright confusing. At best, it is often a mystical voodoo incantation, sure you can say the words but your just one &amp;ldquo;Klaatu verata necktie&amp;rdquo; away from unleashing a horde of undead code that will leave you wanting to unload a fist full of boomstick on your computer. With that in mind, I have put together the infographic below to illuminate your path, equip you for the debugging battles ahead, and return you to your time.</description>
     </item>
     
     <item>
       <title>How to Build Custom ServiceNow Charts and Reports (Video)</title>
-      <link>http://example.org/blog/how-to-build-custom-charts-and-reports/</link>
+      <link>https://codecreativeio.github.io/blog/how-to-build-custom-charts-and-reports/</link>
       <pubDate>Mon, 04 May 2015 16:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/how-to-build-custom-charts-and-reports/</guid>
+      <guid>https://codecreativeio.github.io/blog/how-to-build-custom-charts-and-reports/</guid>
       <description>The ServiceNow Community can be a tough place to communicate without winding up with a wall of intimidating technical text. Add to that the gaps in technical knowledge and understanding as well as differences in jargon and we often end up with walls of text and frequent churn in the comments in order to arrive at a solution. Thankfully, the Community offers some great rich media features like videos!</description>
     </item>
     
