@@ -1,6 +1,7 @@
 ---
 title: Thinker. Developer. Creator.
 linktitle: About
+socialImg: assets/CodeCreative.png
 menu:
   main:
     weight: 300

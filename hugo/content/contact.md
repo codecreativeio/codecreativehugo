@@ -1,6 +1,7 @@
 ---
 title: Let's Chat.
 linktitle: Contact
+socialImg: assets/CodeCreative.png
 menu:
   main:
     weight: 400
