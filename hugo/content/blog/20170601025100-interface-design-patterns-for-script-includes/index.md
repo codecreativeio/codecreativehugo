@@ -132,6 +132,8 @@ This is a much more appropriate way of dealing with most Utility Classes.
 * **AppFileTypeRegistry:** The AppFileTypeRegistry namespace is used within the Studio application to create Registry entries
 * **CacheBuster:** The CacheBuster namespace is used within both Studio and CodeSearch applications to add cache HTTP headers.
 
+[Read More about the Namespace Pattern][7]
+
 ## 4. Global Include Pattern
 
 ### Script Include
@@ -162,6 +164,8 @@ The Global Include Pattern can also organize multiple functions (without a names
 ### Examples
 
 * I am not aware of any current production examples of this pattern.
+
+[Read More about the Global Include Pattern][8]
 
 ## 5. Module Pattern (Revealing Module Pattern)
 
@@ -207,6 +211,8 @@ First, our How to Use It code is as succinct as the Namespace Pattern. It bears 
     * FileTypeInfo
     * etc
 
+[Read More about the Module Pattern][9]
+
 ## Final Thoughts
 
 Hopefully, I've demonstrated that there is more than one way to skin a Script Include. In future articles, we will explore these interface design patterns, their strengths, and their weaknesses in hopes of understanding when best to apply these patterns. We will also begin looking at other design patterns and how to apply them to custom application development on the ServiceNow platform.
@@ -217,3 +223,6 @@ Hopefully, I've demonstrated that there is more than one way to skin a Script In
 [4]: https://en.wikipedia.org/wiki/Functional_programming
 [5]: https://en.wikipedia.org/wiki/Higher-order_function
 [6]: /blog/interface-design-patterns-function-pattern
+[7]: /blog/interface-design-patterns-namespace-pattern
+[8]: /blog/interface-design-patterns-global-include-pattern
+[9]: /blog/interface-design-patterns-revealing-module-pattern

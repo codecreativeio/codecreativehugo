@@ -97,11 +97,81 @@
       <h2>Browse Articles</h2>
       <ul class="post-list">
       <li>
-  <a href="https://codecreative.io/blog/how-to-land-your-first-servicenow-role/">
+  <a href="https://codecreative.io/blog/interface-design-patterns-revealing-module-pattern/">
     <article>
       <div>
         
           <div class="post-latest-flag">Latest Post</div>
+        
+        <h2>Interface Design Patterns: Revealing Module Pattern</h2>
+        <div class="post-meta">
+          <time class="dt-published" datetime="2019-01-17T19:40:38Z" itemprop="datePublished">
+            January 17, 2019
+          </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </div>
+        <div class="post-summary">Back to Interface Design Patterns for Script Includes
+Introduction The Revealing Module pattern can easily imitate either the Class Pattern or the Namespace Pattern with the added advantage of private state and private functions. This is most helpful in Scoped Applications where the app developer may prefer to keep implementation details hidden while exposing clear public interfaces. But it can also be used to help maintain clear API boundaries over time where traditional Javascript classes and objects would tend towards bloat.</div>
+      </div>
+      <div class="post-continue">Click to Read More</div>
+    </article>
+  </a>
+</li>
+
+      <li>
+  <a href="https://codecreative.io/blog/interface-design-patterns-global-include-pattern/">
+    <article>
+      <div>
+        
+        <h2>Interface Design Patterns: Global Include Pattern</h2>
+        <div class="post-meta">
+          <time class="dt-published" datetime="2019-01-15T19:23:43Z" itemprop="datePublished">
+            January 15, 2019
+          </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </div>
+        <div class="post-summary">Back to Interface Design Patterns for Script Includes
+Introduction The Global Include pattern is simply a way of running a script file held in a Script Include. It is an odd, powerful, and potentially dangerous tool that allows for many different purposes from leveraging external javascript libraries to importing a collection of functions into the global scope, to monkey patching.
+One of the most useful purposes is monkey patching which allows us to modify behaviors of existing Script Includes and even ServiceNow provided classes.</div>
+      </div>
+      <div class="post-continue">Click to Read More</div>
+    </article>
+  </a>
+</li>
+
+      <li>
+  <a href="https://codecreative.io/blog/interface-design-patterns-namespace-pattern/">
+    <article>
+      <div>
+        
+        <h2>Interface Design Patterns: Namespace Pattern</h2>
+        <div class="post-meta">
+          <time class="dt-published" datetime="2019-01-15T18:51:14Z" itemprop="datePublished">
+            January 15, 2019
+          </time>
+          
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
+          
+        </div>
+        <div class="post-summary">Back to Interface Design Patterns for Script Includes
+Introduction The namespace pattern provides a simple mechanism for organizing reusable functions and objects. One of the challenging aspects of using alternative Script Include patterns is that they become harder to identify when used. For example, if I use the Function Pattern in a Business Rule it may be challenging for other developers to quickly identify that getMyTeamMembers() refers to a Script Include instead of a function defined in the script or a Global Business Rule.</div>
+      </div>
+      <div class="post-continue">Click to Read More</div>
+    </article>
+  </a>
+</li>
+
+      <li>
+  <a href="https://codecreative.io/blog/how-to-land-your-first-servicenow-role/">
+    <article>
+      <div>
         
         <h2>How to land your first ServiceNow role</h2>
         <div class="post-meta">
@@ -138,75 +208,6 @@
         <div class="post-summary">The following is a summary of the Building Apps on ServiceNow: The App Publishers Checklist session that I presented at Knowledge 18.
  Problem (Slide 2) The Hardest Mistakes to Overcome
 During my time on the ServiceNow platform, I have had many opportunities to build a wide variety of applications. Some of my apps ended up on the ServiceNow Store like Intelligent Queue while others have been silent contributions to client applications.</div>
-      </div>
-      <div class="post-continue">Click to Read More</div>
-    </article>
-  </a>
-</li>
-
-      <li>
-  <a href="https://codecreative.io/blog/making-service-portal-widgets-work-together/">
-    <article>
-      <div>
-        
-        <h2>Making Service Portal Widgets Work Together</h2>
-        <div class="post-meta">
-          <time class="dt-published" datetime="2018-05-21T17:12:38Z" itemprop="datePublished">
-            May 21, 2018
-          </time>
-          
-            
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
-          
-        </div>
-        <div class="post-summary">The following is a summary of the Making Service Portal Widgets Work Together session that I presented at Knowledge 18.
- Problem (Slide 2) Widgets don&rsquo;t play well with others
-If you work with Service Portal widgets long enough, you will come across situations where you want to share data between multiple widgets. And inevitably, you will discover that sharing is not something that widgets are very good at.</div>
-      </div>
-      <div class="post-continue">Click to Read More</div>
-    </article>
-  </a>
-</li>
-
-      <li>
-  <a href="https://codecreative.io/blog/fixing-scoped-apps-a-different-take/">
-    <article>
-      <div>
-        
-        <h2>Fixing Scoped Apps: A Different Take</h2>
-        <div class="post-meta">
-          <time class="dt-published" datetime="2018-04-30T00:46:19Z" itemprop="datePublished">
-            April 30, 2018
-          </time>
-          
-            
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
-          
-        </div>
-        <div class="post-summary">Introduction &ldquo;This record is in the Customer Service Application, but Global is the current application. To edit this record click here.&rdquo; It&rsquo;s the &ldquo;your princess is in another castle&rdquo; of ServiceNow application development and the target of much ire among developers and admins alike (myself included). The fact is, Cross-Scope development is not as great as it could be and one of Tim Woodruff&rsquo;s latest articles inspired by this little pain point really got my wheels spinning on this issue.</div>
-      </div>
-      <div class="post-continue">Click to Read More</div>
-    </article>
-  </a>
-</li>
-
-      <li>
-  <a href="https://codecreative.io/blog/interface-design-patterns-function-pattern/">
-    <article>
-      <div>
-        
-        <h2>Interface Design Patterns: Function Pattern</h2>
-        <div class="post-meta">
-          <time class="dt-published" datetime="2017-09-15T15:30:00Z" itemprop="datePublished">
-            September 15, 2017
-          </time>
-          
-            
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Travis Toulson</span></span>
-          
-        </div>
-        <div class="post-summary">Back to Interface Design Patterns for Script Includes
-Introduction The function pattern is the simplest but also the most flexible interface design pattern for Script Includes. It is the foundation for the Revealing Module Pattern and can be used as a constructor or factory function for any of the other interface types. As a factory function, this pattern can provide a Scoped App with a flexible internal API that can easily evolve as complexity increases.</div>
       </div>
       <div class="post-continue">Click to Read More</div>
     </article>
