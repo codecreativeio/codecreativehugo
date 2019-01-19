@@ -6,10 +6,20 @@
     <description>Recent content in ServiceNow Blog on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Jan 2019 19:40:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jan 2019 11:30:11 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What&#39;s In Store For 2019</title>
+      <link>https://codecreative.io/blog/whats-in-store-for-2019/</link>
+      <pubDate>Fri, 18 Jan 2019 11:30:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/whats-in-store-for-2019/</guid>
+      <description>This year has already kicked off strong and there is a lot that is in the works! Here&amp;rsquo;s a few things you can expect and a few things I am considering on CodeCreative in 2019.
+Hugo, We Go! The first big change of 2019 for CodeCreative was a migration from SquareSpace to a Hugo static site. SquareSpace is great if you use their themes but unfortunately I used a custom theme for CodeCreative.</description>
+    </item>
     
     <item>
       <title>Interface Design Patterns: Revealing Module Pattern</title>
