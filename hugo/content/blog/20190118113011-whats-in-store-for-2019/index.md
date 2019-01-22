@@ -5,10 +5,10 @@ author: tltoulson
 url: /blog/whats-in-store-for-2019
 title: "What's In Store For 2019"
 socialImg: images/social.png
-description: This year has already kicked off strong and there is a lot that is in the works!  Here's a few things you can expect and a few things I am considering on CodeCreative in 2019.
+description: This year has already kicked off strong and there is a lot that is in the works! Here's a few things you can expect and a few things I am considering on CodeCreative in 2019.
 ---
 
-This year has already kicked off strong and there is a lot that is in the works!  Here's a few things you can expect and a few things I am considering on CodeCreative in 2019.
+This year has already kicked off strong and there is a lot that is in the works! Here's a few things you can expect and a few things I am considering on CodeCreative in 2019.
 
 ## Hugo, We Go!
 

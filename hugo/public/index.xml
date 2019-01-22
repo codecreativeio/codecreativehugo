@@ -6,10 +6,20 @@
     <description>Recent content in Developing Creative Business Solutions On ServiceNow on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Jan 2019 11:30:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jan 2019 14:16:59 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React Component in Service Portal</title>
+      <link>https://codecreative.io/blog/react-component-in-service-portal/</link>
+      <pubDate>Tue, 22 Jan 2019 14:16:59 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/react-component-in-service-portal/</guid>
+      <description>So once again I am hearing rumors that React may be coming to Service Portal. I know many folks who were upset with the use of AngularJS in Service Portal and even with the general lack of modern frameworks built into ServiceNow. But what if the future was now (thanks to science)?
+Well, today I spent some time at lunch exploring that possibility and it turns out React may have been able to work within Service Portal just fine all along.</description>
+    </item>
     
     <item>
       <title>What&#39;s In Store For 2019</title>
