@@ -6,10 +6,20 @@
     <description>Recent content in Developing Creative Business Solutions On ServiceNow on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jan 2019 14:16:59 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Jan 2019 07:20:12 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Goodbye Mac, Hello Surface Book 2</title>
+      <link>https://codecreative.io/blog/goodbye-mac-hello-surface-book-2/</link>
+      <pubDate>Wed, 23 Jan 2019 07:20:12 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/goodbye-mac-hello-surface-book-2/</guid>
+      <description>One month ago, I switched from a MacBook Pro with Touchbar to Surface Book 2. Short of a miracle, I won&amp;rsquo;t likely be going back any time soon.
+Why switch? My wife and I have owned Apple devices exclusively since 2012 when she got her first MacBook Pro. Since then, we&amp;rsquo;ve at some point owned pretty much everything: MacBook Air, the new MacBook, MacBook Pro, MacBook Pro with Touchbar, 27&amp;rdquo; iMac, iPads, iPad Pros, iPhones, and heck even our router is the Airport Extreme.</description>
+    </item>
     
     <item>
       <title>React Component in Service Portal</title>
