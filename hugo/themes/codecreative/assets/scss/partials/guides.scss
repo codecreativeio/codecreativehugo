@@ -1,0 +1,57 @@
+.content.text-content.guide-content {
+  max-width: 1400px;
+}
+
+.guide-content .guide-nav {
+  background-color: $light-bg;
+  font-size:.8em;
+  padding: 1.5em;
+  padding-left: 2em;
+  margin-bottom: 4em;
+  padding-bottom: 4em;
+}
+
+.content.text-content.guide-content .guide-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content.text-content.guide-content .guide-nav ul li {
+  padding: .65em 0;
+  line-height: 1.25em;
+}
+
+.content.text-content.guide-content .guide-nav h1 {
+  font-size: 1.25em;
+  padding: 0;
+  margin: 0;
+  padding-bottom: .5em;
+}
+
+.guide-content .post-meta {
+  margin-top: 0;
+}
+
+@media only screen and (min-width : $medium-breakpoint) {
+  .guide-content article {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .guide-content .guide-article {
+    flex: 1 0 66.66%;
+  }
+
+  .guide-content .guide-nav {
+    position: sticky;
+    top: 4em;
+    flex: 1 0 33.33%;
+    max-width: 300px;
+  }
+
+  .guide-nav {
+    width: 33.33%;
+    margin-right: 2em;
+  }
+}

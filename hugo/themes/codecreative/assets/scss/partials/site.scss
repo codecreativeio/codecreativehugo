@@ -83,6 +83,10 @@ h1, h2, h3, h4, h5, h6 {
   max-width: $max-content-width;
 }
 
+.content.noPadding {
+  padding: 0;
+}
+
 .banner h1 {
   font-family: $display-font;
 }

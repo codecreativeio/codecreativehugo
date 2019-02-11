@@ -7,7 +7,7 @@
   <div class="index-content">
     <section class="index-section">
       <h2>Browse Articles</h2>
-      <ul class="post-list">
+      <ul class="post-list featured-list">
       {{ range $index, $value := first 5 .Pages }}
         {{- partial "featured_blog_item.html" (dict "context" . "index" $index) }}
       {{ end }}

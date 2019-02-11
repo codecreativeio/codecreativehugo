@@ -4,6 +4,9 @@
 # Image directory
 /images
 
+# Resource Cache
+/hugo/resources/_gen
+
 ## OS Files
 # Windows
 Thumbs.db

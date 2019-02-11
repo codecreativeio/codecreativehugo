@@ -23,6 +23,7 @@
 
 .index-section ul.post-list > li {
   padding: 1em;
+  flex: 0 1 100%;
 }
 
 .index-section ul.post-list > li > a {
@@ -116,16 +117,16 @@
     flex: 0 1 50%;
   }
 
-  .index-section ul.post-list > li:first-of-type {
+  .index-section ul.post-list.featured-list > li:first-of-type {
     flex: 0 1 100%;
   }
 
-  .index-section ul.post-list > li:first-of-type article {
+  .index-section ul.post-list.featured-list > li:first-of-type article {
     justify-content: center;
     padding: 1em 2em;
   }
 
-  .index-section ul.post-list li:first-of-type > a h2 {
+  .index-section ul.post-list.featured-list li:first-of-type > a h2 {
     font-size: 3em;
     line-height: 1em;
   }
@@ -136,7 +137,7 @@
     flex: 0 1 33.33%;
   }
 
-  .index-section ul.post-list > li:first-of-type {
+  .index-section ul.post-list.featured-list > li:first-of-type {
     flex: 0 1 66.66%;
   }
 }
