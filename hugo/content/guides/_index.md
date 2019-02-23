@@ -5,7 +5,6 @@ socialImg: assets/CodeCreative.png
 menu:
   main:
     weight: 400
-published: false
 ---
 
 Looking for a more targeted, step by step approach to learning ServiceNow? Browse the following guides to unlock your potential.

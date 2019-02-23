@@ -1,12 +1,11 @@
 ---
-date: 2019-02-05 20:20:49
+date: 2019-02-23 20:20:49
 author: tltoulson
 url: /guides/getting-started-on-servicenow/what-is-a-servicenow-instance
 title: What is a ServiceNow Instance?
-socialImg: images/social.png
-description:
+socialImg: social.png
+description: As mentioned in the previous section, ServiceNow operates using a single tenant architecture meaning that each customer gets their own copy or multiple copies of ServiceNow in the cloud. These copies are known as ServiceNow instances.
 weight: 200
-published: false
 ---
 
 <figure>

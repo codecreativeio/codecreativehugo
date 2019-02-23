@@ -1,19 +1,18 @@
 ---
-date: 2019-02-05 20:20:49
+date: 2019-02-23 20:20:49
 author: tltoulson
 url: /guides/getting-started-on-servicenow/get-a-personal-developer-instance
 title: "Exercise: Get a Personal Developer Instance"
-socialImg: images/social.png
-description:
+socialImg: social.png
+description: Obtaining ServiceNow Personal Developer Instance (PDI) is your first step to exploring the full potential of the platform and furthering your skills with it. Let's get started!
 weight: 300
-published: false
 ---
 
 **Objective:** Obtain and login to ServiceNow Personal Developer Instance
 
 Obtaining ServiceNow Personal Developer Instance (PDI) is your first step to exploring the full potential of the platform and furthering your skills with it. Let's get started!
 
-# Exercise
+## Exercise
 
 Follow the below instructions to complete the exercise:
 
@@ -39,7 +38,7 @@ Follow the below instructions to complete the exercise:
 
 **Congratulations! You now have your very own Personal Developer Instance!**
 
-## Additional Notes
+## Review
 
 ### Instance Versions
 

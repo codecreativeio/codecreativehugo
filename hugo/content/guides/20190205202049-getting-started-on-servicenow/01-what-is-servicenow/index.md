@@ -1,15 +1,14 @@
 ---
-date: 2019-02-05 20:20:49
+date: 2019-02-23 20:20:49
 author: tltoulson
 url: /guides/getting-started-on-servicenow/what-is-servicenow
 title: What is ServiceNow?
-socialImg: images/social.png
-description: First and foremost, ServiceNow is a web application you can access through your browser. Beyond that simple explanation, ServiceNow is a bit like the software equivalent of the *Blind men and an elephant* parable.
+socialImg: social.png
+description: First and foremost, ServiceNow is a web application you can access through your browser. Beyond that simple explanation, ServiceNow is a bit like the software equivalent of the blind men and an elephant parable.
 weight: 100
-published: false
 ---
 
-First and foremost, ServiceNow is a web application you can access through your browser in order to track and automate work. Beyond that basic explanation, ServiceNow is a bit like the software equivalent of the *Blind men and an elephant* parable. What ServiceNow is to you depends largely on which piece of it you get your hands on first. As a company, ServiceNow provides both Platform as a Service (PaaS) and Software as a Service (SaaS) offerings via it's Now Platform in a single tenant architecture.
+First and foremost, ServiceNow is a web application you can access through your browser in order to track and automate work. Beyond that basic explanation, ServiceNow is a bit like the software equivalent of the *blind men and an elephant* parable. What ServiceNow is to you depends largely on which piece of it you get your hands on first. As a company, ServiceNow provides both Platform as a Service (PaaS) and Software as a Service (SaaS) offerings via it's Now Platform in a single tenant architecture.
 
 ### SaaS Offering
 

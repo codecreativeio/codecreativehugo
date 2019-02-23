@@ -11,13 +11,14 @@
         {{.Content}}
       </div>
       <ul class="post-list">
-      {{ range .Pages.ByWeight }}
+      {{ range $index, $page := .Pages.ByWeight }}
         <li>
-          <a href="{{.Permalink}}">
+          <a href="{{$page.Permalink}}">
             <article>
               <div>
-                <h2>{{.Title}}</h2>
-                <div class="post-summary">{{ .Description }}</div>
+                <div class="post-latest-flag">Section {{ add $index 1 }}</div>
+                <h2>{{$page.Title}}</h2>
+                <div class="post-summary">{{ $page.Description }}</div>
               </div>
               <div class="post-continue">Click to Read More</div>
             </article>

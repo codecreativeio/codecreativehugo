@@ -35,6 +35,10 @@
     margin-left: 40px;
   }
 
+  ol li ol {
+    list-style-type: lower-alpha;
+  }
+
   blockquote {
     margin:1.5em auto;
     font-family:Open Sans;

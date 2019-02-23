@@ -10,7 +10,13 @@
     "name" : "{{ .Title }}",
     "headline" : "{{ .Title }}",
     "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}",
-    {{- if .Params.socialImg -}}"image": "{{ .Permalink }}{{ .Params.socialImg }}",{{- end -}}
+    {{- if .Params.socialImg -}}
+      {{- if eq .Type "guides" -}}
+      "image": "{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}",
+      {{- else -}}
+      "image": "{{ .Permalink }}{{ .Params.socialImg }}",
+      {{- end -}}
+    {{- end -}}
     "inLanguage" : "en-US",
     {{- if .Params.author -}}
       {{ $author := index .Site.Data.authors .Params.author }}

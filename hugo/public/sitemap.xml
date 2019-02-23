@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/what-is-servicenow/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/what-is-a-servicenow-instance/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/get-a-personal-developer-instance/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/navigating-the-ui/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/filtering-records-in-the-list-view/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/creating-and-editing-records/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-on-servicenow/next-steps/</loc>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codecreative.io/blog/servicenow-salary-survey-nelson-frank/</loc>
     <lastmod>2019-02-11T09:48:29+00:00</lastmod>
   </url>
@@ -291,8 +331,12 @@
   </url>
   
   <url>
+    <loc>https://codecreative.io/guides/</loc>
+  </url>
+  
+  <url>
     <loc>https://codecreative.io/</loc>
-    <lastmod>2019-02-11T09:48:29+00:00</lastmod>
+    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
   </url>
   
   <url>
