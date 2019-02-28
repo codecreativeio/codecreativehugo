@@ -6,10 +6,19 @@
     <description>Recent content in ServiceNow Blog on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Feb 2019 09:48:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Feb 2019 08:42:07 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Prepare Your Import Sets for Rollback</title>
+      <link>https://codecreative.io/blog/prepare-your-import-sets-for-rollback/</link>
+      <pubDate>Thu, 28 Feb 2019 08:42:07 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/prepare-your-import-sets-for-rollback/</guid>
+      <description>Few things are worse than performing a bulk import of data into ServiceNow only to realize you got something horribly wrong in the Transform Map. With a well planned coalesce, this often won&amp;rsquo;t create an issue since you can just reimport and overwrite. But sometimes things don&amp;rsquo;t go as planned and we need the nuclear option. Up until this point, I am still unaware of any baseline method of rollback for import sets.</description>
+    </item>
     
     <item>
       <title>ServiceNow Salary Survey - Nelson Frank</title>
