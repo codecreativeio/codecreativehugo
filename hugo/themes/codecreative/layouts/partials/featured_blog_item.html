@@ -15,7 +15,7 @@
             • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ $author.display }}</span></span>
           {{ end }}
         </div>
-        <div class="post-summary">{{ .context.Summary }}</div>
+        <div class="post-summary">{{ if .context.Description }}{{ .context.Description }}{{ else }}{{ .context.Summary }}{{ end }}</div>
       </div>
       <div class="post-continue">Click to Read More</div>
     </article>

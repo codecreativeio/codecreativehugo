@@ -6,10 +6,20 @@
     <description>Recent content in ServiceNow Blog on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Feb 2019 08:42:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 21:38:31 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Is GlideRecord getValue the King of the String</title>
+      <link>https://codecreative.io/blog/is-gliderecord-getvalue-the-king-of-the-string/</link>
+      <pubDate>Sun, 31 Mar 2019 21:38:31 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/is-gliderecord-getvalue-the-king-of-the-string/</guid>
+      <description>King of the String This article will be long, so here&amp;rsquo;s as quick a synopsis as I can muster. In order to determine if getValue is truly a best practice superior to other GlideRecord field string coercions, I collected and analyzed 278,738 data samples from ServiceNow records in the global scope of a Madrid Personal Developer Instance and compared the resulting types and values of 5 different methods:
+ GlideRecord getValue (gr.</description>
+    </item>
     
     <item>
       <title>Prepare Your Import Sets for Rollback</title>
