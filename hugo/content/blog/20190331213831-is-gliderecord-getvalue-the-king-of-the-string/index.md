@@ -35,6 +35,8 @@ The most important takeaway I can offer is this: know your return types and deve
 
 If you are interested, keep reading for further analysis and feel free to download the Get Value Analysis app to pull samples in your own instance to contribute to the conversation.
 
+**Update (04/07/2019):** Thanks to some sleuthing by Kevin Gravois, it appears that toString may not be as unusual as I initially thought and could in fact be a superior method to plus-quote-quote and String constructor. More details in the toString analysis.
+
 ---
 
 # Analysis
@@ -276,6 +278,8 @@ Bummer. This method had a chance to convert me.
 
 ### Plus-Quote-Quote
 
+**Updated (04/07/2019):** This section has been updated to reflect the findings presented by Kevin Gravois
+
 Example:
 
 ```js
@@ -291,8 +295,8 @@ gs.print(val);
 
 **Criteria Results**
 
-- Expected Type Returned: **Pass**
-- Expected Value Returned: **Pass**
+- Expected Type Returned: **Fail**
+- Expected Value Returned: **Fail**
 - Consistent Readability: **Fail**
 - Long Term Stability: **Pass**
 
@@ -300,24 +304,29 @@ gs.print(val);
 **Pros:**
 
 - Used in ~400+ Scripts in a Baseline Instance implies this method's use isn't going away any time soon
-- Always returns a string
+- Always returns a string, except in the case of the Wiki field type
 - Consistent script readability in all scenarios
 - Returns the expected 'true' and 'false' string representations for booleans
 
 **Cons:**
 
+- Throws an error on empty Wiki fields
 - Not ServiceNow's Documented method
 - May not be explicit enough for inexperienced developers
 
 This was the most unexpected part of the analysis. I assumed that if there were differences, they would fall in favor of getValue but that was not the case at all. Sure, this method is not documented by ServiceNow but it is extensively used by ServiceNow's developers. So unless ServiceNow imposes a major change, we can expect implicit type coercion to continue to work in future versions. That combined with the anecdotal evidence that I've been using this method myself since roughly 2011 gives me a fair amount of confidence in it.
 
-The biggest plus though is that it always returns a string. Empty field? That's an empty string. This simplifies type checking and gives me exactly what I would have expected from the getValue API's. Simpler scripts without the risk of TypeErrors. Now that's an approach I can live with.
+The biggest plus though is that it almost always returns a string. Empty field? That's an empty string. This simplifies type checking and gives me exactly what I would have expected from the getValue API's. Simpler scripts without the risk of TypeErrors. Now that's an approach I can live with.
 
-Controlling for the null and boolean values, Plus-Quote-Quote was consistent with getValue's results 100% of the time.
+Controlling for the null and boolean values, Plus-Quote-Quote was consistent with getValue's results nearly 100% of the time.
 
-That said, the one major drawback I can see is that plus-quote-quote is by definition implicit string coercion. That key word *implicit* means inexperienced developers may not recognize the syntax. Obviously, that is a hazard I am willing to take. Some may disagree, but I failed this method for readability on account of the number of inexperienced programmers who have asked me what the *+ ''* is at the end of my lines of code.
+That said, the biggest drawback is an obscure error that is thrown when a Wiki field is empty. The getValue and toString functions return a null value instead which is far better than an error. This appears to be an issue that is specific to the Wiki processing though and seems to be a bug rather than by design. Even though I failed this method on return values for this reason, I am more than willing to work around this one field type that I rarely encounter.
+
+One other drawback I can see is that plus-quote-quote is by definition implicit string coercion. That key word *implicit* means inexperienced developers may not recognize the syntax. Obviously, that is a hazard I am willing to take. Some may disagree, but I failed this method for readability on account of the number of inexperienced programmers who have asked me what the *+ ''* is at the end of my lines of code.
 
 ### String constructor
+
+**Updated (04/07/2019):** This section has been updated to reflect the findings presented by Kevin Gravois
 
 Example:
 
@@ -334,27 +343,30 @@ gs.print(val);
 
 **Criteria Results**
 
-- Expected Type Returned: **Pass**
-- Expected Value Returned: **Pass**
+- Expected Type Returned: **Fail**
+- Expected Value Returned: **Fail**
 - Consistent Readability: **Pass**
 - Long Term Stability: **Pass**
 
 **Pros:**
 
-- Always returns a string
+- Always returns a string, except in the case of the Wiki field type
 - Consistent script readability in all scenarios
 - Returns the expected 'true' and 'false' string representations for booleans
 
 **Cons:**
 
+- Throws an error on empty Wiki fields
 - Not ServiceNow's Documented method
 - Used in at least 50+ Scripts in a Baseline Instance implies this method may be replaceable but it has some staying power
 
 This method was 100% consistent with the results of Plus-Quote-Quote samples. The main exception is that it is much less frequently used by ServiceNow. While that may imply a greater risk of replacement, String is a JavaScript native implementation. I don't expect many changes to this function but I could be wrong on that.
 
-Additionally, this method is more explicit for newer developers. This one is a tough call but ultimately I chose to stick with Plus-Quote-Quote due to it's wider use.
+Additionally, this method is more explicit for newer developers.
 
 ### toString Function
+
+**Updated (04/07/2019):** This section has been updated to reflect the findings presented by Kevin Gravois
 
 Example:
 
@@ -371,32 +383,31 @@ gs.print(val);
 
 **Criteria Results**
 
-- Expected Type Returned: **Fail**
-- Expected Value Returned: **Fail**
+- Expected Type Returned: **Pass**
+- Expected Value Returned: **Pass**
 - Consistent Readability: **Pass**
 - Long Term Stability: **Pass**
 
 **Pros:**
 
-- Always returns a string
+- Always returns a string, except the buggy wiki field
 - Returns the expected 'true' and 'false' string representations for booleans
 - Used in 350+ Scripts in a Baseline Instance implies this method may be replaceable
 - Documented ServiceNow function
 
 **Cons:**
 
-- There is no explanation for the difference between this string representation and getValue's
-- Can return a NULL value instead of a String
+- Technically, the Wiki field can return a null but that field type gives every string coercion method issues
 
-Lastly, we have the drunk uncle of the bunch. The toString makes absolutely no sense to me. In some cases on Wiki Text fields (possibly others?) it returns null like getValue. But it returns a proper 'true' and 'false' like plus-quote-quote and String constructor. Once upon a time using toString could result in pointing to the Java toString function which would yield odd results but I haven't tried it since Calgary when I stopped using it and those results didn't show up in my samples so I guess that has been worked out.
+After the findings Kevin Gravois presented to me in a slack conversation, I am entirely taking back my "drunk uncle" comments about toString. It turns out the only field type throwing null values around for this method was the Wiki field. Furthermore, that same field type throws errors on plus-quote-quote and String constructor methods. My error handling was swallowing and logging the errors but I overlooked it in my initial analysis.
 
-It is used by ServiceNow pretty extensively but it's hard to tell how exactly that function is being used since it can be used in many different scenarios.
+That said, toString is consistent with the plus-quote-quote and String constructor methods in every other scenario and even I admit that null value is superior to an error.
 
-Further more, there is no explanation as to why toString and getValue would yield different string results for the same field when they are both documented and maintained by ServiceNow.
+Best of all, this function has a consistent signature and can be used with dot-walking reflecting the best strengths of GlideElement getValue. And unlike GlideElement getValue, toString is still available in Scoped applications.
 
-I suppose if toString were the recommended best practice and used more extensively than getValue, then getValue would be the drunk uncle. But that's not how the chips fell for toString.
+Lastly, toString is pretty darn clear as to its intent from a readability perspective. Much more so than my favored plus-quote-quote.
 
-I want to love it. It so closely resembles GlideElement's getValue function. And yet, it scares the crap out of me. I may need to test this one further.
+Will I be switching to toString? I don't know. Old habits are hard to break and plus-quote-quote works in all other scenarios just fine. But I'd be lying if I didn't acknowledge that toString seemingly has all the advantages and none of the disadvantages.
 
 ## Don't Take My Word For It
 
