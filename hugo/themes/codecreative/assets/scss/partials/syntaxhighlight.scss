@@ -1,7 +1,7 @@
 .highlight pre {
 	padding: 1em 2em;
 	max-height: 30em;
-	overflow-y: scroll;
+	overflow: auto;
 }
 .highlight pre { background-color: #404040 }
 .highlight .hll { background-color: #404040 }

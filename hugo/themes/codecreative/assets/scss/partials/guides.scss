@@ -41,6 +41,8 @@
 
   .guide-content .guide-article {
     flex: 1 0 66.66%;
+    overflow: auto;
+    padding-left: 2em;
   }
 
   .guide-content .guide-nav {
@@ -52,6 +54,5 @@
 
   .guide-nav {
     width: 33.33%;
-    margin-right: 2em;
   }
 }

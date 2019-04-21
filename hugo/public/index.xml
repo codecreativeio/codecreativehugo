@@ -95,6 +95,16 @@ Exercise  In your Personal Developer Instance, navigate to Incident &amp;gt; Ope
     </item>
     
     <item>
+      <title>Service Portal CSS Order of Precedence</title>
+      <link>https://codecreative.io/blog/service-portal-css-order-of-precedence/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/service-portal-css-order-of-precedence/</guid>
+      <description>In my work on the Getting Started with Service Portal Guide, I decided to include some information on the order the CSS is processed but truth be told I wasn&amp;rsquo;t 100% certain on it myself. Naturally I hit up the ServiceNow Docs and came across the following image:
+  Not Entirely Accurate Hierarchy of style application in the Service Portal   Using that as a basis, I began writing an article on the process.</description>
+    </item>
+    
+    <item>
       <title>Is GlideRecord getValue the King of the String</title>
       <link>https://codecreative.io/blog/is-gliderecord-getvalue-the-king-of-the-string/</link>
       <pubDate>Sun, 31 Mar 2019 21:38:31 +0000</pubDate>
