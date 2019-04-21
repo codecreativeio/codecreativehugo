@@ -6,7 +6,6 @@ title: "Exercise: Building a Homepage"
 socialImg: social.png
 description: With the portal level components coming together strong, let's turn our attention to the page level components. Service Portal comes with a built in layout engine that makes assembling pages a breeze.
 weight: 500
-published: false
 ---
 
 **Objective:** To create a customized homepage for the portal.

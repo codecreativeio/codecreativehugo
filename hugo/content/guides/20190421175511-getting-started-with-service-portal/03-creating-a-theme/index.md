@@ -6,7 +6,6 @@ title: "Exercise: Creating a Theme"
 socialImg: social.png
 description: Creating a theme takes our styles one step further and brings our portal closer to compliance with a corporate style guide. With just a little SASS and CSS we can take our portal a long way.
 weight: 300
-published: false
 ---
 
 **Objective:** To create a custom theme and apply it to a Service Portal to further modify the portal style.

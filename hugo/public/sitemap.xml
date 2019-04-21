@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/what-is-service-portal/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codecreative.io/guides/getting-started-on-servicenow/</loc>
     <lastmod>2019-02-23T20:20:49+00:00</lastmod>
   </url>
@@ -13,8 +18,23 @@
   </url>
   
   <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/branding-the-portal/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codecreative.io/guides/getting-started-on-servicenow/what-is-a-servicenow-instance/</loc>
     <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/creating-a-theme/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
   </url>
   
   <url>
@@ -23,8 +43,18 @@
   </url>
   
   <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/overriding-styles-with-css-includes/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codecreative.io/guides/getting-started-on-servicenow/navigating-the-ui/</loc>
     <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/building-a-homepage/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
   </url>
   
   <url>
@@ -33,13 +63,28 @@
   </url>
   
   <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/configuring-widgets/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codecreative.io/guides/getting-started-on-servicenow/creating-and-editing-records/</loc>
     <lastmod>2019-02-23T20:20:49+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/css-and-scss-processing/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codecreative.io/guides/getting-started-on-servicenow/next-steps/</loc>
     <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codecreative.io/guides/getting-started-with-service-portal/next-steps/</loc>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
   </url>
   
   <url>
@@ -351,7 +396,7 @@
   
   <url>
     <loc>https://codecreative.io/</loc>
-    <lastmod>2019-02-23T20:20:49+00:00</lastmod>
+    <lastmod>2019-04-21T17:55:11+00:00</lastmod>
   </url>
   
   <url>

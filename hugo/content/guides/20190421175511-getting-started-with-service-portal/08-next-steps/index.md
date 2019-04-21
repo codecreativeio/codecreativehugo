@@ -6,7 +6,6 @@ title: "Next Steps"
 socialImg: social.png
 description: Over the course of this guide, we have covered some basic knowledge and foundational skills for getting started with ServiceNow's Service Portal. To grow your skills on Service Portal, there are multiple paths that you can pursue.
 weight: 800
-published: false
 ---
 
 Over the course of this guide, we have covered some basic knowledge and foundational skills for getting started with ServiceNow's Service Portal. At this point you should be able to:

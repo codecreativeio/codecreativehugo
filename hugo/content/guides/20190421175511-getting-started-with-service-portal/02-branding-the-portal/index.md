@@ -6,7 +6,6 @@ title: "Exercise: Branding the Portal"
 socialImg: social.png
 description: Modifying the basic branding is a great way to get introduced to Service Portal. It is an easy skill to pick up which requires no code and can be performed by administrators.
 weight: 200
-published: false
 ---
 
 **Objective:** To use the Service Portal Branding Editor to modify the branding of a portal.

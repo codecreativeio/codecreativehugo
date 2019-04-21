@@ -6,7 +6,6 @@ title: "Exercise: Configuring Widgets"
 socialImg: social.png
 description: "One more step to finish up our portal: Widgets. Widgets are the heart and soul of the Service Portal world. This exercise will give you an intro to Widgets and prepare you for the next steps in learning Widget development."
 weight: 600
-published: false
 ---
 
 **Objective:** To configure and create simple Widgets in Service Portal

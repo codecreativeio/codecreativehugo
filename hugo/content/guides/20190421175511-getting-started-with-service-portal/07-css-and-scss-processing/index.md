@@ -6,7 +6,6 @@ title: "CSS and SCSS Processing"
 socialImg: social.png
 description: So far we have reviewed many different CSS fields across the Service Portal framework. Since CSS evaluation is highly dependent on it's order, it helps to understand how these different fields get ordered and processed.
 weight: 700
-published: false
 ---
 
 So far we have reviewed many different CSS fields across the Service Portal framework. Since CSS evaluation is highly dependent on it's order, it helps to understand how these different fields get ordered and processed.

@@ -6,10 +6,21 @@
     <description>Recent content in Developing Creative Business Solutions On ServiceNow on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Feb 2019 20:20:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2019 17:55:11 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is Service Portal?</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/what-is-service-portal/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/what-is-service-portal/</guid>
+      <description>Service Portal is a powerful framework for building self-service websites and custom web app UIs. Using a hierarchy of table driven components, Service Portal simplifies the process and reduces the code required to build a web interface.
+Building Blocks The Service Portal framework uses a combination of well known web libraries and unique framework building blocks to power the UI.
+For front-end web developers, a few libraries are in use which are likely familiar:</description>
+    </item>
     
     <item>
       <title>What is ServiceNow?</title>
@@ -18,6 +29,17 @@
       
       <guid>https://codecreative.io/guides/getting-started-on-servicenow/what-is-servicenow/</guid>
       <description>First and foremost, ServiceNow is a web application you can access through your browser in order to track and automate work. Beyond that basic explanation, ServiceNow is a bit like the software equivalent of the blind men and an elephant parable. What ServiceNow is to you depends largely on which piece of it you get your hands on first. As a company, ServiceNow provides both Platform as a Service (PaaS) and Software as a Service (SaaS) offerings via it&amp;rsquo;s Now Platform in a single tenant architecture.</description>
+    </item>
+    
+    <item>
+      <title>Exercise: Branding the Portal</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/branding-the-portal/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/branding-the-portal/</guid>
+      <description>Objective: To use the Service Portal Branding Editor to modify the branding of a portal.
+  Exercise Goal   Modifying the basic branding is a great way to get introduced to Service Portal. It is an easy skill to pick up which requires no code and can be performed by administrators.
+In this exercise, we will clone the baseline ITSM portal to create our own portal to modify through the rest of this guide.</description>
     </item>
     
     <item>
@@ -31,6 +53,17 @@ Each instance can run multiple applications side by side, so a single instance c
     </item>
     
     <item>
+      <title>Exercise: Creating a Theme</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/creating-a-theme/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/creating-a-theme/</guid>
+      <description>Objective: To create a custom theme and apply it to a Service Portal to further modify the portal style.
+  Exercise Goal   Creating a theme takes our styles one step further and brings our portal closer to compliance with a corporate style guide. With just a little SASS and CSS we can take our portal a long way.
+In this exercise, we will clone the La Jolla Theme record, modify it&amp;rsquo;s styles, and apply it to the CodeCreative portal we created in the last exercise.</description>
+    </item>
+    
+    <item>
       <title>Exercise: Get a Personal Developer Instance</title>
       <link>https://codecreative.io/guides/getting-started-on-servicenow/get-a-personal-developer-instance/</link>
       <pubDate>Sat, 23 Feb 2019 20:20:49 +0000</pubDate>
@@ -41,6 +74,17 @@ Obtaining ServiceNow Personal Developer Instance (PDI) is your first step to exp
 Exercise Follow the below instructions to complete the exercise:
  In a web browser, navigate to https://developer.servicenow.com/
  Note: Create an account if you do not already have one  Log in to your account</description>
+    </item>
+    
+    <item>
+      <title>Exercise: Overriding Styles with CSS Includes</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/overriding-styles-with-css-includes/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/overriding-styles-with-css-includes/</guid>
+      <description>Objective: To further modify the theme and styles, including fonts, using CSS Includes on the Theme record.
+  Exercise Goal   Now that we have a basic theme, let&amp;rsquo;s introduce some new fonts and styles using Theme CSS Includes. CSS Includes are the best place to put CSS styles that should be applied across every page of the portal.
+In this exercise, we will create a CSS Include, add it to our CodeCreative Theme record, and update our portals styles to reflect the Exercise Goal pictured above.</description>
     </item>
     
     <item>
@@ -58,6 +102,18 @@ Exercise Follow the below instructions to complete the exercise:
     </item>
     
     <item>
+      <title>Exercise: Building a Homepage</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/building-a-homepage/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/building-a-homepage/</guid>
+      <description>Objective: To create a customized homepage for the portal.
+  Exercise Goal   With the portal level components coming together strong, let&amp;rsquo;s turn our attention to the page level components. Service Portal comes with a built in layout engine that makes assembling pages a breeze.
+In this exercise, we will explore cloning and customizing pages in Service Portal by creating a custom homepage.
+Exercise Follow the below instructions to complete the exercise:</description>
+    </item>
+    
+    <item>
       <title>Exercise: Filtering Records in the List View</title>
       <link>https://codecreative.io/guides/getting-started-on-servicenow/filtering-records-in-the-list-view/</link>
       <pubDate>Sat, 23 Feb 2019 20:20:49 +0000</pubDate>
@@ -67,6 +123,16 @@ Exercise Follow the below instructions to complete the exercise:
 Mastering the list view is one of the more critical skills for new ServiceNow users. In this first List View exercise, we&amp;rsquo;ll focus on different ways of filtering records.
 Exercise  In your Personal Developer Instance, navigate to Incident &amp;gt; All
   Using the list header search, find all Incidents containing the Short Description SAP (Learn more about the list header search)</description>
+    </item>
+    
+    <item>
+      <title>Exercise: Configuring Widgets</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/configuring-widgets/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/configuring-widgets/</guid>
+      <description>Objective: To configure and create simple Widgets in Service Portal
+  Exercise Goal   One more step to finish up our portal: Widgets. Widgets are the heart and soul of the Service Portal world. All of the content from the header to the footer, the menus, the lists, the forms, all of it is driven by Widgets. Widgets can be as simple or complex as you need.</description>
     </item>
     
     <item>
@@ -81,6 +147,16 @@ Exercise  In your Personal Developer Instance, navigate to Incident &amp;gt; Ope
     </item>
     
     <item>
+      <title>CSS and SCSS Processing</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/css-and-scss-processing/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/css-and-scss-processing/</guid>
+      <description>So far we have reviewed many different CSS fields across the Service Portal framework. Since CSS evaluation is highly dependent on it&amp;rsquo;s order, it helps to understand how these different fields get ordered and processed.
+Unfortunately, much of the documentation around this can lead to even more confusion. In order to understand the whole picture, we first have to understand that Service Portal does not generate a single blob of CSS.</description>
+    </item>
+    
+    <item>
       <title>Next Steps</title>
       <link>https://codecreative.io/guides/getting-started-on-servicenow/next-steps/</link>
       <pubDate>Sat, 23 Feb 2019 20:20:49 +0000</pubDate>
@@ -92,6 +168,20 @@ Exercise  In your Personal Developer Instance, navigate to Incident &amp;gt; Ope
  Navigate records using the form and list views
  Create and edit records using the form and list views
   With practice and persistence, you can grow these skills to learn the many capabilities that ServiceNow has to offer.</description>
+    </item>
+    
+    <item>
+      <title>Next Steps</title>
+      <link>https://codecreative.io/guides/getting-started-with-service-portal/next-steps/</link>
+      <pubDate>Sun, 21 Apr 2019 17:55:11 +0000</pubDate>
+      
+      <guid>https://codecreative.io/guides/getting-started-with-service-portal/next-steps/</guid>
+      <description>Over the course of this guide, we have covered some basic knowledge and foundational skills for getting started with ServiceNow&amp;rsquo;s Service Portal. At this point you should be able to:
+ Create a new Portal
+ Style a Portal with a Theme and CSS Includes
+ Create and Configure Portal Pages
+ Create and Configure Widgets and Widget Instances
+  To grow your skills on Service Portal, there are multiple paths that you can pursue:</description>
     </item>
     
     <item>

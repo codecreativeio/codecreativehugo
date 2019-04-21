@@ -6,7 +6,6 @@ title: "Exercise: Overriding Styles with CSS Includes"
 socialImg: social.png
 description: Now that we have a basic theme, let's introduce some new fonts and styles using Theme CSS Includes.
 weight: 400
-published: false
 ---
 
 **Objective:** To further modify the theme and styles, including fonts, using CSS Includes on the Theme record.

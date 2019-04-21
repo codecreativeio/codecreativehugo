@@ -6,7 +6,6 @@ title: What is Service Portal?
 socialImg: social.png
 description: Service Portal is a powerful framework for building self-service websites and custom web app UIs. Using a hierarchy of table driven components, Service Portal simplifies the process and reduces the code required to build a web interface.
 weight: 100
-published: false
 ---
 
 Service Portal is a powerful framework for building self-service websites and custom web app UIs. Using a hierarchy of table driven components, Service Portal simplifies the process and reduces the code required to build a web interface.
