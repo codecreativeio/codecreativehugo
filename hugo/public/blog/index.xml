@@ -6,10 +6,20 @@
     <description>Recent content in ServiceNow Blog on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Apr 2019 17:55:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2019 16:57:50 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Are Extension Points Worth It</title>
+      <link>https://codecreative.io/blog/are-extension-points-worth-it/</link>
+      <pubDate>Sat, 04 May 2019 16:57:50 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/are-extension-points-worth-it/</guid>
+      <description>One of the features that most intrigued me in ServiceNow&amp;rsquo;s London release was Extension Points. Unfortunately, I wasn&amp;rsquo;t doing a whole lot of custom app development in London, so that intrigue was left on the bench. Recently, though, I&amp;rsquo;ve been doing a little more app development and starting exploring this new feature and finding myself at a cross-roads:
+Do I switch to Extension Points or keep using my tried and true methods?</description>
+    </item>
     
     <item>
       <title>Service Portal CSS Order of Precedence</title>
