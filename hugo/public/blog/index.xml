@@ -6,10 +6,21 @@
     <description>Recent content in ServiceNow Blog on CodeCreative | A ServiceNow Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 May 2019 16:57:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 16:10:09 +0000</lastBuildDate>
     
 	<atom:link href="https://codecreative.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Configuration vs Customization: Which Is It?</title>
+      <link>https://codecreative.io/blog/configuration-vs-customization-which-is-it/</link>
+      <pubDate>Sat, 11 May 2019 16:10:09 +0000</pubDate>
+      
+      <guid>https://codecreative.io/blog/configuration-vs-customization-which-is-it/</guid>
+      <description>The following is a summary of the Configuration vs Customization: Which Is It? session that I presented at Knowledge 19.
+ The Official Guidance (Slide 1) Intro
+&amp;ldquo;We don&amp;rsquo;t want any customization.&amp;rdquo; It&amp;rsquo;s one of the first things I hear on almost any project. We all know and have been taught that we should avoid ServiceNow customization. The ideal is a purely configured instance. But by day 3 or 4, &amp;ldquo;maybe just this one customization&amp;rdquo;.</description>
+    </item>
     
     <item>
       <title>Are Extension Points Worth It</title>
