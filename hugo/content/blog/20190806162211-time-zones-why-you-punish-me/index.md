@@ -5,7 +5,7 @@ author: tltoulson
 url: /blog/time-zones-why-you-punish-me
 title: "Time Zones: Why You Punish Me"
 socialImg: images/social.png
-description:
+description: Time is one of my least favorite data constructs to work with. As some members of my team discovered, there can be a whole lot of pain and sorrow running free when it comes to working with time zones.
 ---
 
 Hootie captured my current frustrations about time best, *I think I'm out of my mind / thinking about time*. That reference is apparently about 24 years old... enough time for Hootie to become Darius, cycle through R&B and Country before circling back to the Blowfish he left in the Cracked Rear View so long ago. But that's not the time I'm talking about today.
