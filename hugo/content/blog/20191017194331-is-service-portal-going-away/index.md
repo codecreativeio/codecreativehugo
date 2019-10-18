@@ -8,7 +8,7 @@ socialImg: images/social.png
 description: "In short: No, I do not think Service Portal is going away any time soon. However, I hope Service Portal does go away."
 ---
 
-I really enjoyed [Jace Benson's][1] latest post *Service Portal is going the way of the mammoth* and it's ensuing [Twitter conversation][2]. But seeing as how I couldn't answer a yes or no question in 280 characters or whatever it is these days, I certainly can't tackle something of this magnitude... here we are.
+I really enjoyed [Jace Benson's][1] latest post *Service Portal is going the way of the mammoth* and it's ensuing [Twitter conversation][2]. But seeing as how I couldn't answer a yes or no question in 280 characters or whatever it is these days, I certainly can't tackle something of this magnitude with so few characters... so here we are.
 
 <aside class="ccPullQuote right w-50">
   <p>I hope Service Portal does go away</p>
