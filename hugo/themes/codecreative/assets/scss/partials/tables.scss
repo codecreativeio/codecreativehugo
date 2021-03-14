@@ -1,0 +1,24 @@
+table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+table thead th {
+    background-color: $primary-color;
+    border: solid 1px $bg-color-nav;
+    color: #FFF;
+    padding: 10px;
+    text-align: left;
+}
+table tbody td {
+    border: solid 1px $bg-color-nav;
+    color: #333;
+    padding: 10px;
+}
