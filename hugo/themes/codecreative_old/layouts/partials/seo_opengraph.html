@@ -1,0 +1,16 @@
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .LinkTitle }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ if .IsPage }}
+<meta property="og:type" content="article">
+{{ else }}
+<meta property="og:type" content="website">
+{{ end }}
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}">
+{{ if .Params.socialImg }}
+  {{ if eq .Type "guides" }}
+    <meta property="og:image" content="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
+  {{else}}
+    <meta property="og:image" content="{{ .Permalink }}{{ .Params.socialImg }}">
+  {{ end }}
+{{ end }}

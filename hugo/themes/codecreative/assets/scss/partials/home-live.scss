@@ -1,0 +1,58 @@
+section.home-live {
+    background-image: url(/assets/codecreative-live-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    padding: 3rem 0;
+    overflow: hidden;
+}
+
+section.home-live > div {
+    width: $flex-content-width;
+    max-width: $max-content-width;
+    margin: auto;
+}
+
+section.home-live div.section-content {
+    max-width: 26em;
+}
+
+section.home-live div.section-content h1 {
+    font-size: 2.5rem;
+    line-height: 120%;
+    padding-bottom: 1rem;
+}
+
+section.home-live div.section-content p {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 140%;
+}
+
+section.home-live .illustration {
+    padding-bottom: 1rem;
+}
+
+section.home-live .illustration img {
+    display: block;
+    width: 100%;
+    max-width: 475px;
+}
+
+@media (min-width: $medium-breakpoint) {
+    section.home-live > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    section.home-live .illustration {
+        padding-right: 3.5rem;
+    }
+
+    section.home-live .illustration img {
+        max-width: none;
+    }
+}

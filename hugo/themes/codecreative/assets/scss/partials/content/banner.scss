@@ -1,0 +1,62 @@
+header.banner.blog {
+    background-color: $brand-green-lightest;
+}
+
+header.banner.guides {
+    background-color: $brand-purple-lightest;
+}
+
+header.banner.notebook {
+    background-color: $brand-teal-lightest;
+}
+
+header.banner.live {
+    background-color: $brand-orange-lightest;
+}
+
+header.banner {
+    padding: 4rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+header.banner h1 {
+    padding-bottom: 1.25rem;
+}
+
+header.banner::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 100%;
+    opacity: 0.3;
+    background-image: url("/assets/codecreativelogo-watermark.png");
+    background-repeat: no-repeat;
+    background-position: 90% 10%;
+    background-size: auto 200%;
+}
+
+header.banner .content-wrap > div {
+    width: 66.66%;
+    position: relative;
+    z-index: 1;
+}
+
+/* For Image Based 
+
+header.banner .content-wrap {
+    position: relative;
+}
+
+header.banner > div {
+    display: flex;
+}
+
+header.banner > div img.watermark {
+    position: absolute;
+    right: 0;
+    top: -50%;
+    opacity: 0.5;
+    height: 350%;
+}*/

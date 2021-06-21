@@ -1,0 +1,72 @@
+$sectionColor: #EAF4FE;
+
+section.home-chat {
+    background-color: $sectionColor;
+    position: relative;
+    padding: 3rem 0;
+    overflow: hidden;
+}
+
+section.home-chat > div {
+    width: $flex-content-width;
+    max-width: $max-content-width;
+    margin: auto;
+}
+
+section.home-chat div.section-content {
+    max-width: 20em;
+}
+
+section.home-chat div.section-content h1 {
+    font-size: 2.5rem;
+    line-height: 120%;
+    padding-bottom: 1rem;
+}
+
+section.home-chat div.section-content p {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 140%;
+}
+
+section.home-chat .illustration {
+    padding-bottom: 1rem;
+}
+
+section.home-chat .illustration img {
+    display: block;
+    width: 75%;
+    margin: auto;
+}
+
+section.home-chat .btn-invert-ghost:hover,
+section.home-chat .btn-invert-ghost:focus {
+    color: $sectionColor;
+}
+
+@media (min-width: $medium-breakpoint) {
+    section.home-chat {
+        padding: 1rem 0;
+    }
+
+    section.home-chat > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.home-chat .illustration {
+        width: 40%;
+        padding-left: 3.5rem;
+        order: 1;
+    }
+
+    section.home-chat div.section-content {
+        order: 0;
+    }
+
+    section.home-chat .illustration img {
+        width: 100%;
+    }
+}

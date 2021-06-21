@@ -1,22 +1,118 @@
 {{ define "header" }}
-  <header class="banner">
-    <h1>{{ .Title }}</h1>
+  <header class="home-header">
+    <div>
+      <div class="illustration">
+        <img src="/assets/codecreative-illustration-puzzle.svg" title="CodeCreative Puzzle Illustration" />
+      </div>
+      <div class="section-content">
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+
+        {{ range ( where .Site.RegularPages "Type" "blog" | first 1 ) }}
+          <a href="{{ .Permalink }}" class="btn-primary-ghost" role="button">Read the latest</a>
+        {{end}}
+      </div>
+    </div>
   </header>
-  {{- partial "announcement.html" . -}}
 {{ end }}
 {{ define "main" }}
-  <div class="index-content">
-    <section class="index-section">
-      <h2>Browse Articles</h2>
-      <ul class="post-list featured-list">
-      {{ range $index, $value := first 5 ( where site.RegularPages "Type" "in" site.Params.mainSections )}}
-        {{- partial "featured_blog_item.html" (dict "context" . "index" $index) }}
-      {{ end }}
-      </ul>
-      <div class="text-center">
-        <a href="/years">Browse Older Articles</a>
+  <section class="home-live">
+    <div>
+
+      <div class="illustration">
+        <img src="/assets/codecreative-illustration-live.png" title="CodeCreative Live Illustration" />
       </div>
-    <section>
-    {{- partial "subscribe.html" . -}}
-  </div>
+
+      <div class="section-content">
+        <h1>Join Code Creative Live!</h1>
+
+        <p>
+          Join me as I code live, show people what I'm working on, and explore new ServiceNow features and undocumented areas of the platform.
+        </p>
+
+        <div class="btn-images">
+          <a href="https://www.youtube.com/channel/UCmwKZdMYyUD4AWnAIrx5JVw/live">
+            <img src="/assets/codecreative-btn-youtube.svg" title="Youtube" />
+          </a>
+
+          <a href="https://www.twitch.tv/codecreativelive">
+            <img src="/assets/codecreative-btn-twitch.svg" title="Twitch" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="home-guides">
+    <div>
+
+      <h1>Guides & Courses</h1>
+
+      <ul class="card-list">
+
+        {{ with .Site.GetPage "/guides/20190205202049-getting-started-on-servicenow/_index.md" }}
+          {{- partial "content_card.html" (dict "context" . "index" 1 "hideMeta" true) }}
+        {{ end }}
+
+        {{ with .Site.GetPage "/guides/20190421175511-getting-started-with-service-portal/_index.md" }}
+          {{- partial "content_card.html" (dict "context" . "index" 2 "hideMeta" true) }}
+        {{ end }}
+
+        {{ with .Site.GetPage "/guides/20201115000000-salary-influence-survey-results-2020/_index.md" }}
+          {{- partial "content_card.html" (dict "context" . "index" 3 "hideMeta" true) }}
+        {{ end }}
+
+      </ul>
+
+      <div>
+        <a class="btn-primary-ghost" href="/guides">View All Guides</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="home-notebook">
+    <div>
+
+      <div class="illustration">
+        <img src="/assets/codecreative-illustration-notebook.svg" title="CodeCreative Notebook Illustration" />
+      </div>
+
+      <div class="section-content">
+        <h1>CodeCreative Notebook</h1>
+
+        <p>
+          Dive into a wiki like web of processes, procedures, and other notes straight from my own personal notebook. These pages are light on narrative but make great reference material.
+        </p>
+
+        <div>
+          <a class="btn-invert-ghost" href="/notebook">View All Notes</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="home-blog">
+    <div>
+      
+      <h1>CodeCreative Blog</h1>
+
+      <ul class="card-list">
+
+        {{ range $index, $value := first 5 ( where site.RegularPages "Type" "in" site.Params.mainSections )}}
+          {{- partial "content_card.html" (dict "context" . "index" $index) }}
+        {{ end }}
+
+      </ul>
+
+      <div>
+        <a class="btn-primary-ghost" href="/blog">View All Posts</a>
+      </div>
+
+    </div>
+  </section>
+
+  {{- partial "chat.html" }}
 {{ end }}

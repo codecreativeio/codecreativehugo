@@ -1,0 +1,22 @@
+.content header {
+    text-align: center;
+    padding-bottom: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.content header .channel-title {
+    font-weight: 600;
+}
+
+.content header .channel-title::before {
+    content: "// "
+}
+
+.content header .channel-title::after {
+    content: " //"
+}
+
+.content header .channel-title.blog {
+    color: $brand-green;
+}

@@ -1,0 +1,14 @@
+<meta itemprop="name" content="{{ .LinkTitle }}">
+<meta itemprop="url" content="{{ .Permalink }}">
+<meta itemprop="description" content="{{ .Description }}">
+{{ if .Params.socialImg }}
+  {{ if eq .Type "guides"}}
+  <meta itemprop="thumbnailUrl" content="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
+  <link rel="image_src" href="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
+  <meta itemprop="image" content="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
+  {{ else }}
+  <meta itemprop="thumbnailUrl" content="{{ .Permalink }}{{ .Params.socialImg }}">
+  <link rel="image_src" href="{{ .Permalink }}{{ .Params.socialImg }}">
+  <meta itemprop="image" content="{{ .Permalink }}{{ .Params.socialImg }}">
+  {{ end }}
+{{ end }}

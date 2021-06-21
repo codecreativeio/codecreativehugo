@@ -1,4 +1,4 @@
-@import
+/*@import
   "partials/site",
   "partials/header",
   "partials/navigation",
@@ -12,3 +12,23 @@
   "partials/announcement",
   "partials/guides",
   "partials/tables"
+*/
+
+@import
+  "partials/_scssVariables.scss",
+  "partials/site.scss",
+  "partials/header.scss",
+  "partials/navigation.scss",
+  "partials/hamburger.scss",
+  "partials/home-header.scss",
+  "partials/home-live.scss",
+  "partials/home-guides.scss",
+  "partials/home-blog.scss",
+  "partials/home-notebook.scss",
+  "partials/home-chat.scss",
+  "partials/footer.scss",
+  "partials/content-card.scss",
+  "partials/content/container.scss",
+  "partials/content/banner.scss",
+  "partials/content/content.scss",
+  "partials/content/content-header.scss";

@@ -1,0 +1,27 @@
+.content-wrap {
+  width: $flex-content-width;
+  max-width: $max-content-width;
+  margin: auto;
+}
+
+.content-section {
+  padding: 3rem 0;
+}
+
+.content-section > h2 {
+  padding-bottom: 1rem;
+}
+
+.content {
+  line-height: 1.65em;
+  letter-spacing: .75px;
+  font-weight: 300;
+  background-color: #fff;
+  padding: 5rem 0;
+  padding-top: 3rem;
+  max-width: 40rem;
+}
+
+.content.noPadding {
+  padding: 0;
+}

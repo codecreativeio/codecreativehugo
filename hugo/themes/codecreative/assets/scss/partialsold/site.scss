@@ -1,0 +1,121 @@
+$text-color: #3B4D57;
+$primary-color: #5EC231;
+$alert-color: #9B7EDE;
+$bg-color-nav: #4D4D4E;
+$btn-color: #616161;
+$light-border-color: #ccc;
+$darken: rgba(0, 0, 0, .25);
+$light-bg: rgba(0,0,0,.05);
+
+$sans-font: 'Open Sans', Sans-Serif;
+$display-font: 'TT Hoves Demi Bold', Sans-Serif;
+$serif-font: $display-font;
+
+$max-content-width: 1000px;
+$flex-content-width: 90%;
+
+$small-breakpoint: 600px;
+$medium-breakpoint: 1200px;
+
+$content-padding: 6rem;
+
+@font-face {
+  font-family: 'TT Hoves Demi Bold';
+  src: url("/fonts/TTHoves-DemiBold.woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: #fff;
+  color: $text-color;
+  font-family: $sans-font;
+}
+
+@media only screen and (min-width : $small-breakpoint) {
+  html, body {
+    font-size: 20px;
+  }
+}
+
+body.locked {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  border-bottom: .5px solid #69bd45;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $serif-font;
+  letter-spacing: normal;
+}
+
+.content {
+  line-height: 1.65em;
+  letter-spacing: .75px;
+  font-weight: 300;
+  margin: auto;
+  background-color: #fff;
+  padding: 5em 0;
+  padding-top: 3em;
+  width: $flex-content-width;
+  max-width: $max-content-width;
+}
+
+.content.noPadding {
+  padding: 0;
+}
+
+.banner h1 {
+  font-family: $display-font;
+}
+
+h3.section-title {
+  font-family: $sans-font;
+  font-weight: 400;
+  font-size: .75em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1.5em;
+  position: relative;
+}
+
+h3.section-title::after {
+  content: "";
+  height: .5px;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25px;
+  background: rgba(51, 51, 51, 0.2);
+}

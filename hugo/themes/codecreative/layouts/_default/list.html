@@ -1,18 +1,16 @@
 {{ define "header" }}
-  <header class="banner">
-    <h1>{{ .Title }}</h1>
-  </header>
+  {{- partial "channel_header.html" (dict "context" . "channel" "blog")}}
 {{ end }}
 {{ define "main" }}
-  <div class="index-content">
-    <section class="index-section">
+  <div class="content-wrap">
+    <section class="content-section">
       <h2>Browse Articles</h2>
       <ul class="post-list">
       {{ range $index, $value := first 5 .Pages }}
-        {{- partial "featured_blog_item.html" (dict "context" . "index" $index) }}
+        {{- partial "content_card.html" (dict "context" . "index" $index) }}
       {{ end }}
       </ul>
     <section>
-    {{- partial "subscribe.html" . -}}
   </div>
+  {{- partial "chat.html" . -}}
 {{ end }}

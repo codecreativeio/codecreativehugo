@@ -1,0 +1,36 @@
+{{ if .Type}}
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "{{ .Site.BaseURL }}"
+    },
+    "name" : "{{ .Title }}",
+    "headline" : "{{ .Title }}",
+    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}",
+    {{- if .Params.socialImg -}}
+      {{- if eq .Type "guides" -}}
+      "image": "{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}",
+      {{- else -}}
+      "image": "{{ .Permalink }}{{ .Params.socialImg }}",
+      {{- end -}}
+    {{- end -}}
+    "inLanguage" : "en-US",
+    {{- if .Params.author -}}
+      {{ $author := index .Site.Data.authors .Params.author }}
+      "author" : "{{ $author.name }}",
+      "creator" : "{{ $author.name }}",
+    {{- end -}}
+    "publisher": "{{ .Site.Params.author }}",
+    "copyrightHolder" : "{{ .Site.Params.author }}",
+    "copyrightYear" : "{{ .Date.Format "2006" }}",
+    "datePublished": "{{ .Date.Format .Site.Params.dateFormat8601 }}",
+    "dateModified" : "{{ .Date.Format .Site.Params.dateFormat8601 }}",
+    "url" : "{{ .Permalink }}",
+    "wordCount" : "{{ .WordCount }}",
+    "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog" ]
+}
+</script>
+{{ end }}

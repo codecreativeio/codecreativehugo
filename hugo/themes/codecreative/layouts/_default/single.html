@@ -2,10 +2,10 @@
   <header class="banner">
     <h1>{{ .Title }}</h1>
   </header>
-  {{- partial "announcement.html" . -}}
 {{ end }}
 {{ define "main" }}
   <div class="content text-content">
     {{ .Content }}
   </div>
+  {{- partial "chat.html" . -}}
 {{ end }}

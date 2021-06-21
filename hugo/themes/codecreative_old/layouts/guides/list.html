@@ -1,0 +1,44 @@
+{{ define "header" }}
+  <header class="banner">
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{- partial "announcement.html" . -}}
+{{ end }}
+{{ define "main" }}
+  <div class="index-content">
+    <section class="index-section">
+      <h2>Browse Guides</h2>
+      <div class="content text-content noPadding">
+        {{.Content}}
+      </div>
+      <ul class="post-list">
+      {{ range .Sections.ByWeight }}
+        <li>
+          <a href="{{.Permalink}}">
+            <article>
+              <div>
+                <h2>{{.Title}}</h2>
+                <div class="post-meta">
+                  <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">
+                    {{ .Date.Format "January 02, 2006" }}
+                  </time>
+                  {{ if .Params.author }}
+                    {{ $author := index .Site.Data.authors .Params.author }}
+                    • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ $author.display }}</span></span>
+                  {{ end }}
+                </div>
+                <div class="post-summary">{{ .Description }}</div>
+              </div>
+              <div class="post-continue">Click to Read More</div>
+            </article>
+          </a>
+        </li>
+      {{ end }}
+      </ul>
+      <div class="text-center">
+        <a href="/years">Browse Older Articles</a>
+      </div>
+    <section>
+    {{- partial "subscribe.html" . -}}
+  </div>
+{{ end }}

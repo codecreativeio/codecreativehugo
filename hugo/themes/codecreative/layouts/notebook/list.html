@@ -1,0 +1,19 @@
+{{ define "header" }}
+  {{- partial "channel_header.html" (dict "context" . "channel" "notebook")}}
+{{ end }}
+{{ define "main" }}
+  <div class="content-wrap">
+    <section class="content-section">
+      <!--<h2>Browse Articles</h2>-->
+      <ul class="card-list">
+      {{ range $index, $value := first 5 .Pages }}
+        {{- partial "content_card.html" (dict "context" . "index" $index) }}
+      {{ end }}
+      </ul>
+      <div class="text-center">
+        <a href="/years">Browse Older Articles</a>
+      </div>
+    <section>
+  </div>
+  {{- partial "chat.html" . -}}
+{{ end }}

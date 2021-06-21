@@ -1,0 +1,105 @@
+ul.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: -0.5rem;
+    padding-bottom: 3rem;
+    padding-left: 0;
+}
+
+ul.card-list li {
+    width: 100%;
+    margin: 0.5rem;
+    box-shadow: 0px 22px 50px $shadow-color;
+    border-radius: 10px;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+ul.card-list li a {
+    color: $text-color;
+    text-decoration: none;
+}
+
+ul.card-list li:hover,
+ul.card-list li:focus {
+    box-shadow: 0px 22px 50px $shadow-hover-color;
+}
+
+ul.card-list li .arrow-button {
+    visibility: hidden;
+    padding: .25rem 1rem;
+    border-radius: 4px;
+    font-weight: normal;
+    background-color: $brand-green-darker;
+    color: #FFF;
+}
+
+ul.card-list li:hover .arrow-button,
+ul.card-list li:focus .arrow-button {
+    visibility: visible;  
+}
+
+ul.card-list li a .card-details {
+    padding: 1rem;
+}
+
+ul.card-list li a .card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-top: 0.75rem;
+}
+
+ul.card-list li .card-details-header {
+    padding-bottom: 1rem;
+}
+
+ul.card-list li .card-details-header h2 {
+    font-size: 1.3rem;
+}
+
+ul.card-list li .card-details-header .post-meta {
+    font-size: .75rem;
+    padding-top: 0.5rem;
+}
+
+ul.card-list li .post-summary {
+    font-size: .8rem;
+    line-height: 150%;
+}
+
+ul.card-list li .card-image img {
+    width: 100%;
+}
+
+.post-continue {
+    font-weight: 600;
+    line-height: 1.2rem;
+    color: $brand-green-darker;
+}
+
+@media (min-width: $medium-breakpoint) {
+    ul.card-list li {
+        width: 47.668%;
+        margin: 1.166%
+    }
+
+    ul.card-list li:first-of-type {
+        width: 97.668%;
+    }
+
+    ul.card-list li:first-of-type article {
+        display: flex;
+    }
+
+    /* 3 side by side
+    ul.card-list li {
+        width: 31%;
+        margin: 1.166%
+    }
+    */
+}

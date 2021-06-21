@@ -1,0 +1,17 @@
+section.home-guides {
+    padding: 3rem 0;
+    overflow: hidden;
+    background-color: #F7F9FB;
+}
+
+section.home-guides > div {
+    width: $flex-content-width;
+    max-width: $max-content-width;
+    margin: auto;
+}
+
+section.home-guides h1 {
+    font-size: 2.5rem;
+    line-height: 120%;
+    padding-bottom: 2rem;
+}

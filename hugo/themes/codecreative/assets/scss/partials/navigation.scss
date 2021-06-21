@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   border: 5px solid #fff;
-  background-color: $bg-color-nav;
+  background-color: $brand-gray;
   z-index: 25;
   transition: .5s transform cubic-bezier(0.895, .03, .685, .22);
   transform: translate3d(100%, 0, 0);
@@ -61,11 +61,11 @@
 }
 
 .fullNav ul a.active {
-  color: $primary-color;
+  color: $brand-green;
 }
 
 .fullNav ul a.active:before {
-  background-color: $primary-color;
+  background-color: $brand-green;
 }
 
 @media only screen and (min-width : $small-breakpoint) {

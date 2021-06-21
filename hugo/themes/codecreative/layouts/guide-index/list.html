@@ -1,36 +1,22 @@
 {{ define "header" }}
-  <header class="banner">
-    <h1>{{ .Title }}</h1>
-  </header>
-  {{- partial "announcement.html" . -}}
+  {{- partial "channel_header.html" (dict "context" . "channel" "guides")}}
 {{ end }}
 {{ define "main" }}
-  <div class="index-content">
-    <section class="index-section">
-      <h2>Browse Content</h2>
+  <div class="content-wrap">
+    <section class="content-section">
+      <!--<h2>Browse Content</h2>
       <div class="content text-content noPadding">
         {{.Content}}
-      </div>
-      <ul class="post-list">
+      </div>-->
+      <ul class="card-list">
       {{ range $index, $page := .Pages.ByWeight }}
-        <li>
-          <a href="{{$page.Permalink}}">
-            <article>
-              <div>
-                <div class="post-latest-flag">Section {{ add $index 1 }}</div>
-                <h2>{{$page.Title}}</h2>
-                <div class="post-summary">{{ $page.Description }}</div>
-              </div>
-              <div class="post-continue">Click to Read More</div>
-            </article>
-          </a>
-        </li>
+        {{- partial "content_card.html" (dict "context" . "index" 1 "hideImage" true) }}
       {{ end }}
       </ul>
       <div class="text-center">
         <a href="/years">Browse Older Articles</a>
       </div>
     <section>
-    {{- partial "subscribe.html" . -}}
   </div>
+  {{- partial "chat.html" . -}}
 {{ end }}

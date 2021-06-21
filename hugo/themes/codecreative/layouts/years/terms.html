@@ -2,7 +2,6 @@
   <header class="banner">
     <h1>Articles by {{ .Data.Singular }}</h1>
   </header>
-  {{- partial "announcement.html" . -}}
 {{ end }}
 {{ define "main" }}
   <div class="index-content">
@@ -16,6 +15,6 @@
         {{ end }}
       </ul>
     <section>
-    {{- partial "subscribe.html" . -}}
   </div>
+  {{- partial "chat.html" . -}}
 {{ end }}

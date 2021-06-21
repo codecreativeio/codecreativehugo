@@ -28,10 +28,9 @@
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 25px;
-  height: 2px;
-  background-color: #fff;
-  border-radius: 4px;
+  width: 30px;
+  height: 3px;
+  background-color: $brand-green;
   position: absolute;
   transition-property: transform;
   transition-duration: 0.15s;

@@ -1,114 +1,116 @@
-$text-color: #616161;
-$primary-color: #69bd45;
-$alert-color: #9B7EDE;
-$bg-color-nav: #4D4D4E;
-$btn-color: #616161;
-$light-border-color: #ccc;
-$darken: rgba(0, 0, 0, .25);
-$light-bg: rgba(0,0,0,.05);
+@font-face {
+    font-family: 'TT-Hoves-Demi-Bold';
+    src: url("/fonts/TTHoves-DemiBold.woff");
+}
 
-$sans-font: 'Open Sans', Sans-Serif;
-$serif-font: 'Slabo 13px', Serif;
-$display-font: 'Julius Sans One', Sans-Serif;
-
-$max-content-width: 1000px;
-$flex-content-width: 90%;
-
-$small-breakpoint: 600px;
-$medium-breakpoint: 1200px;
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url("/fonts/Poppins-Light.ttf") format('truetype');
+}
 
 * {
-  box-sizing: border-box;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-.text-center {
-  text-align: center;
+    box-sizing: border-box;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  background-color: #fff;
-  color: $text-color;
-  font-family: $sans-font;
+    margin: 0;
+    padding: 0;
+    /*font-size: 14px;*/
+    font-size: 18px;
+    background-color: #fff;
+    color: $text-color;
+    font-family: $body-font;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-@media only screen and (min-width : $small-breakpoint) {
-  html, body {
-    font-size: 20px;
-  }
+/*@media only screen and (min-width : $small-breakpoint) {
+    html, body {
+        font-size: 20px;
+    }
+}*/
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
 }
 
 body.locked {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 
 a {
-  color: $primary-color;
-  text-decoration: none;
-}
-
-a:hover, a:focus {
-  border-bottom: .5px solid #69bd45;
+    color: $brand-green;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-family: $serif-font;
-  letter-spacing: normal;
+    margin: 0;
+    font-family: $heading-font;
+    letter-spacing: normal;
 }
 
-.content {
-  line-height: 1.65em;
-  letter-spacing: .75px;
-  font-weight: 300;
-  margin: auto;
-  background-color: #fff;
-  padding: 5em 0;
-  padding-top: 3em;
-  width: $flex-content-width;
-  max-width: $max-content-width;
+.btn-primary-ghost {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid $brand-green;
+    color: $brand-green;
+    padding: .75em 1.5rem;
+    border-radius: 5.7px;
+    font-weight: 600;
+    font-family: $display-font;
+    text-decoration: none;
 }
 
-.content.noPadding {
-  padding: 0;
+.btn-primary-ghost:hover,
+.btn-primary-ghost:focus {
+    background-color: $brand-green;
+    color: #fff;
 }
 
-.banner h1 {
-  font-family: $display-font;
+.btn-invert-ghost {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: .75em 1.5rem;
+    border-radius: 5.7px;
+    font-weight: 600;
+    font-family: $display-font;
+    text-decoration: none;
 }
 
-h3.section-title {
-  font-family: $sans-font;
-  font-weight: 400;
-  font-size: .75em;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 1.5em;
-  position: relative;
+.btn-invert-ghost:hover,
+.btn-invert-ghost:focus {
+    background-color: #fff;
 }
 
-h3.section-title::after {
-  content: "";
-  height: .5px;
-  width: 50px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -25px;
-  background: rgba(51, 51, 51, 0.2);
+.btn-images > a {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: .75rem 1rem;
+    border-radius: 5.7px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-images > a:not(:first-child) {
+    margin-left: 1.5rem;
+}
+
+.btn-images > a > img {
+    height: 1.2rem;
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center;
 }

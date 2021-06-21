@@ -2,6 +2,7 @@
 title: Guides
 linktitle: Guides
 socialImg: assets/CodeCreative.png
+description: Take a guided, step by step approach to learning ServiceNow
 menu:
   main:
     weight: 250

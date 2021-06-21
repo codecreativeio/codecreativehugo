@@ -1,19 +1,96 @@
-.social-icons-color-black.social-icons-style-border .sqs-use--icon {
-  fill: $btn-color;
+footer {
+    background-color: #35454E;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
 }
 
-.social-icons-color-black.social-icons-style-border .sqs-svg-icon--wrapper {
-  border-color: $btn-color;
+footer div {
+    width: $flex-content-width;
+    max-width: $max-content-width;
+    margin: auto;
 }
 
-.social-icons-color-black.social-icons-style-border .sqs-svg-icon--wrapper:hover {
-  background-color: $btn-color;
+footer a {
+    color: #fff;
 }
 
-.footer-content-wrap {
-  text-align: center;
-  max-width: $max-content-width;
-  width: $flex-content-width;
-  margin: auto;
-  padding-top: 2em;
+footer .footer-links {
+    font-size: .85rem;
+    line-height: 140%;
+    opacity: 0.6;
+}
+
+footer .footer-title {
+    font-size: 1.25rem;
+    line-height: 120%;
+    font-family: $heading-font;
+}
+
+footer svg .logo-text {
+    fill: #fff;
+}
+
+footer .social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .social-links a svg path {
+    fill: #fff;
+}
+
+footer .social-links a svg path.lightburst {
+    display: none;
+}
+
+footer .social-links a:hover svg path,
+footer .social-links a:focus svg path {
+    fill: $brand-green;
+}
+
+footer .social-links a:hover svg path.lightburst,
+footer .social-links a:focus svg path.lightburst {
+    display: inline;
+}
+
+footer .copyright {
+    
+    font-size: .85rem;
+    line-height: 140%;
+    opacity: 0.5;
+}
+
+footer .pad {
+    padding-bottom: 2rem;
+}
+
+footer .pad-lg {
+    padding-top: 3rem;
+}
+
+@media (min-width: $medium-breakpoint) {
+    footer > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    footer > div > div {
+        width: 50%;
+    }
+
+    footer div.copyright {
+        width: 100%;
+    }
+
+    footer .footer-title {
+        padding-top: 0;
+    }
+
+    footer .footer-logo svg {
+        width: 250px;
+    }
 }
