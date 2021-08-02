@@ -1,22 +1,80 @@
+{{ define "meta" }}
+  {{- partial "seo_jsonldBlog.html" . -}}
+{{ end }}
 {{ define "header" }}
-  {{- partial "channel_header.html" (dict "context" . "channel" "guides")}}
 {{ end }}
 {{ define "main" }}
-  <div class="content-wrap">
-    <section class="content-section">
-      <!--<h2>Browse Content</h2>
-      <div class="content text-content noPadding">
-        {{.Content}}
-      </div>-->
-      <ul class="card-list">
-      {{ range $index, $page := .Pages.ByWeight }}
-        {{- partial "content_card.html" (dict "context" . "index" 1 "hideImage" true) }}
-      {{ end }}
-      </ul>
-      <div class="text-center">
-        <a href="/years">Browse Older Articles</a>
+  <div class="guide-content">
+    <aside class="guide-nav open">
+      <nav>
+        <div class="guide-nav-content">
+          <h2>{{ .CurrentSection.Title }}</h2>
+          <ol aria-label="{{ .CurrentSection.Title }}">
+            {{ $currentPage := . }}
+            {{ range .CurrentSection.Pages.ByWeight }}
+              {{ if eq $currentPage.Permalink .Permalink }}
+                <li class="current">
+                  {{.Title}}
+                </li>
+              {{ else }}
+                <li>
+                  <a href="{{.Permalink}}">
+                    {{.Title}}
+                  </a>
+                </li>
+              {{ end }}
+            {{ end }}
+            <li class="index-link">
+              <a href="{{.CurrentSection.Permalink}}">
+                Guide Index
+              </a>
+            </li>
+          </ol>
+        </div>
+      </nav>
+      <div>
+        <button class="guide-nav-toggle" title="Toggle Navigation" onclick="toggleGuideMenu()">
+          <span class="fa fa-arrow-right"></span>
+          <span class="sr-only">Toggle Navigation</span>
+        </button>
       </div>
-    <section>
+    </aside>
+
+    <div class="content text-content content-wrap">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <section class="guide-article">
+          <header class="post-header">
+            <div class="channel-title guide">Guide</div>
+            <h1 class="post-title p-name" itemprop="name headline">{{ .Title }}</h1>
+            <p class="post-meta">
+                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">
+                {{ .Date.Format "January 02, 2006" }}
+                </time>
+              {{ if .Params.author }}
+                {{ $author := index .Site.Data.authors .Params.author }}
+                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ $author.display }}</span></span>
+              {{ end }}
+            </p>
+          </header>
+
+          <div class="post-content e-content" itemprop="articleBody">
+            {{ .Content }}
+          </div>
+
+          <a class="u-url" href="{{ .URL }}" title="Article URL" hidden></a>
+
+          <nav class="pagination">
+            {{ range first 1 .Pages.ByWeight }}
+              <a href="{{.Permalink}}" class="pagination-next">
+                <h4>Next</h4>
+                <div class="pagination-label">{{.Title}}</div>
+              </a>
+            {{ end }}
+          </nav>
+        </section>
+      </article>
+    </div>
   </div>
   {{- partial "chat.html" . -}}
 {{ end }}
+

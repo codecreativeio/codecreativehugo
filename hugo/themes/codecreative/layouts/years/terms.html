@@ -1,12 +1,9 @@
 {{ define "header" }}
-  <header class="banner">
-    <h1>Articles by {{ .Data.Singular }}</h1>
-  </header>
 {{ end }}
 {{ define "main" }}
-  <div class="index-content">
+  <div class="content text-content content-wrap">
     <section class="index-section">
-      <h2>Browse Articles</h2>
+      <h1>Content by {{ .Data.Singular }}</h1>
       <ul class="taxonomy-list">
         {{ range .Pages.Reverse }}
         <li>

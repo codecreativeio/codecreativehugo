@@ -2,19 +2,18 @@
   {{- partial "seo_jsonldBlog.html" . -}}
 {{ end }}
 {{ define "header" }}
-  <header class="banner">
-    <h1>{{ .Title }}</h1>
-  </header>
 {{ end }}
 {{ define "main" }}
-  <div class="content text-content">
+  <div class="content text-content content-wrap">
     <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
       <header class="post-header">
-        <h1 class="post-title p-name sr-only" itemprop="name headline">{{ .Title }}</h1>
+        <div class="channel-title notebook">Notebook</div>
+        <h1 class="post-title p-name" itemprop="name headline">{{ .Title }}</h1>
         <p class="post-meta">
-            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">
-            {{ .Date.Format "January 02, 2006" }}
+            <span>Last Updated</span>
+            • <time class="dt-published" datetime="{{ .Params.LastMod.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">
+            {{ .Params.LastMod.Format "January 02, 2006" }}
             </time>
           {{ if .Params.author }}
             {{ $author := index .Site.Data.authors .Params.author }}
@@ -29,6 +28,16 @@
 
       <a class="u-url" href="{{ .URL }}" hidden></a>
     </article>
+
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+      <h2>Related Notes</h2>
+      <ul>
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
   </div>
   {{- partial "chat.html" . -}}
 {{ end }}

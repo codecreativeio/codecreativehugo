@@ -12,6 +12,20 @@ pygmentsUseClasses=true
 
 [taxonomies]
   year = "years"
+  "note tag" = "notebook/tags"
 
 [markup.goldmark.renderer]
   unsafe= true
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "notebook/tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10

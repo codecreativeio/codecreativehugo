@@ -1,0 +1,163 @@
+$header-height-compensation: 150px;
+
+@mixin openGuideNav {
+    width: 80%;
+    transition: width 0.1s cubic-bezier(0.42, 1, 0.58, 1) 0s;
+}
+
+@mixin openNav {
+    border-color: $brand-gray-lightest;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    max-width: 400px;
+    transition: border-color 0.1s cubic-bezier(0.42, 1, 0.58, 1) 0s,
+}
+
+@mixin openNavContent {
+    width: 100%;
+    transition: width 0.1s cubic-bezier(0.42, 1, 0.58, 1) 0s;
+}
+
+.guide-content {
+    position: relative;
+}
+
+.guide-content .content {
+    margin: 0 auto;
+}
+
+.guide-content .guide-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    z-index: 15;
+    transition: width 0.1s cubic-bezier(0.42, 1, 0.58, 1) 0s;
+}
+
+.guide-content .guide-nav nav {
+    background: #fff;
+    border-right: 1px solid transparent;
+    height: 100%;
+    transition: border-color 0.1s cubic-bezier(0.42, 1, 0.58, 1) 0s,
+}
+
+.guide-content .guide-nav nav .guide-nav-content {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.5rem;
+    width: 0;
+    overflow: hidden auto;
+    transition: width 0.1s cubic-bezier(0.42, 1, 0.58, 1) 0s;
+    max-height: calc(100vh - #{$header-height-compensation});
+}
+
+.guide-content .guide-nav.open {
+    @include openGuideNav;
+}
+
+.guide-content .guide-nav.open nav {
+    @include openNav;
+}
+
+.guide-content .guide-nav.open nav .guide-nav-content {
+    @include openNavContent;
+}
+
+.guide-nav-toggle {
+    position: -webkit-sticky;
+    position: sticky;
+    top: $header-height-compensation;
+    border: 1px solid $brand-gray-lightest;
+    border-left: 1px solid transparent;
+    padding: 1.25rem .65rem;
+    background-color: #fff;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+.guide-content .guide-nav.open .guide-nav-toggle .fa {
+    transform: rotate(180deg);
+}
+
+.guide-content .guide-nav.open nav .guide-nav-content h2 {
+    font-size: 1.15rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.guide-content .guide-nav nav .guide-nav-content ol {
+    padding-bottom: 4rem;
+}
+
+.guide-content .guide-nav nav .guide-nav-content ol li {
+    padding: .5rem;
+    border-left: 3px solid transparent;
+}
+
+.guide-content .guide-nav nav .guide-nav-content ol li a {
+    color: $text-color;
+    text-decoration: none;
+    display: block;
+}
+
+.guide-content .guide-nav nav .guide-nav-content ol li:hover,
+.guide-content .guide-nav nav .guide-nav-content ol li:focus {
+    border-color: $brand-purple-lighter;
+}
+
+.guide-content .guide-nav nav .guide-nav-content ol li.current {
+    border-color: $brand-purple;
+    background-color: $brand-purple-lightest;
+}
+
+.guide-content .guide-nav nav .guide-nav-content ol li.index-link {
+    margin-top: 1.5rem;
+    font-style: italic;
+    font-size: .75rem;
+}
+
+@media only screen and (min-width : $medium-breakpoint) {
+    .guide-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .guide-content .guide-nav {
+        position: relative;
+        height: auto;
+    }
+
+    .guide-content .guide-nav.open {
+        width: auto;
+    }
+}
+
+@media only screen and (min-width : $max-content-width) {
+    .guide-content {
+        max-width: $max-content-width;
+        margin: auto;
+    }
+
+    .guide-nav-toggle {
+        display: none;
+    }
+
+    /* Auto open at larger width */
+    .guide-content .guide-nav {
+        @include openGuideNav;
+        width: auto;
+    }
+    
+    .guide-content .guide-nav nav {
+        @include openNav;
+    }
+    
+    .guide-content .guide-nav nav .guide-nav-content {
+        @include openNavContent;
+    }
+}

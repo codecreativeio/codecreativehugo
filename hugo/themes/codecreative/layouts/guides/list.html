@@ -4,18 +4,11 @@
 {{ define "main" }}
   <div class="content-wrap">
     <section class="content-section">
-      <!--<h2>Browse Guides</h2>
-      <div class="content text-content noPadding">
-        {{.Content}}
-      </div>-->
       <ul class="card-list">
       {{ range .Sections.ByWeight }}
         {{- partial "content_card.html" (dict "context" . "index" 1) }}
       {{ end }}
       </ul>
-      <div class="text-center">
-        <a href="/years">Browse Older Articles</a>
-      </div>
     <section>
   </div>
   {{- partial "chat.html" . -}}

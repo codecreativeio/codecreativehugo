@@ -4,15 +4,16 @@
 {{ define "main" }}
   <div class="content-wrap">
     <section class="content-section">
-      <!--<h2>Browse Articles</h2>-->
-      <ul class="card-list">
-      {{ range $index, $value := first 5 .Pages }}
-        {{- partial "content_card.html" (dict "context" . "index" $index) }}
+      {{ $section := where $.Site.RegularPages "Section" "notebook"}}
+      {{ $related := $section.RelatedTo ( keyVals "notebook/tags" "UI Builder")   }}
+      {{ with $related }}
+        <h3>UI Builder</h3>
+        <ul>
+          {{ range . }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
       {{ end }}
-      </ul>
-      <div class="text-center">
-        <a href="/years">Browse Older Articles</a>
-      </div>
     <section>
   </div>
   {{- partial "chat.html" . -}}

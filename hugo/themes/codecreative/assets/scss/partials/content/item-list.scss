@@ -1,0 +1,28 @@
+.index-section > h1 {
+    margin-top: 0 !important;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  
+  .index-section ul.taxonomy-list {
+    font-size: 1.25rem;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .index-section ul.taxonomy-list li {
+    padding: .75em 0;
+  }
+  
+  @media only screen and (min-width : $medium-breakpoint) {
+    .index-section ul.post-list > li {
+      flex: 0 1 33.33%;
+    }
+  
+    .index-section ul.post-list.featured-list > li:first-of-type {
+      flex: 0 1 66.66%;
+    }
+  }
+  

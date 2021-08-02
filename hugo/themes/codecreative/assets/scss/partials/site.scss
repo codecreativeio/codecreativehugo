@@ -22,6 +22,7 @@ html, body {
     font-family: $body-font;
     width: 100%;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 /*@media only screen and (min-width : $small-breakpoint) {

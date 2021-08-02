@@ -1,11 +1,16 @@
 {{ define "header" }}
-  <header class="banner">
-    <h1>{{ .Title }}</h1>
-  </header>
 {{ end }}
 {{ define "main" }}
-  <div class="content text-content">
-    {{ .Content }}
+  <div class="content text-content content-wrap">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">{{ .Title }}</h1>
+      </header>
+      
+      <div class="post-content e-content" itemprop="articleBody">
+        {{ .Content }}
+      </div>
+    </article>
   </div>
   {{- partial "chat.html" . -}}
 {{ end }}

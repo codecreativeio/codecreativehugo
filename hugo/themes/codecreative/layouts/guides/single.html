@@ -2,26 +2,18 @@
   {{- partial "seo_jsonldBlog.html" . -}}
 {{ end }}
 {{ define "header" }}
-  <header class="banner">
-    <h1>{{ .CurrentSection.Title }}</h1>
-  </header>
 {{ end }}
 {{ define "main" }}
-  <div class="content text-content guide-content">
-    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-      <section class="guide-nav">
-        <nav>
-          <h1>{{ .CurrentSection.Title }}</h1>
-          <ul>
-            <li>
-              <a href="{{.CurrentSection.Permalink}}">
-                Guide Index
-              </a>
-            </li>
+  <div class="guide-content">
+    <aside class="guide-nav open">
+      <nav>
+        <div class="guide-nav-content">
+          <h2>{{ .CurrentSection.Title }}</h2>
+          <ol aria-label="{{ .CurrentSection.Title }}">
             {{ $currentPage := . }}
             {{ range .CurrentSection.Pages.ByWeight }}
               {{ if eq $currentPage.Permalink .Permalink }}
-                <li>
+                <li class="current">
                   {{.Title}}
                 </li>
               {{ else }}
@@ -32,47 +24,63 @@
                 </li>
               {{ end }}
             {{ end }}
-          </ul>
-        </nav>
-      </section>
-
-      <section class="guide-article">
-        <header class="post-header">
-          <h1 class="post-title p-name" itemprop="name headline">{{ .Title }}</h1>
-          <p class="post-meta">
-              <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">
-              {{ .Date.Format "January 02, 2006" }}
-              </time>
-            {{ if .Params.author }}
-              {{ $author := index .Site.Data.authors .Params.author }}
-              • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ $author.display }}</span></span>
-            {{ end }}
-          </p>
-        </header>
-
-        <div class="post-content e-content" itemprop="articleBody">
-          {{ .Content }}
+            <li class="index-link">
+              <a href="{{.CurrentSection.Permalink}}">
+                Guide Index
+              </a>
+            </li>
+          </ol>
         </div>
+      </nav>
+      <div>
+        <button class="guide-nav-toggle" title="Toggle Navigation" onclick="toggleGuideMenu()">
+          <span class="fa fa-arrow-right"></span>
+          <span class="sr-only">Toggle Navigation</span>
+        </button>
+      </div>
+    </aside>
 
-        <a class="u-url" href="{{ .URL }}" hidden></a>
+    <div class="content text-content content-wrap">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <section class="guide-article">
+          <header class="post-header">
+            <div class="channel-title guide">Guide</div>
+            <h1 class="post-title p-name" itemprop="name headline">{{ .Title }}</h1>
+            <p class="post-meta">
+                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">
+                {{ .Date.Format "January 02, 2006" }}
+                </time>
+              {{ if .Params.author }}
+                {{ $author := index .Site.Data.authors .Params.author }}
+                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ $author.display }}</span></span>
+              {{ end }}
+            </p>
+          </header>
 
-        <nav class="pagination">
-          {{if .NextInSection}}
-            <a href="{{.NextInSection.Permalink}}" class="pagination-prev">
-              <h4>Previous</h4>
-              <div class="pagination-label">{{.NextInSection.Title}}</div>
-            </a>
-          {{end}}
+          <div class="post-content e-content" itemprop="articleBody">
+            {{ .Content }}
+          </div>
 
-          {{if .PrevInSection}}
-            <a href="{{.PrevInSection.Permalink}}" class="pagination-next">
-              <h4>Next</h4>
-              <div class="pagination-label">{{.PrevInSection.Title}}</div>
-            </a>
-          {{end}}
-        </nav>
-      </section>
-    </article>
+          <a class="u-url" href="{{ .URL }}" title="Article URL" hidden></a>
+
+          <nav class="pagination">
+            {{if .NextInSection}}
+              <a href="{{.NextInSection.Permalink}}" class="pagination-prev">
+                <h4>Previous</h4>
+                <div class="pagination-label">{{.NextInSection.Title}}</div>
+              </a>
+            {{end}}
+
+            {{if .PrevInSection}}
+              <a href="{{.PrevInSection.Permalink}}" class="pagination-next">
+                <h4>Next</h4>
+                <div class="pagination-label">{{.PrevInSection.Title}}</div>
+              </a>
+            {{end}}
+          </nav>
+        </section>
+      </article>
+    </div>
   </div>
   {{- partial "chat.html" . -}}
 {{ end }}
