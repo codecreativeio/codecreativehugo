@@ -41,7 +41,7 @@ My hope is that the more freeform Notebook will help me organize a little better
 
 ### Live
 
-CodeCreative Live will be reesuming on Twitch and Youtube. In fact, I've even got links from the website to those pages to help people find their way. I'm currently working on integrating this channel more tightly with the website so stand by for improvements on that. Live is likely to be a place where I do more advanced development, research, reverse engineering, and other fun things. This channel is great for folks who really want to dig in. Joining in the chat means you can participate, ask questions, and guide where some of the conversation goes. And of course, I've renewed Sarah's contract for another season. She drove a hard bargain but the show just isn't the same without her.
+CodeCreative Live will be resuming on Twitch and Youtube. In fact, I've even got links from the website to those pages to help people find their way. I'm currently working on integrating this channel more tightly with the website so stand by for improvements on that. Live is likely to be a place where I do more advanced development, research, reverse engineering, and other fun things. This channel is great for folks who really want to dig in. Joining in the chat means you can participate, ask questions, and guide where some of the conversation goes. And of course, I've renewed Sarah's contract for another season. She drove a hard bargain but the show just isn't the same without her.
 
 ### Recordings
 
