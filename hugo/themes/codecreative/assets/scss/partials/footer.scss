@@ -1,96 +1,96 @@
-footer {
+body > footer {
     background-color: #35454E;
     color: #fff;
     padding: 3rem 0;
     text-align: center;
 }
 
-footer div {
+body > footer div {
     width: $flex-content-width;
     max-width: $max-content-width;
     margin: auto;
 }
 
-footer a {
+body > footer a {
     color: #fff;
 }
 
-footer .footer-links {
+body > footer .footer-links {
     font-size: .85rem;
     line-height: 140%;
     opacity: 0.6;
 }
 
-footer .footer-title {
+body > footer .footer-title {
     font-size: 1.25rem;
     line-height: 120%;
     font-family: $heading-font;
 }
 
-footer svg .logo-text {
+body > footer svg .logo-text {
     fill: #fff;
 }
 
-footer .social-links {
+body > footer .social-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-footer .social-links a svg path {
+body > footer .social-links a svg path {
     fill: #fff;
 }
 
-footer .social-links a svg path.lightburst {
+body > footer .social-links a svg path.lightburst {
     display: none;
 }
 
-footer .social-links a:hover svg path,
-footer .social-links a:focus svg path {
+body > footer .social-links a:hover svg path,
+body > footer .social-links a:focus svg path {
     fill: $brand-green;
 }
 
-footer .social-links a:hover svg path.lightburst,
-footer .social-links a:focus svg path.lightburst {
+body > footer .social-links a:hover svg path.lightburst,
+body > footer .social-links a:focus svg path.lightburst {
     display: inline;
 }
 
-footer .copyright {
+body > footer .copyright {
     
     font-size: .85rem;
     line-height: 140%;
     opacity: 0.5;
 }
 
-footer .pad {
+body > footer .pad {
     padding-bottom: 2rem;
 }
 
-footer .pad-lg {
+body > footer .pad-lg {
     padding-top: 3rem;
 }
 
 @media (min-width: $medium-breakpoint) {
-    footer > div {
+    body > footer > div {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    footer > div > div {
+    body > footer > div > div {
         width: 50%;
     }
 
-    footer div.copyright {
+    body > footer div.copyright {
         width: 100%;
     }
 
-    footer .footer-title {
+    body > footer .footer-title {
         padding-top: 0;
     }
 
-    footer .footer-logo svg {
+    body > footer .footer-logo svg {
         width: 250px;
     }
 }

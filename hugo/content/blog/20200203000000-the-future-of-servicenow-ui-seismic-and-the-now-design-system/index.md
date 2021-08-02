@@ -5,6 +5,9 @@ author: tltoulson
 url: /blog/the-future-of-servicenow-ui-seismic-and-the-now-design-system
 title: "The Future of ServiceNow UI: Seismic and the Now Design System"
 socialImg: images/social.png
+featuredImg: images/featured.jpg
+featuredCredit: Hal Gatewood
+featuredSrc: https://unsplash.com/@halacious
 description: "In case you missed it over the weekend, I posted the video above to youtube covering the new UX system that powers ServiceNow Workspaces. And according to reliable information, this system will be eventually taking over most, if not all, of the web UI's at ServiceNow including Service Portal."
 ---
 

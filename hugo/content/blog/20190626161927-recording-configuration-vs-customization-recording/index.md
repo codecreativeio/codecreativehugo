@@ -5,6 +5,9 @@ author: tltoulson
 url: /blog/recording-configuration-vs-customization-which-is-it
 title: "(Recording) Configuration vs Customization: Which Is It?"
 socialImg: images/social.png
+featuredImg: images/featured.jpg
+featuredCredit: Austin Distel
+featuredSrc: https://unsplash.com/@austindistel
 description: The following is the recording of the Configuration vs Customization session that I presented at Knowledge 19.
 ---
 

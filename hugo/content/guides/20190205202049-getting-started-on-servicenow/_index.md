@@ -6,6 +6,9 @@ type: guide-index
 url: /guides/getting-started-on-servicenow
 title: Getting Started on ServiceNow
 socialImg: social.png
+featuredImg: featured.png
+featuredCredit: Ben Kolde
+featuredSrc: https://unsplash.com/@benkolde
 description: New to ServiceNow? This guide will help show you the ropes and expose you to the basics of navigating the platform and your career on ServiceNow.
 weight: 100
 ---

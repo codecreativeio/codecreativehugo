@@ -5,6 +5,9 @@ author: tltoulson
 url: /blog/time-zones-why-you-punish-me
 title: "Time Zones: Why You Punish Me"
 socialImg: images/social.png
+featuredImg: images/featured.jpg
+featuredCredit: Andrik Langfield
+featuredSrc: https://unsplash.com/@andriklangfield
 description: Time is one of my least favorite data constructs to work with. As some members of my team discovered, there can be a whole lot of pain and sorrow running free when it comes to working with time zones.
 ---
 

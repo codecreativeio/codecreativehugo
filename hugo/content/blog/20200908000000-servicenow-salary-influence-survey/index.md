@@ -5,6 +5,9 @@ author: tltoulson
 url: /blog/service-now-salary-influence-survey-2020
 title: "ServiceNow Salary Influence Survey 2020"
 socialImg: images/social.png
+featuredImg: images/featured.jpg
+featuredCredit: rupixen.com
+featuredSrc: https://unsplash.com/@rupixen
 description: "What drives your salary in the ServiceNow industry? Today I'm kicking off the ServiceNow Salary Influence Survey 2020 to help answer that question and more. If you are interested in participating, be sure to take the survey and share. The more we collect, the more we'll know."
 ---
 

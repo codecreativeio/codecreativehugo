@@ -24,6 +24,15 @@
         </p>
       </header>
 
+      {{ if .Params.featuredImg }}
+        <figure>
+          <img src="{{ .Permalink }}{{ .Params.featuredImg }}" title="Featured Image for {{ .Title }}" />
+          <figcaption>
+            Photo by <a href="{{ .Params.featuredSrc }}" rel="nofollow">{{ .Params.featuredCredit }}</a>
+          </figcaption>
+        </figure>
+      {{ end }}
+
       <div class="post-content e-content" itemprop="articleBody">
         {{ .Content }}
       </div>

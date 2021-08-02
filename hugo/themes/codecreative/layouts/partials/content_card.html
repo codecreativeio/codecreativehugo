@@ -2,9 +2,9 @@
     <a href="{{.context.Permalink}}">
       <article>
 
-        {{ if and (.context.Params.socialImg) (ne .hideImage true)}}
-        <div class="card-image">
-          <img title="Featured Image" src="{{ .context.Permalink }}{{ .context.Params.socialImg }}" />
+        {{ if and (.context.Params.featuredImg) (ne .hideImage true)}}
+        <div class="card-image" style="background-image: url('{{ .context.Permalink }}{{ .context.Params.featuredImg }}'); background-size: cover; background-position: center; min-height: 259px; width: 100%;">
+          <!--<img title="Featured Image" src="{{ .context.Permalink }}{{ .context.Params.socialImg }}" />-->
         </div>
         {{ end }}
 
@@ -31,7 +31,10 @@
                   {{ end }}
                 </div>
               </div>
-              <div class="post-summary">{{ if .context.Description }}{{ .context.Description }}{{ else }}{{ .context.Summary }}{{ end }}</div>
+              <div class="post-summary">
+                {{ if .context.Description }}{{ .context.Description }}{{ else }}{{ .context.Summary }}{{ end }}
+                {{ if and (.context.Params.featuredImg) (ne .hideImage true)}}<br/><br/>Photo by {{.context.Params.featuredCredit}}{{end}}
+              </div>
             </div>
           </div>
 

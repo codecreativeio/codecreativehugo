@@ -5,6 +5,9 @@ author: tltoulson
 url: /blog/is-service-portal-going-away
 title: "Is Service Portal Going Away?"
 socialImg: images/social.png
+featuredImg: images/featured.jpg
+featuredCredit: Anukrati Omar
+featuredSrc: https://unsplash.com/@anuomar
 description: "In short: No, I do not think Service Portal is going away any time soon. However, I hope Service Portal does go away."
 ---
 
