@@ -115,6 +115,6 @@ description: "How to add a header menu to a Portal Experience in ServiceNow UI B
 9. Close portal settings
 10. Click "Open" to test page
 
-Special thanks to [ServiceNow Ninjas][1]
+Special thanks to [Ninja Bytes][1]
 
-[1]: https://servicenowninjas.blog/uib_basic/add-simple-navigation-menu-and-actions/
+[1]: https://www.ninjabytes.blog/uib_basic/add-simple-navigation-menu-and-actions/

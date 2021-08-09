@@ -41,6 +41,6 @@ description: "How to create a Footer for a Portal Experience in ServiceNow UI Bu
         }
      ```
      
-     Special thanks to [ServiceNow Ninjas][1]
+     Special thanks to [Ninja Bytes][1]
 
-     [1]: https://servicenowninjas.blog/uib_basic/add-footer/
+     [1]: https://www.ninjabytes.blog/uib_basic/add-footer/

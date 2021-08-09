@@ -29,3 +29,7 @@ description: "How to add a logo to the footer of a Portal Experience in ServiceN
 10. Close current browser tab to return to UI Builder browser tab
 11. Close portal settings
 12. Click "Open" to test page
+
+Special thanks to [Ninja Bytes][1]
+
+[1]: https://www.ninjabytes.blog/uib_basic/add-footer/

@@ -110,6 +110,6 @@ description: "How to create a Header for a Portal Experience in ServiceNow UI Bu
 8. Click "X" to close the Portal Settings modal
 9. Click "Open" to test the page header
 
-Special thanks to [ServiceNow Ninjas][1]
+Special thanks to [Ninja Bytes][1]
 
-[1]: https://servicenowninjas.blog/uib_basic/add-header-and-logo/
+[1]: https://www.ninjabytes.blog/uib_basic/add-header-and-logo/

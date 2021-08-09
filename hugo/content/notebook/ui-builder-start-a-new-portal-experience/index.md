@@ -23,6 +23,8 @@ description: "How to create a new Portal Experience in ServiceNow UI Builder"
 9. [Add a header menu][9]
 10. [Create additional pages][3]
 
+Special thanks to [Ninja Bytes][10]
+
 [1]: /notebook/ui-builder-create-ux-page-registry
 [2]: /notebook/ui-builder-create-ux-app-configuration
 [3]: /notebook/ui-builder-create-page
@@ -32,3 +34,4 @@ description: "How to create a new Portal Experience in ServiceNow UI Builder"
 [7]: /notebook/ui-builder-create-footer
 [8]: /notebook/ui-builder-add-logo-to-footer
 [9]: /notebook/ui-builder-add-header-menu
+[10]: https://www.ninjabytes.blog/uib_basic/create-your-first-experience-using-ui-builder/

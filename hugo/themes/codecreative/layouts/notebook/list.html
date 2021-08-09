@@ -3,17 +3,32 @@
 {{ end }}
 {{ define "main" }}
   <div class="content-wrap">
-    <section class="content-section">
+    <section class="content-section notebook-index">
       {{ $section := where $.Site.RegularPages "Section" "notebook"}}
-      {{ $related := $section.RelatedTo ( keyVals "notebook/tags" "UI Builder")   }}
-      {{ with $related }}
-        <h3>UI Builder</h3>
-        <ul>
-          {{ range . }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      {{ end }}
+      
+      <div>
+        {{ $related := $section.RelatedTo ( keyVals "notebook/tags" "UI Builder")   }}
+        {{ with $related }}
+          <h3>UI Builder</h3>
+          <ul>
+            {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+
+      <div>
+        {{ $related := $section.RelatedTo ( keyVals "notebook/tags" "GlideRecord" "Functional Programming")   }}
+        {{ with $related }}
+          <h3>GlideRecord</h3>
+          <ul>
+            {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
     <section>
   </div>
   {{- partial "chat.html" . -}}

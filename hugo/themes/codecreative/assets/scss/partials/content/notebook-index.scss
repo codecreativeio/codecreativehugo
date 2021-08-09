@@ -1,0 +1,9 @@
+.notebook-index {
+    display: flex;
+    flex-direction: row;
+}
+
+.notebook-index > div {
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+}
