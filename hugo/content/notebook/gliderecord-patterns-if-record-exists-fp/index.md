@@ -1,7 +1,7 @@
 ---
 years: "2021"
 date: 2021-08-08 17:01:00
-lastMod: 2021-08-08 17:01:00
+lastMod: 2021-08-10 17:01:00
 author: tltoulson
 url: /notebook/gliderecord-patterns-if-record-exists-fp
 title: "GlideRecord: If Record Exists (Functional)"
@@ -12,7 +12,7 @@ description: "How to execute code conditionally if a matching record exists in S
 
 **Purpose:** How to execute code conditionally if a matching record exists or is found in ServiceNow using a Functional Programming style
 
-**Use:** Use this script in a Server Script
+**Use:** Use this script in a Server Script to test if a record exists before deciding how the code should continue. This allows handling error cases when a record doesn't exist, creation of expected records, or an alternate handling path depending on whether the record exists or not. The call to `setLimit` is extremely important to maintaining the best performance by telling the database to stop searching after finding one matching record.
 
 ```js
 /**
