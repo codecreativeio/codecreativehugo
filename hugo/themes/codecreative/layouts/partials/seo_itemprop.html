@@ -6,6 +6,10 @@
   <meta itemprop="thumbnailUrl" content="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
   <link rel="image_src" href="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
   <meta itemprop="image" content="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
+  {{ else if (.Params.rootSocial)}}
+  <meta itemprop="thumbnailUrl" content="{{ .Site.BaseURL }}{{ .Params.socialImg }}">
+  <link rel="image_src" href="{{ .Site.BaseURL }}{{ .Params.socialImg }}">
+  <meta itemprop="image" content="{{ .Site.BaseURL }}{{ .Params.socialImg }}">
   {{ else }}
   <meta itemprop="thumbnailUrl" content="{{ .Permalink }}{{ .Params.socialImg }}">
   <link rel="image_src" href="{{ .Permalink }}{{ .Params.socialImg }}">

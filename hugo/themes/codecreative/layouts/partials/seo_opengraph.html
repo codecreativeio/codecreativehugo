@@ -10,6 +10,8 @@
 {{ if .Params.socialImg }}
   {{ if eq .Type "guides" }}
     <meta property="og:image" content="{{ .CurrentSection.Permalink }}{{ .Params.socialImg }}">
+  {{ else if (eq .FirstSection.Kind "home")}}
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.socialImg }}">
   {{else}}
     <meta property="og:image" content="{{ .Permalink }}{{ .Params.socialImg }}">
   {{ end }}

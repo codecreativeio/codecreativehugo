@@ -2,6 +2,7 @@
 title: Empowering People with ServiceNow
 linktitle: About
 socialImg: assets/CodeCreative.png
+rootSocial: true
 menu:
   main:
     weight: 300
