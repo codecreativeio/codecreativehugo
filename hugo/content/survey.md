@@ -1,5 +1,6 @@
 ---
-title: CodeCreative Salary Influence Survey 2021
+title: ServiceNow Salary Influence Survey 2021
+description: Take the ServiceNow Salary Influence Survey 2021 and find out salary trends in the industry, things you can do to influence your salary, and how your salary may compare.
 linktitle: Salary Survey
 socialImg: assets/salary-survey-social.png
 rootSocial: true
