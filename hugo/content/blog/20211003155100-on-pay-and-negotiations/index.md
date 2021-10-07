@@ -44,7 +44,7 @@ My second most important piece of the package is health care. I've paid for heal
 
 ### 401K
 
-Right up there with health benefits is a 401k with employer match. Anything you invest in the 401k up to the match is like a free pay raise. With some healthy stock market growth and wise decisions on the investments (assuming you get to choose), it becomes the gift that keeps on giving. I definitely try to make sure I maximize my employer matched contributions, and I do prioritize employers that have a 401k match. [Point to add: what % do you typically see in a 401k match? what's a generous match vs. shitty one?]
+Right up there with health benefits is a 401k with employer match. Anything you invest in the 401k up to the match is like a free pay raise. With some healthy stock market growth and wise decisions on the investments (assuming you get to choose), it becomes the gift that keeps on giving. I definitely try to make sure I maximize my employer matched contributions, and I do prioritize employers that have a 401k match.
 
 ## Other Compensation
 
