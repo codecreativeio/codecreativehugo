@@ -22,7 +22,7 @@ The first step involved removing all survey responses that did not disclose the 
 
 ### Sanitize Currencies
 
-Next, some work had to be performed to santize the user submitted currencies. This involved converting all submitted currencies to their ISO 4217 Currency Code. For example, any currencies submitted as *Indian Rupees*, *inr*, or *rupee* would be substituted with *INR*. Additionally, there were a couple of other adjustments and inferences required:
+Next, some work had to be performed to sanitize the user submitted currencies. This involved converting all submitted currencies to their ISO 4217 Currency Code. For example, any currencies submitted as *Indian Rupees*, *inr*, or *rupee* would be substituted with *INR*. Additionally, there were a couple of other adjustments and inferences required:
 
 - Discarded two surveys where the currency was not provided and could not be inferred based on geographic location 
 - Converted all submissions in Lakh Rupees to INR
@@ -34,7 +34,7 @@ Some of the survey questions used free text response and needed to be standardiz
 
 - Country responses such as *US*, *United States*, and *America* were standardized to *United States*
 - One survey listed 11100 years of Total Experience which was changed to 11 years of experience in order to align with the user's 11 years of IT Experience
-- Adjusted two surveys which listed percentages over 100% to be exactly 100% under the assumption that these survey responses were exagerating
+- Adjusted two surveys which listed percentages over 100% to be exactly 100% under the assumption that these survey responses were exaggerating
 
 ### Remove Employer Based Responses
 
@@ -57,7 +57,7 @@ Some features could be inferred from provided responses. For example, based on a
 - US Census Bureau Division
 - US Census Bureau Region
 - US BEA Region
-- Counts of Certifications and Number of Certifications from various Certificaiton Groups the respondent possesses
+- Counts of Certifications and Number of Certifications from various Certification Groups the respondent possesses
 - Boolean features indicating whether or not a respondent has exactly zero, exactly one, or an exact combination of various certifications
 - Skill Scores computed across various skill groupings such as Soft Skills, Management, Sales and Marketing, Architectural, and Development indicating a scored frequency of use
 - Product Scores computed across both ServiceNow Applications (ITSM, CSM, ITBM, etc) and ServiceNow Capabilities (Service Portal, Virtual Agent, Performance Analytics, etc) indicating a scored frequency of use
@@ -66,7 +66,7 @@ Some features could be inferred from provided responses. For example, based on a
 
 ### Purchasing Power Parity Adjustment
 
-In order to enable comparisons across international currentcies, all currency values were converted from the survey respondants local currency to Inernational Dollars (Intl$ or GK$) using the [2019 Purchasing Power Parity index][1]. This index is published by the Eurostat-OECD as a method of equalizing and comparing the purchasing power of different currencies in their local markets. This adjustment makes it much easier to directly compare compensation amounts across international borders by converting local currency to the equivalent purchasing power of the US Dollar (USD). In this report, currency values of Intl$ indicate that the currency has been converted using the PPP index. The conversion rates used in this survey report are published below:
+In order to enable comparisons across international currencies, all currency values were converted from the survey respondents local currency to International Dollars (Intl$ or GK$) using the [2019 Purchasing Power Parity index][1]. This index is published by the Eurostat-OECD as a method of equalizing and comparing the purchasing power of different currencies in their local markets. This adjustment makes it much easier to directly compare compensation amounts across international borders by converting local currency to the equivalent purchasing power of the US Dollar (USD). In this report, currency values of Intl$ indicate that the currency has been converted using the PPP index. The conversion rates used in this survey report are published below:
 
 | Country                | Purchasing Power Parity (local currency / Intl$)          |
 |------------------------|---------------------------------------------------------|
@@ -92,7 +92,7 @@ In order to enable comparisons across international currentcies, all currency va
 
 ### GNI Dollars per Capita (Atlas) 2019
 
-Another calculated measure to improve comparison across international borders is GNI Dollars per Capita. Respondants country of employment was mapped to their [Gross National Income per Capita using the Atlas method as of 2019][2]. This indicator provides a continuous variable for compairng different countries by their economic power. This specific indicator was selected during exploratory analysis as it provided the lowest variance of the international economic indicators. Below is the table of values used in this analysis:
+Another calculated measure to improve comparison across international borders is GNI Dollars per Capita. Respondents country of employment was mapped to their [Gross National Income per Capita using the Atlas method as of 2019][2]. This indicator provides a continuous variable for comparing different countries by their economic power. This specific indicator was selected during exploratory analysis as it provided the lowest variance of the international economic indicators. Below is the table of values used in this analysis:
 
 | Country                | GNI Dollars per Capita (Atlas) |
 |------------------------|--------------------------------|
@@ -158,7 +158,7 @@ Following is the process the analysis used for generating regression trees:
 5. For each subset created by the feature selected in step 4
     1. Repeat steps 3 through 4 with the subset as the current dataset until one of the following conditions is met
         - No suitable feature is found in step 4
-        - All copmensation values within the subset are within the 50% Salary Window as calculated in step 3.5
+        - All compensation values within the subset are within the 50% Salary Window as calculated in step 3.5
 
 ### Calculate Prediction Model Mean Absolute Percent Error (MAPE)
 
@@ -186,7 +186,7 @@ To calculate a feature's importance, as discussed above the Leave Out One Covari
 6. Repeat steps 2 through 5 for each Feature included in the optimum prediction model
 7. Sort the features in descending order of Feature Importance
 
-The highest Feature Importance values indicate the most significant features in the optimum prediction model. Note that when a Feature Importance is negative, although leaving the feature out reduced the error it is generally implied that the decrease in error occured by random chance. Features with negative feature importance are therefore the least significant.
+The highest Feature Importance values indicate the most significant features in the optimum prediction model. Note that when a Feature Importance is negative, although leaving the feature out reduced the error it is generally implied that the decrease in error occurred by random chance. Features with negative feature importance are therefore the least significant.
 
 ### Multiple Regression Prediction
 

@@ -29,7 +29,7 @@ Contents:
 15. [Do you identify with the religious majority of the team(s) with whom you most closely work?][15]
 16. [Is your first language the preferred language of the team(s) with whom you most closely work?][16]
 17. [What is the highest level of education that you completed?][17]
-18. [If you atteneded college, what was your field of study?][18]
+18. [If you attended college, what was your field of study?][18]
 19. [Please indicate the total years of experience you have in the following areas [Total Professional Experience]][19]
 20. [Please indicate the total years of experience you have in the following areas [In the IT Field]][20]
 21. [Please indicate the total years of experience you have in the following areas [Working with the ServiceNow Platform]][21]

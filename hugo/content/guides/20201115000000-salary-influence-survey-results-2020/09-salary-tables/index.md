@@ -37,8 +37,6 @@ The findings of the survey indicate that job title is technically irrelevant but
 
 ### India
 
-[>=10000000]"₹ "##\,##\,##\,##0;[>=100000]"₹ " ##\,##\,##0;"₹ "##,##0
-
 <a href="images/total-compensation-by-role-india.png">
     <figure>
     <img src="images/total-compensation-by-role-india.png" />
